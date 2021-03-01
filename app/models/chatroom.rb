@@ -1,3 +1,3 @@
 class Chatroom < ApplicationRecord
-  belongs_to :activities
+  belongs_to :activity
 end

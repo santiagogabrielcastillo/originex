@@ -1,5 +1,6 @@
 class Activity < ApplicationRecord
   has_many :chatrooms, dependent: :destroy
+  has_many :events, through: :chatrooms
   
   include PgSearch::Model
   pg_search_scope :search_over_activities,

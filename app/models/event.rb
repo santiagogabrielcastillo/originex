@@ -1,4 +1,4 @@
 class Event < ApplicationRecord
-  belongs_to :activities
-  belongs_to :chatrooms
+  belongs_to :activity
+  belongs_to :chatroom
 end

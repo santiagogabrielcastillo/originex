@@ -1,7 +1,7 @@
 puts "Cleaning database"
-Activity.destroy_all
-Chatroom.destroy_all
 Event.destroy_all
+Chatroom.destroy_all
+Activity.destroy_all
 
 ACTIVITIES = [{
     title: "Go for a run",
@@ -28,15 +28,15 @@ end
 CHATROOMS = [{
     title: "Futbol 5 - Belgrano",
     description: "Vamos a jugar un picadito los sabado.",
-    activities_id: Activity.first.id
+    activity_id: Activity.first.id
   }, {
     title: "Cocina para todos!",
     description: "Somos personas que amamos cocinar.",
-    activities_id: Activity.second.id
+    activity_id: Activity.second.id
   }, {
     title: "Educando ando",
     description: "Vamos a una escuela a jugar y ensenarles a leer a chicos humildes de primaria.",
-    activities_id: Activity.last.id
+    activity_id: Activity.last.id
   }
 ]
   
@@ -48,20 +48,20 @@ EVENTS = [{
   status: "public",
   details: "19hs en Tiro Federal.",
   date: DateTime.new(2021,9,1,19),
-  activities_id: Activity.first.id,
-  chatrooms_id: Chatroom.first.id
+  activity_id: Activity.first.id,
+  chatroom_id: Chatroom.first.id
 }, {
   status: "private",
   details: "Nos juntamos los miercoles al Mediodia a cocinar para alimentar un comedor.",
   date: DateTime.new(2021,11,20,13),
-  activities_id: Activity.second.id,
-  chatrooms_id: Chatroom.second.id
+  activity_id: Activity.second.id,
+  chatroom_id: Chatroom.second.id
 }, {
   status: "public",
   details: "Domingos de 15hs a 20hs.",
   date: DateTime.new(2021,4,13,16),
-  activities_id: Activity.last.id,
-  chatrooms_id: Chatroom.last.id
+  activity_id: Activity.last.id,
+  chatroom_id: Chatroom.last.id
 }
 ]
 

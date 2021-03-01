@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_01_191958) do
+ActiveRecord::Schema.define(version: 2021_03_01_194511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,22 +27,22 @@ ActiveRecord::Schema.define(version: 2021_03_01_191958) do
   create_table "chatrooms", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.bigint "activities_id", null: false
+    t.bigint "activity_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["activities_id"], name: "index_chatrooms_on_activities_id"
+    t.index ["activity_id"], name: "index_chatrooms_on_activity_id"
   end
 
   create_table "events", force: :cascade do |t|
     t.string "details"
     t.string "status"
     t.date "date"
-    t.bigint "activities_id", null: false
-    t.bigint "chatrooms_id", null: false
+    t.bigint "activity_id", null: false
+    t.bigint "chatroom_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["activities_id"], name: "index_events_on_activities_id"
-    t.index ["chatrooms_id"], name: "index_events_on_chatrooms_id"
+    t.index ["activity_id"], name: "index_events_on_activity_id"
+    t.index ["chatroom_id"], name: "index_events_on_chatroom_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2021_03_01_191958) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "chatrooms", "activities", column: "activities_id"
-  add_foreign_key "events", "activities", column: "activities_id"
-  add_foreign_key "events", "chatrooms", column: "chatrooms_id"
+  add_foreign_key "chatrooms", "activities"
+  add_foreign_key "events", "activities"
+  add_foreign_key "events", "chatrooms"
 end

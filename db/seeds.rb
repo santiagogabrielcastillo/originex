@@ -42,9 +42,9 @@ ACTIVITIES = [{
     description: "Enjoy the nature while running among friends!",
     address: "Infanta Isabel 410, Buenos Aires, Argentina"
   }, {
-    title: "Go to the Art's museum",
+    title: "Art's museum",
     category: "Cultural activities",
-    description: "Discover the Museo de Arte Latinoamericano de Buenos Aires (MALBA)",
+    description: "Discover the Museo de Arte Latinoamericano de Buenos Aires",
     address: "Figueroa Alcorta 3415, Buenos Aires, Argentina"
   }, {
     title: "Eat a pizza",

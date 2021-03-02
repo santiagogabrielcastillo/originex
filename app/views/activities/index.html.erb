@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="text-center mt-3">Explore over our available activities</h1>
+  <div class="row">
+    <div class="col-12">
+      <%= form_tag activities_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find an activity"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+      <% @activities.each do |activity| %>
+        <h3><%= activity.title %></h3>
+        <p><%= activity.category %> | <%= activity.address %></p>
+        <p><%= activity.description %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1><%= @chatroom.title %></h1>
+      <p><%= @chatroom.description %></p>
+      <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+        <% @chatroom.messages.each do |message| %>
+          <div class="message-container" id="message-<%= message.id %>">
+            <i class="author">
+              <span><%= message.user.username %></span>
+              <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+            </i>
+            <p><%= message.content %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

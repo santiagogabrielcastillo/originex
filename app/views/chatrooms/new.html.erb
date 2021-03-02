@@ -22,6 +22,7 @@
       <%= simple_form_for([@activity, @chatroom]) do |f| %>
         <%= f.input :title %>
         <%= f.input :description %>
+        <%= f.association :users, label_method: :full_name, value_method: :id, multiple: true, include_blank: false %>
         <%= f.button :submit, class: 'btn btn-primary' %>
       <% end %>
     </div>

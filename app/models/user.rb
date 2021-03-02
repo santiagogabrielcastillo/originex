@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :user_interests
   has_many :activities, through: :user_interests
+  has_many :participants
+  has_many :chatrooms, through: :participants
 end

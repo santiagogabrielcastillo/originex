@@ -1,5 +1,6 @@
 puts "Cleaning database"
 Event.destroy_all
+Participant.destroy_all
 Chatroom.destroy_all
 UserInterest.destroy_all
 Activity.destroy_all
@@ -94,6 +95,13 @@ CHATROOMS = [{
   
 CHATROOMS.each do |chatroom|
   Chatroom.create!(chatroom)
+end
+
+chatrooms = Chatroom.all
+users.each do |user|
+  chatrooms.each do |chatroom|
+    Participant.create!(user: user, chatroom: chatroom)
+  end
 end
 
 EVENTS = [{

@@ -1,6 +1,7 @@
 class ChatroomsController < ApplicationController
   before_action :set_activity, only: %i[new create]
   def new
+    @users = @activity.users
     @chatroom = Chatroom.new
   end
 

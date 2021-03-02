@@ -1,0 +1,14 @@
+.main-container {
+  display: flex;
+}
+
+.chatroom-form {
+  height: 100vh;
+}
+
+.users-cards {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 18px;
+}

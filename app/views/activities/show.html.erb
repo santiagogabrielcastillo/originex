@@ -12,16 +12,15 @@
             <p><%= @activity.description %></p>
           </div>
         </div>
-        <!-- Reemplazar luego por link_to new_chatroom_path-->
         <div class="d-flex justify-content-center">
-          <a href="#" class="btn btn-primary mt-3">Create a chatroom</a>
+          <%= link_to 'Create chatroom', new_activity_chatroom_path(@activity), class: 'btn btn-primary mt-2' %>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="events-banner">
+<div class="events-banner mb-3">
   <div class="container">
     <h3 class="text-center">Explore some related events!</h3>
     <div class="row">

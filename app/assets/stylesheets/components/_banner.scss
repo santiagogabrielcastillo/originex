@@ -1,0 +1,35 @@
+.banner {
+  height: 75vh;
+  position: relative;
+  margin-top: 75px;
+
+  .banner-background {
+    background-color: white;
+  }
+  
+  .banner-img {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), asset-url("friends.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner-content {
+      position: absolute;
+      bottom: 0;
+      left: 200px;
+      z-index: 999;
+      padding: 20px;
+      height: 50%;
+
+      h1 {
+        color: black;
+        font-weight: bold;
+        font-size: 75px;
+        font-weight: 900;
+      }
+
+      .btn-search-bar {
+        margin-top: 20px;
+      }
+  }
+}

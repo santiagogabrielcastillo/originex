@@ -1,2 +1,41 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="banner row">
+  <div class="container banner-content col-6">
+    <h1>Share new <br/> experiences</h1>
+    <div class="container btn-search-bar">
+      <p class="my-1">Location</p>
+      <%#= text_field_tag :location_query, params:location_query, id: "location", class: "form-control col-6 col-md-3", placeholder: "Location" %>
+      <%#= submit_tag "Search", class: "mt-2 col-12 fas fa-search btn btn-primary" %>
+    </div>
+  </div>
+  <div class="container banner-background col-6">
+  </div>
+  <div class="container banner-img col-6">
+  </div>
+</div>
+
+<!-- aca seria iterar por reviews -->
+<div class="container row m-2 justify-content-center">
+  <% @activities.each do |activity| %>
+    <div class="container col-12 col-md-6 col-lg-4 col-xl-3 mx-2">
+      <div class="card-activity my-2">
+      <img src="https://images.unsplash.com/photo-1541525897844-9851970da95a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fGxvbmdib2FyZGluZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
+      <div class="card-activity-infos">
+          <div>
+          <h1><%= activity.title %></h1>
+          <p><%= activity.description %></p>
+          </div>
+      </div>
+          <div class="card-stars">
+          <h2><i class="fas fa-star"></i></h2>
+          <h2><i class="fas fa-star"></i></h2>
+          <h2><i class="fas fa-star"></i></h2>
+          <h2><i class="fas fa-star"></i></h2>
+          <h2><i class="fas fa-star"></i></h2>
+          </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+FAQ

@@ -12,21 +12,20 @@
             <p><%= @activity.description %></p>
           </div>
         </div>
-        <!-- Reemplazar luego por link_to new_chatroom_path-->
         <div class="d-flex justify-content-center">
-          <a href="#" class="btn btn-primary mt-3">Create a chatroom</a>
+          <%= link_to 'Create chatroom', new_activity_chatroom_path(@activity), class: 'btn btn-primary mt-2' %>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="events-banner">
+<div class="events-banner mb-3">
   <div class="container">
     <h3 class="text-center">Explore some related events!</h3>
     <div class="row">
-      <div class="col-12 col-md-6 col-lg-3">
-        <% @events.each do |event| %>
+      <% @events.each do |event| %>
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card-activity my-2">
             <img src="https://images.unsplash.com/photo-1541525897844-9851970da95a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fGxvbmdib2FyZGluZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
             <div class="card-activity-infos text-center">
@@ -34,14 +33,14 @@
                 <h1><%= event.date.to_datetime.strftime('%a %d/%m/%Y') %></h1>
                 <p class="mt-4"><%= event.details %> | <%= event.status %></p>
               </div>
-              <div class="d-flex justify-content-center mt-5">
+              <div class="d-flex justify-content-center mb-2">
                 <!--Reemplazar después por el link_to correspondiente-->
                 <a href="#" class="btn btn-primary">Join event chatroom!</a>
               </div>
             </div>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

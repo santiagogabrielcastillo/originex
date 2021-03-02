@@ -4,7 +4,9 @@
 
 <div class="navbar navbar-expand-sm navbar-light navbar-originex d-flex align-items-center justify-content-between">
   <div style="width: 220px;">
-    <%= image_tag("logo.png", alt: "Originex logo", width: "150") %>  
+    <%= link_to root_path, class: "navbar-logo" do %>
+      <%= image_tag "logo.png", alt: "Originex logo", width: "150" %>
+    <% end %>
   </div>
   <div class="d-none d-md-flex align-items-center mb-0">
     <%= link_to "Home", root_path, class: "navbar-link mx-2" %>

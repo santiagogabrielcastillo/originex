@@ -1,27 +1,47 @@
 .btn-search-bar {
-  color: #8d8d8d;
+  color: #ffffff;
   font-weight:  600;
-  padding: 16px 48px;
+  padding: 16px 32px;
   border-radius: 50px;
   opacity: 0.9;
-  background: linear-gradient(to right, rgb(62, 226, 255) , rgb(139, 238, 255));
+  background: linear-gradient(to right, rgb(242, 74, 85) , rgb(243, 123, 107));
+
   box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
   //   transition: opacity 0.3s ease;
   
   //   &:hover {
   //     opacity: 1;
   //   }
+
+  .searchable-items {
+    flex-grow: 1;
+  }
+
+  .search-icon {
+    height: 100%;
+    width: 100px;
+    border-radius: 50px;
+    flex-grow: 0;
+
+    .fas {
+      font-size: 20px;
+
+      &:hover {
+        color: rgb(139, 238, 255);
+      }
+    }
+  }
 }
 
 .btn-navbar {
     color: rgb(255, 255, 255);
     padding: 8px 24px;
     border-radius: 10px;
-    background: linear-gradient(to right, rgb(62, 226, 255) , rgb(139, 238, 255));
+    background: linear-gradient(to right, rgb(242, 74, 85) , rgb(243, 123, 107));
     font-weight: 600;
   
   &:hover {
-    background: linear-gradient(to right, rgb(245, 91, 60) , rgb(243, 123, 107));
+    background: linear-gradient(to right, rgb(62, 226, 255) , rgb(139, 238, 255));
     text-decoration: none;
     color: rgb(255, 255, 255);
   }

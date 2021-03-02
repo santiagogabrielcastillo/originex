@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resources :activities, only: %i[index show] do
     resources :chatrooms, only: %i[new create]
   end
-  resources :chatrooms, only: :show
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
 end

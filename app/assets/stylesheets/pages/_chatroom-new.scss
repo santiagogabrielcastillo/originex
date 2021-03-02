@@ -1,0 +1,17 @@
+.main-container {
+  display: flex;
+  padding-top: 50px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.chatroom-form {
+  height: 400px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: dimgrey;
+}
+
+.users-cards {
+  flex-grow: 1;
+}

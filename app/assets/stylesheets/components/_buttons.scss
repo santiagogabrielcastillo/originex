@@ -12,3 +12,17 @@
   //     opacity: 1;
   //   }
 }
+
+.btn-navbar {
+    color: rgb(0, 0, 0);
+    padding: 8px 24px;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(62, 226, 255) , rgb(139, 238, 255));
+    font-weight: 600;
+  
+  &:hover {
+    background: linear-gradient(to right, rgb(245, 91, 60) , rgb(243, 123, 107));
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+}

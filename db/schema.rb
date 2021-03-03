@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_143809) do
+ActiveRecord::Schema.define(version: 2021_03_03_182115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 2021_03_03_143809) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["activity_id"], name: "index_events_on_activity_id"
     t.index ["chatroom_id"], name: "index_events_on_chatroom_id"
   end

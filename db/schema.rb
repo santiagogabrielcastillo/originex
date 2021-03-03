@@ -69,8 +69,8 @@ ActiveRecord::Schema.define(version: 2021_03_03_182115) do
   end
 
   create_table "user_interests", force: :cascade do |t|
-    t.bigint "activity_id", null: false
     t.bigint "user_id", null: false
+    t.bigint "activity_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["activity_id"], name: "index_user_interests_on_activity_id"

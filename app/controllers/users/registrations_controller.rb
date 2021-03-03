@@ -4,24 +4,31 @@ class Users::RegistrationsController < Devise::RegistrationsController
   
   # before_action :configure_sign_in_params, only: [:create]
 
-  # GET /resource/sign_in
-  def create
-    super
-    if @user.save
-      redirect_to user_interests_path
-    else 
-      render :new
+  def after_sign_up_path_for(resource)
+    if current_user.user_interests.count >=1
+      activities_path
+    else
+      user_interests_path
     end
   end
 
-  def update
-    super
-    if @user.save
-      redirect_to activities_path
-    else
-      render :new
-    end
-  end
+  # GET /resource/sign_in
+  # def create
+  #   if @user.save
+  #     redirect_to user_interests_path
+  #   else 
+  #     render :new
+  #   end
+  # end
+
+  # def update
+  #   super
+  #   if @user.save
+  #     redirect_to activities_path
+  #   else
+  #     render :new
+  #   end
+  # end
   # POST /resource/sign_in
   # def create
   #   super

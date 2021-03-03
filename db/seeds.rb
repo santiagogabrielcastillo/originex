@@ -1,6 +1,8 @@
 puts "Cleaning database"
 Event.destroy_all
+Participant.destroy_all
 Chatroom.destroy_all
+UserInterest.destroy_all
 Activity.destroy_all
 User.destroy_all
 
@@ -40,9 +42,9 @@ ACTIVITIES = [{
     description: "Enjoy the nature while running among friends!",
     address: "Infanta Isabel 410, Buenos Aires, Argentina"
   }, {
-    title: "Go to the Art's museum",
+    title: "Art's museum",
     category: "Cultural activities",
-    description: "Discover the Museo de Arte Latinoamericano de Buenos Aires (MALBA)",
+    description: "Discover the Museo de Arte Latinoamericano de Buenos Aires",
     address: "Figueroa Alcorta 3415, Buenos Aires, Argentina"
   }, {
     title: "Eat a pizza",
@@ -54,6 +56,14 @@ ACTIVITIES = [{
 
 ACTIVITIES.each do |activity|
   Activity.create!(activity)
+end
+
+users = User.all
+activities = Activity.all
+users.each do |user|
+  activities.each do |activity|
+    UserInterest.create!(user: user, activity: activity)
+  end
 end
 
 CHATROOMS = [{
@@ -85,6 +95,13 @@ CHATROOMS = [{
   
 CHATROOMS.each do |chatroom|
   Chatroom.create!(chatroom)
+end
+
+chatrooms = Chatroom.all
+users.each do |user|
+  chatrooms.each do |chatroom|
+    Participant.create!(user: user, chatroom: chatroom)
+  end
 end
 
 EVENTS = [{
@@ -130,4 +147,4 @@ EVENTS.each do |event|
   Event.create!(event)
 end
 
-puts "3 users, 2 activities, 6 chatrooms and 6 events created"
+puts "3 users, 3 activities, 6 chatrooms and 6 events created"

@@ -1,6 +1,14 @@
 // Define variables for your color scheme
 
-// For example:
+// Customized
+// red-degrade would be: background: linear-gradient(to right, rgb(242, 74, 85), rgb(243, 123, 107));
+$light-red: rgb(243, 123, 107);
+$pink: rgb(242, 74, 85);
+// blue-degrade would be: background: linear-gradient(to right, rgb(62, 226, 255), rgb(139, 238, 255));
+$light-blue: rgb(139, 238, 255);
+$blue: rgb(62, 226, 255);
+
+// Default ones
 $red: #FD1015;
 $blue: #167FFB;
 $yellow: #FFC65A;

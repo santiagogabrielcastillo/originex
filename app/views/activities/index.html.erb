@@ -10,7 +10,9 @@
         %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
+      
       <% @activities.each do |activity| %>
+        
         <h3><%= activity.title %></h3>
         <p><%= activity.category %> | <%= activity.zone %></p>
         <p><%= activity.description %></p>

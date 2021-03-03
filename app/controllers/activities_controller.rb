@@ -1,10 +1,14 @@
 class ActivitiesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   def index
-    if params[:query].present?
-      @activities = Activity.search_over_activities(params[:query])
+    if current_user.user_interests.empty?
+      redirect_to user_interests_path
     else
-      @activities = Activity.all
+      if params[:query].present?
+        @activities = Activity.search_over_activities(params[:query])
+      else
+        @activities = current_user.activities
+      end
     end
   end
 

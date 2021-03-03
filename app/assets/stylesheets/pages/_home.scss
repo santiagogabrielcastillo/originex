@@ -1,15 +1,15 @@
 // Specific CSS for your home-page
 .faq {
 
+  h2 {
+    font-weight: 600;
+  }
+
   p {
     margin-bottom: 0;
   }
 
   .arrow {
     color: $warning;
-  }
-
-  .btn-warning {
-    color: $body-color;
   }
 }

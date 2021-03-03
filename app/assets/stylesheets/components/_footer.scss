@@ -6,7 +6,7 @@
   padding: 0 50px;
   color: rgba(0,0,0,0.5);
   
-  .row {
+  .column {
     height: 100%;
 
     .copyright {
@@ -45,6 +45,14 @@
      h3 {
       font-size: 18px;
       font-weight: bold;
+    }
+  }
+}
+
+@media (max-width : 480px) {
+  .footer {
+    .column {
+      height: auto;
     }
   }
 }

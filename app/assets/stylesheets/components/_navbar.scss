@@ -18,6 +18,15 @@
   
   .navbar-collapse {
     flex-grow: 0;
+
+    .avatar {
+      position: relative;
+    }
+
+    .dropdown.menu {
+      position: absolute;
+      top: 0;
+    }
   }
   
   .navbar-link {

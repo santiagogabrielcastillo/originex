@@ -1,6 +1,7 @@
 puts "Cleaning database"
 Event.destroy_all
 Participant.destroy_all
+Message.destroy_all
 Chatroom.destroy_all
 UserInterest.destroy_all
 Activity.destroy_all
@@ -40,17 +41,17 @@ ACTIVITIES = [{
     title: "Go for a run",
     category: "Outdoor sports",
     description: "Enjoy the nature while running among friends!",
-    address: "Infanta Isabel 410, Buenos Aires, Argentina"
+    zone: "Palermo"
   }, {
     title: "Art's museum",
     category: "Cultural activities",
     description: "Discover the Museo de Arte Latinoamericano de Buenos Aires",
-    address: "Figueroa Alcorta 3415, Buenos Aires, Argentina"
+    zone: "Palermo"
   }, {
     title: "Eat a pizza",
     category: "Food and drinks",
-    description: "Have a pizza in an iconic place of Buenos Aires, Pizzería Guerrín",
-    address: "Av. Corrientes 1368, Buenos Aires, Argentina"
+    description: "Have a pizza in an iconic place of Buenos Aires",
+    zone: "Microcentro"
   }
 ]
 
@@ -109,37 +110,43 @@ EVENTS = [{
   details: "19hs en Tiro Federal.",
   date: DateTime.new(2021,9,1,19),
   activity_id: Activity.first.id,
-  chatroom_id: Chatroom.first.id
+  chatroom_id: Chatroom.first.id,
+  address: "Av. del Libertador, Buenos Aires, Argentina"
 }, {
   status: "private",
   details: "20hs en Plaza Las Heras .",
   date: DateTime.new(2021,12,1,20),
   activity_id: Activity.first.id,
-  chatroom_id: Chatroom.second.id
+  chatroom_id: Chatroom.second.id,
+  address: "Av. Gral. Las Heras 3353, Buenos Aires, Argentina"
 }, {
   status: "public",
   details: "Asados a las 14.",
   date: DateTime.new(2021,7,15,14),
   activity_id: Activity.second.id,
-  chatroom_id: Chatroom.third.id
+  chatroom_id: Chatroom.third.id,
+  address: ""
 }, {
   status: "private",
   details: "Nos juntamos los miercoles al Mediodia a cocinar para alimentar un comedor.",
   date: DateTime.new(2021,11,20,13),
   activity_id: Activity.second.id,
-  chatroom_id: Chatroom.fourth.id
+  chatroom_id: Chatroom.fourth.id,
+  address: ""
 }, {
   status: "public",
   details: "Viernes a las 17hs",
   date: DateTime.new(2021,2,26,17),
   activity_id: Activity.last.id,
-  chatroom_id: Chatroom.fifth.id
+  chatroom_id: Chatroom.fifth.id,
+  address: "Av. Pres. Figueroa Alcorta 3415, Buenos Aires, Argentina"
 }, {
   status: "public",
   details: "Domingos de 15hs a 20hs.",
   date: DateTime.new(2021,4,13,16),
   activity_id: Activity.last.id,
-  chatroom_id: Chatroom.last.id
+  chatroom_id: Chatroom.last.id,
+  address: "Av. Corrientes 1368, Buenos Aires, Argentina"
 }
 ]
 

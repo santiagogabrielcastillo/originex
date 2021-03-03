@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_02_182534) do
+ActiveRecord::Schema.define(version: 2021_03_03_143809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 2021_03_02_182534) do
     t.string "category"
     t.string "title"
     t.text "description"
-    t.string "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "zone"
   end
 
   create_table "chatrooms", force: :cascade do |t|
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2021_03_02_182534) do
     t.bigint "chatroom_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "address"
     t.index ["activity_id"], name: "index_events_on_activity_id"
     t.index ["chatroom_id"], name: "index_events_on_chatroom_id"
   end
@@ -66,8 +67,8 @@ ActiveRecord::Schema.define(version: 2021_03_02_182534) do
   end
 
   create_table "user_interests", force: :cascade do |t|
-    t.bigint "activity_id", null: false
     t.bigint "user_id", null: false
+    t.bigint "activity_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["activity_id"], name: "index_user_interests_on_activity_id"

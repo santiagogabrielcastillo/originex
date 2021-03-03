@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_02_182534) do
+ActiveRecord::Schema.define(version: 2021_03_03_143809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 2021_03_02_182534) do
     t.string "category"
     t.string "title"
     t.text "description"
-    t.string "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "zone"
   end
 
   create_table "chatrooms", force: :cascade do |t|
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2021_03_02_182534) do
     t.bigint "chatroom_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "address"
     t.index ["activity_id"], name: "index_events_on_activity_id"
     t.index ["chatroom_id"], name: "index_events_on_chatroom_id"
   end

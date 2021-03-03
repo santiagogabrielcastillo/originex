@@ -6,7 +6,7 @@
   padding: 0 50px;
   color: rgba(0,0,0,0.5);
   
-  .row {
+  .column {
     height: 100%;
 
     .copyright {
@@ -46,5 +46,35 @@
       font-size: 18px;
       font-weight: 600;
     }
+
+    .email-info .send {
+      padding: 11px 16px;
+      height: 100%;
+      border-radius: 3px;
+      background: $warning;
+      
+      &:hover {
+      background: linear-gradient(to right, rgb(62, 226, 255) , rgb(139, 238, 255));
+    }
+  }
   }
 }
+
+ @media (max-width : 587px) {
+  .footer {
+    height: fit-content;
+    
+    .column {
+      height: fit-content;
+      margin-bottom: 10px;
+
+      .services {
+        margin-top: 15px;
+      }
+
+      .email-section {
+        margin-top: 15px;
+      }
+    }
+  }
+ }

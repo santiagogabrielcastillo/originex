@@ -5,8 +5,8 @@ class UserInterestsController < ApplicationController
     user_interests_params[:activity_ids].each do |activity_id|
       UserInterest.create(activity_id: activity_id, user_id: current_user.id)
     end
+    redirect_to activities_path 
   end
-
 
   private
 

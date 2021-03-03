@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p><%= @participant.user.username %></p>
+      <p><%= @participant.chatroom.title %></p>
+      <ul>
+        <% @chatroom.users.each do |user| %>
+          <li><%= user.full_name %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% @participants.each do |p| %>
+      <p><%= p.user.username %></p>
+    <% end %>
+  </div>
+</div>

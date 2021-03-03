@@ -10,6 +10,17 @@
   overflow: scroll;
 }
 
+#messages {
+  height: 48vh;
+  padding-bottom: 45px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.author {
+  border-bottom: 1px solid black;
+}
+
 .message {
   display: flex;
   margin-bottom: 10px;

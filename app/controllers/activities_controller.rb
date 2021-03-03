@@ -7,9 +7,7 @@ class ActivitiesController < ApplicationController
       if params[:query].present?
         @activities = Activity.search_over_activities(params[:query])
       else
-        current_user.user_interests.each do |interest|
-          @activities = Activity.where(id: interest.activity_id)
-        end
+        @activities = current_user.activities
       end
     end
   end

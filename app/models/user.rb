@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :user_interests
-  has_many :user_interests
   has_many :activities, through: :user_interests
   has_many :participants
   has_many :chatrooms, through: :participants

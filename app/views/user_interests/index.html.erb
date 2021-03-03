@@ -9,7 +9,8 @@ iterar x cada activity, y en cada una hacer un eventlistener, if click then save
     <div class="col-6 text-center">
       <h3>Please, select your interests</h3>
       <%= simple_form_for current_user, url: user_interests_path, method: :post do |f| %>
-        <%= f.association :activities, as: :check_boxes %>
+        <%= f.association :activities, as: :check_boxes, input_html: { class: "tag-selector" },
+                          item_wrapper_class: 'tag-item' %> %>
         <%= f.button :submit %>
       <% end %>
     </div>

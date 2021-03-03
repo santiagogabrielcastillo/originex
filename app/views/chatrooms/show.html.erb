@@ -1,6 +1,6 @@
 <div class="main-container">
   <div class="chatroom-users">
-  <h2 class="text-center">Participants</h2>
+    <h2 class="text-center">Participants</h2>
     <div class="row">
       <% @users.each do |user| %>
       <div class="col-12">
@@ -28,6 +28,7 @@
       <div class="col-12">
         <div class="chat-header"><h1>#<%= @chatroom.title %></h1></div>
           <p><%= @chatroom.description %></p>
+          <hr>
           <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
             <% @chatroom.messages.each do |message| %>
               <%= render 'messages/message', message: message %>

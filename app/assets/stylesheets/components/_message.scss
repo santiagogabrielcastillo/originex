@@ -36,6 +36,7 @@
 #create-message {
   padding: 10px;
   background-color: #ffffff;
+  border-radius: 10px;
   margin-bottom: 20px;
   border: 1px solid #ececec;
 }
@@ -49,12 +50,12 @@ input.form-control {
   color: #868686;
   &:focus {
     outline: none;
-    border: 1px solid blue;
+    border: 1px solid $blue;
     box-shadow: none;
   }
 }
 .chat-header {
-  background-color: #4F2F4C;
+  // background-color: $pink;
   border-radius: 10px;
   color: white;
   padding: 7px 20px;

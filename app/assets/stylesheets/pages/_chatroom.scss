@@ -17,15 +17,18 @@
 
 .chatroom {
   flex-grow: 1;
+  background-color: $pink;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .chatroom-users {
   margin-right: 40px;
   width: 37%;
-  height: auto;
   padding: 25px;
   border-radius: 10px;
   background-color: dimgrey;
+  position: sticky;
 
   h2 {
     font-size: 35px;

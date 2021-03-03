@@ -29,10 +29,12 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { dropdownMenuAppears } from '../plugins/hoverable_menu';
+import { cleanInput } from '../components/init_chatroom';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initChatroomCable();
   dropdownMenuAppears();
+  cleanInput();
 });

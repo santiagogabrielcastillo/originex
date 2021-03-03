@@ -1,0 +1,23 @@
+.event-header-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px black;
+  object-fit: cover;
+}
+
+.event-show-title {
+  text-align: left;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.event-show-details {
+  padding-left: 15px;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}

@@ -1,6 +1,8 @@
 class Activity < ApplicationRecord
   has_many :chatrooms, dependent: :destroy
   has_many :events, through: :chatrooms
+  has_many :user_interests
+  has_many :users, through: :user_interests
 
   validates :title, :description, :category, presence: true
   

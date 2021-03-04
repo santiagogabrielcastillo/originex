@@ -2,7 +2,7 @@
   <div class="chatroom-users">
     <h2 class="text-center mb-5">Participants</h2>
     <div class="row">
-      <% @users.each do |user| %>
+      <% @participants.each do |part| %>
       <div class="col-12">
         <div class="chatroom-user text-center">
           <div class="row">
@@ -11,10 +11,10 @@
             </div>
             <div class="col-12 col-lg-8">
               <div class="chatroom-user-infos">
-                <h2><%= user.full_name %></h2>
-                <p>Username: <%= user.username %></p>
-                <p>Email: <%= user.email %></p>
-                <p>Address: <%= user.address %></p>
+                <h2><%= part.user.full_name %></h2>
+                <p>Username: <%= part.user.username %></p>
+                <p>Email: <%= part.user.email %></p>
+                <p>Address: <%= part.user.address %></p>
               </div>
             </div>
           </div>
@@ -24,7 +24,7 @@
     </div>
     <div class="row">
       <div class="col-12 d-flex justify-content-center">
-        <a href="#" class="btn-navbar mt-5">Create an event</a>
+        <%= link_to 'Create event', new_chatroom_event_path(@chatroom), class: 'btn-red-degrade mt-5' %>
       </div>
     </div>
   </div>

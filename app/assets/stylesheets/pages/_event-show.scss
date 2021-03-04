@@ -15,14 +15,28 @@
   padding-top: 15px;
 }
 
-// .event-show-map {
-//   border-radius: 5px;
-//   box-shadow: 0 0 15px grey;
-//   margin-top: 30px;
-// }
+.event-show-contact-link {
+  padding-top: 30px;
+}
 
-#map {
-  // height: 100vh;
+.event-show-other-events {
+  display:flex;
+  justify-content: space-between;
+}
+
+.back-link {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#event-info {
+  height: 100vh;
   position: sticky;
   top: 0;
+}
+
+.fas {
+  margin-top: 30px;
+  font-size: xx-large;
+  color: lightgrey;
 }

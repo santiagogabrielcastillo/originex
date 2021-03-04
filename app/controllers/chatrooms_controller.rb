@@ -10,9 +10,9 @@ class ChatroomsController < ApplicationController
     @chatroom.activity = @activity
     if @chatroom.save
       params[:chatroom]["user_ids"].reject(&:blank?).map { |a| a.to_i }.each do |user_id|
-        @participant = Participant.create(user_id: user_id, chatroom_id: @chatroom.id, status: "false")
+        @participant = Participant.create(user_id: user_id, chatroom_id: @chatroom.id, status: false)
       end
-      @participant = Participant.create(user_id: current_user.id, chatroom_id: @chatroom.id, status: "true")
+      @participant = Participant.create(user_id: current_user.id, chatroom_id: @chatroom.id, status: true)
       redirect_to chatroom_path(@chatroom)
     else
       render :new
@@ -22,7 +22,7 @@ class ChatroomsController < ApplicationController
   def show
     @message = Message.new
     @chatroom = Chatroom.find(params[:id])
-    @users = @chatroom.users
+    @participants = @chatroom.participants.where(status: true)
   end
 
   private

@@ -31,7 +31,9 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { dropdownMenuAppears } from '../plugins/hoverable_menu';
 import { cleanInputForExport } from '../components/init_chatroom';
+import { questionAnsweredAppears } from '../plugins/clickable_faq_icon';
 import { initFlatpickr } from '../components/init_flatpickr';
+import { initFlatpickrBday } from '../components/init_flatpickr';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -40,5 +42,8 @@ document.addEventListener('turbolinks:load', () => {
   dropdownMenuAppears();
   initMapbox();
   cleanInputForExport();
+  questionAnsweredAppears();
   initFlatpickr();
+  initFlatpickrBday();
 });
+

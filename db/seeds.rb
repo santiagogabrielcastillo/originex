@@ -64,6 +64,41 @@ ACTIVITIES = [{
   category: "Food and drinks",
   description: "Have a pizza in an iconic place of Buenos Aires, Pizzería Guerrín",
   zone: "Microcentro"
+}, {
+  title: "Mercado San Nicolás",
+  category: "Food and drinks",
+  description: "Traditional market from Buenos Aires, with different gastronomic options",
+  zone: "Centro"
+}, {
+  title: "Jardín Japonés",
+  category: "Outdoor activities",
+  description: "Beautiful park with a lot of japanese culture",
+  zone: "Palermo"
+}, {
+  title: "Museo de Artes Plásticas Eduardo Sívori",
+  category: "Cultural activities",
+  description: "A lot of fantastic and new art exhibitions",
+  zone: "Palermo"
+} ,{
+  title: "Picnic at Hipódromo de Palermo",
+  category: "Food and drinks",
+  description: "Let's eat in an iconic place of Buenos Aires, while enjoying the sunset",
+  zone: "Palermo"
+}, {
+  title: "Go skateboarding",
+  category: "Outdoor sports",
+  description: "Enjoy this amazing sport with friends!",
+  zone: "Caballito"
+}, {
+  title: "Reserva Ecológica",
+  category: "Outdoor activities",
+  description: "Walk by the Rio de La Plata river",
+  zone: "Puerto Madero"
+}, {
+  title: "Cycling next to Aeroparque",
+  category: "Outdoor sports",
+  description: "Enjoy this beautiful sport while enjoying the landscape",
+  zone: "Palermo"
 }
 ]
 

@@ -8,6 +8,18 @@
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   
+  .avatar-section {
+    position: relative;
+
+    .avatar-img {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  #about-us {
+    white-space: nowrap;
+  }
   .navbar-logo {
     opacity: 0.7;
 
@@ -46,4 +58,21 @@
     }
   }
 }
-  
+
+@include media-breakpoint-down(lg) {
+  .navbar-originex {
+    padding: 12px 16px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .navbar-originex {
+    padding: 10px 14px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar-originex {
+    padding: 8px 12px;
+  }
+}

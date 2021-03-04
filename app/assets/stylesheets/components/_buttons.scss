@@ -25,9 +25,11 @@
 
     .fas {
       font-size: 20px;
+      color: white;
 
       &:hover {
         color: rgb(139, 238, 255);
+        text-decoration: none;
       }
     }
   }

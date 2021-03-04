@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   end
   resources :chatrooms, only: :show do
     resources :messages, only: :create
+    resources :events, only: %i[new create]
   end
 end

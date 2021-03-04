@@ -128,3 +128,15 @@
   width: auto;
   margin: 5px;
 }
+
+.card-rectangular .card-rectangular-bigger {
+  overflow: hidden;
+  border-radius: 9px;
+  height: 700px;
+  width: 70%;
+  padding: auto;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}

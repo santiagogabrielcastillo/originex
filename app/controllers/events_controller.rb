@@ -8,6 +8,11 @@ class EventsController < ApplicationController
     @markers = [{
       lat: @event.latitude,
       lng: @event.longitude
-    }]    
+    }]
+  end
+
+  def new
+    @chatroom = Chatroom.find(params[:chatroom_id])
+    @event = Event.new
   end
 end

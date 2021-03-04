@@ -25,9 +25,11 @@
 
     .fas {
       font-size: 20px;
+      color: white;
 
       &:hover {
         color: rgb(139, 238, 255);
+        text-decoration: none;
       }
     }
   }
@@ -44,5 +46,18 @@
     background: linear-gradient(to right, rgb(62, 226, 255) , rgb(139, 238, 255));
     text-decoration: none;
     color: rgb(255, 255, 255);
+  }
+}
+
+.btn-menu {
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: linear-gradient(to right, rgb(62, 226, 255) , rgb(139, 238, 255));
+  font-weight: 600;
+  opacity: 0.8;
+  
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
   }
 }

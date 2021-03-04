@@ -1,82 +1,112 @@
-<div class="banner row">
-  <div class="container banner-content col-6">
-    <h1>Share new <br/> experiences</h1>
-    <div class="d-flex align-items-center btn-search-bar">
-      <div class="searchable-items">
-        <p class="my-1">Location</p>
+  <div class="banner row">
+    <div class="container banner-content col-6">
+      <h1>Share new <br/> experiences</h1>
+      <div class="d-flex align-items-center btn-search-bar">
+        <div class="searchable-items">
+          <p class="my-1">Location</p>
+        </div>
+        <div class="search-icon text-right justify-content-end">
+          <%= link_to "", activities_path, class: "fas fa-search"%>
+        </div>
+        <%#= text_field_tag :location_query, params:location_query, id: "location", class: "form-control col-6 col-md-3", placeholder: "Location" %>
+        <%#= submit_tag "Search", class: "mt-2 col-12 fas fa-search btn btn-primary" %>
       </div>
-      <div class="search-icon text-right justify-content-end">
-        <i class="fas fa-search"></i>
-      </div>
-      <%#= text_field_tag :location_query, params:location_query, id: "location", class: "form-control col-6 col-md-3", placeholder: "Location" %>
-      <%#= submit_tag "Search", class: "mt-2 col-12 fas fa-search btn btn-primary" %>
+    </div>
+    <div class="banner-background col-5 col-lg-6">
+    </div>
+    <div class="banner-img col-7 col-lg-6">
     </div>
   </div>
-  <div class="banner-background col-5 col-lg-6">
-  </div>
-  <div class="banner-img col-7 col-lg-6">
-  </div>
-</div>
-
-<!-- aca seria iterar por reviews y hay que modificar las cards -->
-<div class="container mt-5">
-  <div class="row m-2 justify-content-start">
-    <% @activities.each do |activity| %>
-      <div class="card-activity col-12 col-md-6 col-lg-4 col-xl-3 m-3 p-0">
-        <img src="https://images.unsplash.com/photo-1541525897844-9851970da95a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fGxvbmdib2FyZGluZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-      <div class="card-activity-infos">
-        <div>
-          <h1><%= activity.title %></h1>
-          <p><%= activity.description %></p>
-        </div>
-      </div>
-        <div class="card-stars">
-          <h2><i class="fas fa-star"></i></h2>
-          <h2><i class="fas fa-star"></i></h2>
-          <h2><i class="fas fa-star"></i></h2>
-          <h2><i class="fas fa-star"></i></h2>
-          <h2><i class="fas fa-star"></i></h2>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<!-- Frequently Asqued Questions -->
-<div class="container faq text-center my-5">
-  <h2>Frequently Asked Questions</h2>
   
-  <div class="row py-3">
-    <div class="d-flex justify-content-between align-items-center col-12 col-md-6 col-lg-4 my-3 text-left">
-    <p>Do I have to pay for Originex or it is free?</p>
-    <i class="arrow fas fa-arrow-alt-circle-down"></i>
+  <!-- aca seria iterar por reviews y hay que modificar las cards -->
+  <div class="container mt-5">
+    <div class="row m-2 justify-content-start">
+      <% @activities.each do |activity| %>
+        <div class="card-activity col-12 col-md-6 col-lg-4 col-xl-3 m-3 p-0">
+          <img src="https://images.unsplash.com/photo-1541525897844-9851970da95a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fGxvbmdib2FyZGluZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
+        <div class="card-activity-infos">
+          <div>
+            <h1><%= activity.title %></h1>
+            <p><%= activity.description %></p>
+          </div>
+        </div>
+          <div class="card-stars">
+            <h2><i class="fas fa-star"></i></h2>
+            <h2><i class="fas fa-star"></i></h2>
+            <h2><i class="fas fa-star"></i></h2>
+            <h2><i class="fas fa-star"></i></h2>
+            <h2><i class="fas fa-star"></i></h2>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  
+  <!-- Frequently Asqued Questions -->
+  <div class="container faq text-center my-5">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="row py-3">
+      <div class="col-12 col-md-6 col-lg-4 my-3 text-left">
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="question">Do I have to pay for Originex or it is free?</p>
+          <i class="faq-icon arrow fas fa-arrow-alt-circle-down"></i>
+        </div>
+        <div class="container px-0 py-2">
+          <p class="question-answered" style="display: none; opacity: 0.6;">Originex is a web platform developed by Ariel Waisburg, Eric Hoare, Lucia Diaz and Santiago Castillo during Le Wagon bootcamp in Buenos Aires.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 my-3 text-left">
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="question">How can I report someone?</p>
+          <i class="faq-icon arrow fas fa-arrow-alt-circle-down"></i>
+        </div>
+        <div class="container px-0 py-2">
+          <p class="question-answered" style="display: none; opacity: 0.6;">Originex is a web platform developed by Ariel Waisburg, Eric Hoare, Lucia Diaz and Santiago Castillo during Le Wagon bootcamp in Buenos Aires.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 my-3 text-left">
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="question">How does chatrooms work on Originex?</p>
+          <i class="faq-icon arrow fas fa-arrow-alt-circle-down"></i>
+        </div>
+        <div class="container px-0 py-2">
+          <p class="question-answered" style="display: none; opacity: 0.6;">Originex is a web platform developed by Ariel Waisburg, Eric Hoare, Lucia Diaz and Santiago Castillo during Le Wagon bootcamp in Buenos Aires.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 my-3 text-left">
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="question">Can anyone talk to me just because is interested in my profile?</p>
+          <i class="faq-icon arrow fas fa-arrow-alt-circle-down"></i>
+        </div>
+        <div class="container px-0 py-2">
+          <p class="question-answered" style="display: none; opacity: 0.6;">Originex is a web platform developed by Ariel Waisburg, Eric Hoare, Lucia Diaz and Santiago Castillo during Le Wagon bootcamp in Buenos Aires.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 my-3 text-left">
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="question">Do prices include taxes and fees?</p>
+          <i class="faq-icon arrow fas fa-arrow-alt-circle-down"></i>
+        </div>
+        <div class="container px-0 py-2">
+          <p class="question-answered" style="display: none; opacity: 0.6;">Originex is a web platform developed by Ariel Waisburg, Eric Hoare, Lucia Diaz and Santiago Castillo during Le Wagon bootcamp in Buenos Aires.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 my-3 text-left">
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="question">What's the difference between an activity and and event?</p>
+          <i class="faq-icon arrow fas fa-arrow-alt-circle-down"></i>
+        </div>
+        <div class="container px-0 py-2">
+          <p class="question-answered" style="display: none; opacity: 0.6;">Originex is a web platform developed by Ariel Waisburg, Eric Hoare, Lucia Diaz and Santiago Castillo during Le Wagon bootcamp in Buenos Aires.</p>
+        </div>
+      </div>
     </div>
     
-    <div class="d-flex justify-content-between align-items-center col-12 col-md-6 col-lg-4 my-3 text-left">
-    <p>How can I report someone?</p>
-    <i class="arrow fas fa-arrow-alt-circle-down"></i>
-    </div>
-
-    <div class="d-flex justify-content-between align-items-center col-12 col-md-6 col-lg-4 my-3 text-left">
-    <p>How does chatrooms work on Originex?</p>
-    <i class="arrow fas fa-arrow-alt-circle-down"></i>
-    </div>
-
-    <div class="d-flex justify-content-between align-items-center col-12 col-md-6 col-lg-4 my-3 text-left">
-    <p>Can anyone talk to me just because is interested in my profile?</p>
-    <i class="arrow fas fa-arrow-alt-circle-down"></i>
-    </div>
-
-    <div class="d-flex justify-content-between align-items-center col-12 col-md-6 col-lg-4 my-3 text-left">
-    <p>Do prices include taxes and fees?</p>
-    <i class="arrow fas fa-arrow-alt-circle-down"></i>
-    </div>
-
-    <div class="d-flex justify-content-between align-items-center col-12 col-md-6 col-lg-4 my-3 text-left">
-    <p>What's the difference between an activity and and event?</p>
-    <i class="arrow fas fa-arrow-alt-circle-down"></i>
-    </div>
+    <%= link_to "See more", root_path, class: "btn btn-red-degrade" %>
   </div>
-  
-  <%= link_to "See more", root_path, class: "btn btn-red-degrade" %>
-</div>

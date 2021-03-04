@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :set_chatroom, only: %i[new create]
   def index
   end
 
@@ -12,7 +13,28 @@ class EventsController < ApplicationController
   end
 
   def new
-    @chatroom = Chatroom.find(params[:chatroom_id])
     @event = Event.new
+    @users = @chatroom.users
+  end
+
+  def create
+    @event = Event.new(event_params)
+    @event.chatroom = @chatroom
+    @event.activity = @chatroom.activity
+    if @event.save
+      redirect_to event_path(@event)
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def set_chatroom
+    @chatroom = Chatroom.find(params[:chatroom_id])
+  end
+
+  def event_params
+    params.require(:event).permit(:details, :status, :date, :address)
   end
 end

@@ -24,7 +24,7 @@
     </div>
     <div class="row">
       <div class="col-12 d-flex justify-content-center">
-        <a href="#" class="btn-navbar mt-5">Create an event</a>
+        <%= link_to 'Create event', new_chatroom_event_path(@chatroom), class: 'btn-red-degrade mt-5' %>
       </div>
     </div>
   </div>
@@ -32,19 +32,18 @@
     <div class="row">
       <div class="col-12">
         <div class="chat-header"><h1>#<%= @chatroom.title %></h1></div>
-          <p><%= @chatroom.description %></p>
-          <hr>
-          <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
-            <% @chatroom.messages.each do |message| %>
-              <%= render 'messages/message', message: message %>
-            <% end %>
-          </div>
-          <hr>
-          <div id="create-message">
-            <%= simple_form_for [ @chatroom, @message ], remote: true, input_html: { autocomplete: "off" } do |f| %>
-              <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.title}", input_html: {id: "user-input", autocomplete: "off" } %>
-            <% end %>
-          </div>
+        <p><%= @chatroom.description %></p>
+        <hr>
+        <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+          <% @chatroom.messages.each do |message| %>
+            <%= render 'messages/message', message: message %>
+          <% end %>
+        </div>
+        <hr>
+        <div id="create-message">
+          <%= simple_form_for [ @chatroom, @message ], remote: true, input_html: { autocomplete: "off" } do |f| %>
+            <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.title}", input_html: {id: "user-input", autocomplete: "off" } %>
+          <% end %>
         </div>
       </div>
     </div>

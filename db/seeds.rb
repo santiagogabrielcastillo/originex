@@ -1,9 +1,6 @@
 puts "Cleaning database"
 Event.destroy_all
-Participant.destroy_all
-Message.destroy_all
 Chatroom.destroy_all
-UserInterest.destroy_all
 Activity.destroy_all
 User.destroy_all
 
@@ -43,28 +40,35 @@ ACTIVITIES = [{
     description: "Enjoy the nature while running among friends!",
     zone: "Palermo"
   }, {
-    title: "Art's museum",
+    title: "Go to the Art's museum",
     category: "Cultural activities",
-    description: "Discover the Museo de Arte Latinoamericano de Buenos Aires",
+    description: "Discover the Museo de Arte Latinoamericano de Buenos Aires (MALBA)",
     zone: "Palermo"
   }, {
     title: "Eat a pizza",
     category: "Food and drinks",
-    description: "Have a pizza in an iconic place of Buenos Aires",
+    description: "Have a pizza in an iconic place of Buenos Aires, Pizzería Guerrín",
     zone: "Microcentro"
-  }
+  }, {
+  title: "play football in the park",
+  category: "Outdoor sports",
+  description: "Meet some people to play ball with!",
+  zone: "Devoto"
+}, {
+  title: "Go to a recital",
+  category: "Cultural activities",
+  description: "check in",
+  zone: "Belgrano"
+}, {
+  title: "Eat a pizza",
+  category: "Food and drinks",
+  description: "Have a pizza in an iconic place of Buenos Aires, Pizzería Guerrín",
+  zone: "Microcentro"
+}
 ]
 
 ACTIVITIES.each do |activity|
   Activity.create!(activity)
-end
-
-users = User.all
-activities = Activity.all
-users.each do |user|
-  activities.each do |activity|
-    UserInterest.create!(user: user, activity: activity)
-  end
 end
 
 CHATROOMS = [{
@@ -98,20 +102,13 @@ CHATROOMS.each do |chatroom|
   Chatroom.create!(chatroom)
 end
 
-chatrooms = Chatroom.all
-users.each do |user|
-  chatrooms.each do |chatroom|
-    Participant.create!(user: user, chatroom: chatroom)
-  end
-end
-
 EVENTS = [{
   status: "public",
   details: "19hs en Tiro Federal.",
   date: DateTime.new(2021,9,1,19),
   activity_id: Activity.first.id,
   chatroom_id: Chatroom.first.id,
-  address: "Av. del Libertador, Buenos Aires, Argentina"
+  address: "Av. del Libertador 6905, Buenos Aires, Argentina"
 }, {
   status: "private",
   details: "20hs en Plaza Las Heras .",
@@ -125,28 +122,28 @@ EVENTS = [{
   date: DateTime.new(2021,7,15,14),
   activity_id: Activity.second.id,
   chatroom_id: Chatroom.third.id,
-  address: ""
+  address: "Av. Corrientes 1368, Buenos Aires, Argentina"
 }, {
   status: "private",
   details: "Nos juntamos los miercoles al Mediodia a cocinar para alimentar un comedor.",
   date: DateTime.new(2021,11,20,13),
   activity_id: Activity.second.id,
   chatroom_id: Chatroom.fourth.id,
-  address: ""
+  address: "Av. Corrientes 1368, Buenos Aires, Argentina"
 }, {
   status: "public",
   details: "Viernes a las 17hs",
   date: DateTime.new(2021,2,26,17),
   activity_id: Activity.last.id,
   chatroom_id: Chatroom.fifth.id,
-  address: "Av. Pres. Figueroa Alcorta 3415, Buenos Aires, Argentina"
+  address: "Infanta Isabel 410, Buenos Aires, Argentina"
 }, {
   status: "public",
   details: "Domingos de 15hs a 20hs.",
   date: DateTime.new(2021,4,13,16),
   activity_id: Activity.last.id,
   chatroom_id: Chatroom.last.id,
-  address: "Av. Corrientes 1368, Buenos Aires, Argentina"
+  address: "Infanta Isabel 410, Buenos Aires, Argentina"
 }
 ]
 
@@ -154,4 +151,4 @@ EVENTS.each do |event|
   Event.create!(event)
 end
 
-puts "3 users, 3 activities, 6 chatrooms and 6 events created"
+puts "3 users, 2 activities, 6 chatrooms and 6 events created"

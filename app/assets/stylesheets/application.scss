@@ -7,6 +7,7 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "flatpickr/dist/flatpickr";
 
 // Your CSS partials
 @import "components/index";
@@ -22,5 +23,29 @@ body {
   }
   
 .content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
+  padding-bottom: 12rem;    /* Footer height*/
 }
+
+@media (max-width : 587px) {
+  .content-wrap {
+    padding-bottom: 600px;
+  }
+ }
+
+@media (max-width : 498px) {
+ .content-wrap {
+   padding-bottom: 680px;
+ }
+}
+
+@media (max-width : 392px) {
+  .content-wrap {
+    padding-bottom: 725px;
+  }
+ }
+
+ @media (max-width : 350px) {
+  .content-wrap {
+    padding-bottom: 825px;
+  }
+ }

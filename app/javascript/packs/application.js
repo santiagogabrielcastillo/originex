@@ -27,14 +27,18 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { initMapbox } from '../plugins/init_mapbox';
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { dropdownMenuAppears } from '../plugins/hoverable_menu';
 import { cleanInputForExport } from '../components/init_chatroom';
+import { initFlatpickr } from '../components/init_flatpickr';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initChatroomCable();
   dropdownMenuAppears();
+  initMapbox();
   cleanInputForExport();
+  initFlatpickr();
 });

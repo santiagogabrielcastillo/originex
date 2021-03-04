@@ -30,6 +30,7 @@ import "bootstrap";
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { dropdownMenuAppears } from '../plugins/hoverable_menu';
 import { cleanInputForExport } from '../components/init_chatroom';
+import { questionAnsweredAppears } from '../plugins/clickable_faq_icon';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -37,4 +38,5 @@ document.addEventListener('turbolinks:load', () => {
   initChatroomCable();
   dropdownMenuAppears();
   cleanInputForExport();
+  questionAnsweredAppears();
 });

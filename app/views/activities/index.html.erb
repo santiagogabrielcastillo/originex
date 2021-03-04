@@ -14,22 +14,20 @@
 
   <div class="row">
     <div class="col-8">
-      <div class="card-users m-5">
+      <div class="card-user card-users-infos m-5">
         <% @activities.each do |activity| %>
           <% if activity.photo.attached? %>
               <%= cl_image_tag current_user.photo.key %>
             <% else %>
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "card-users" %>
-            <% end %> 
-          <div class="card-users-infos">       
-          <h2><%= activity.title %></h2>
+            <% end %>       
+          <h2><%= link_to "#{activity.title}", activity_path(activity) %></h2>
           <p><%= activity.category %> | <%= activity.zone %></p>
           <p><%= activity.description %></p>
-          </div> 
         <% end %>
       </div>
     </div>
   </div>
 
   
-</div
+</div>

@@ -1,16 +1,18 @@
 <div class="container">
+  <h1 class="text-center">Chatroom invitations</h1>
   <div class="row">
     <div class="col-12">
-      <p><%= @participant.user.username %></p>
-      <p><%= @participant.chatroom.title %></p>
-      <ul>
-        <% @chatroom.users.each do |user| %>
-          <li><%= user.full_name %></li>
-        <% end %>
-      </ul>
+      <% @invitations.each do |invitation| %>
+        <h3>Chatroom #<%= invitation.chatroom.title %></h3>
+        <h4>Chatroom participants</h4>
+        <ul>
+          <% invitation.chatroom.users.each do |user| %>
+            <% if user != current_user %>
+              <li><%= user.full_name %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      <% end %>
     </div>
-    <% @participants.each do |p| %>
-      <p><%= p.user.username %></p>
-    <% end %>
   </div>
 </div>

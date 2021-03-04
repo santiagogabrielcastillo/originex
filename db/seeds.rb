@@ -119,13 +119,15 @@ EVENTS = [{
   details: "Asados a las 14.",
   date: DateTime.new(2021,7,15,14),
   activity_id: Activity.second.id,
-  chatroom_id: Chatroom.third.id
+  chatroom_id: Chatroom.third.id,
+  address: "Av. Corrientes 1368, Buenos Aires, Argentina"
 }, {
   status: "private",
   details: "Nos juntamos los miercoles al Mediodia a cocinar para alimentar un comedor.",
   date: DateTime.new(2021,11,20,13),
   activity_id: Activity.second.id,
-  chatroom_id: Chatroom.fourth.id
+  chatroom_id: Chatroom.fourth.id,
+  address: "Av. Corrientes 1368, Buenos Aires, Argentina"
 }, {
   status: "public",
   details: "Viernes a las 17hs",

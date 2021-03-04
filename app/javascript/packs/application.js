@@ -27,6 +27,7 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { initMapbox } from '../plugins/init_mapbox';
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { dropdownMenuAppears } from '../plugins/hoverable_menu';
 import { cleanInputForExport } from '../components/init_chatroom';
@@ -36,5 +37,6 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initChatroomCable();
   dropdownMenuAppears();
+  initMapbox();
   cleanInputForExport();
 });

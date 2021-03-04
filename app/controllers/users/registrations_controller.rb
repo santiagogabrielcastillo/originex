@@ -5,13 +5,20 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_in_params, only: [:create]
 
   def after_sign_up_path_for(resource)
-    if current_user.user_interests.count >=1
+    if current_user.user_interests.count >= 1
       activities_path
     else
       user_interests_path
     end
   end
 
+  def after_edit_path_for(resource)
+    if current_user.user_interests.count >= 1
+      activities_path
+    else
+      user_interests_path
+    end
+  end
   # GET /resource/sign_in
   # def create
   #   if @user.save

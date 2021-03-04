@@ -10,9 +10,9 @@
           <div class="invitation-participants">
             <h4>Chatroom participants</h4>
             <ul>
-              <% invitation.chatroom.users.each do |user| %>
-                <% if user != current_user %>
-                  <li><%= user.full_name %></li>
+              <% invitation.chatroom.participants.where(status: "true").each do |part| %>
+                <% if part.user != current_user %>
+                  <li><%= part.user.full_name %></li>
                 <% end %>
               <% end %>
             </ul>

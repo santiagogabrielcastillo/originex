@@ -9,12 +9,12 @@
         <%= f.error_notification %>
 
           <div class="form-inputs">
+            <%= f.input :photo, as: :file %>
             <%= f.input :email, required: true, autofocus: true %>
 
             <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
               <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
             <% end %>
-         
             <%= f.input :full_name,
                         required: false,
                         input_html: { autocomplete: "full name" } %>
@@ -24,11 +24,11 @@
                         input_html: { autocomplete: "address" } %>
             <%= f.input :phone_number,
                         required: false,
-                        iput_html: { autocomplete: "number" } %>
+                        iput_html: { autocomplete: "phone number" } %>
             <%= f.input :birthday,
                         required: false,
                         input_html: { autocomplete: "date" } %>
-            <div class="form-actions btn-red-degrade">
+            <div class="form-actions">
               <%= f.button :submit, "Update" %>
             </div>
           <% end %>
@@ -46,13 +46,11 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
-          <%= f.input :email, required: true, autofocus: true %>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
           <% end %>
-
-          <%= f.input :password,
+         <%= f.input :password, 
                       hint: "leave it blank if you don't want to change it",
                       required: false,
                       input_html: { autocomplete: "new-password" } %>
@@ -62,7 +60,7 @@
           <%= f.input :current_password,
                       hint: "we need your current password to confirm your changes",
                       required: true,
-                      input_html: { autocomplete: "current-password" } %>
+                      input_html: { autocomplete: "current-password" } %> 
         </div>
 
         <div class="form-actions">
@@ -77,6 +75,6 @@
 
     </div>
   </div>
-</div>
+</div> %>
 
 

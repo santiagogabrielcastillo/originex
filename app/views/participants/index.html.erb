@@ -1,0 +1,29 @@
+<div class="container">
+  <h1 class="text-center">Chatroom invitations</h1>
+  <div class="row">
+    <div class="col-12">
+      <% @invitations.each do |invitation| %>
+      <div class="invitation">
+        <h3>Chatroom #<%= invitation.chatroom.title %></h3>
+        <p><%= invitation.chatroom.description %></p>
+        <div class="invitation-infos">
+          <div class="invitation-participants">
+            <h4>Chatroom participants</h4>
+            <ul>
+              <% invitation.chatroom.participants.where(status: true).each do |part| %>
+                <% if part.user != current_user %>
+                  <li><%= part.user.full_name %></li>
+                <% end %>
+              <% end %>
+            </ul>
+          </div>
+          <div class="invitation-buttons">
+            <%= link_to 'Accept invitation', participant_path(invitation), method: :patch %>
+            <%= link_to 'Ignore invitation', participant_path(invitation), method: :delete, data: {confirm: 'Are you sure?'} %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

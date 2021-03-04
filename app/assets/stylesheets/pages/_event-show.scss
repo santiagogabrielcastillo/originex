@@ -9,15 +9,34 @@
 .event-show-title {
   text-align: left;
   padding-top: 15px;
-  padding-left: 15px;
 }
 
 .event-show-details {
-  padding-left: 15px;
+  padding-top: 15px;
 }
 
-#map {
+.event-show-contact-link {
+  padding-top: 30px;
+}
+
+.event-show-other-events {
+  display:flex;
+  justify-content: space-between;
+}
+
+.back-link {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#event-info {
   height: 100vh;
   position: sticky;
   top: 0;
+}
+
+.fas {
+  margin-top: 30px;
+  font-size: xx-large;
+  color: lightgrey;
 }

@@ -22,7 +22,7 @@ class EventsController < ApplicationController
     @event.chatroom = @chatroom
     @event.activity = @chatroom.activity
     if @event.save
-      redirect_to event_path(@event)
+      redirect_to activity_event_path(@event.activity, @event)
     else
       render :new
     end

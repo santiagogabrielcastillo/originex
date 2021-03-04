@@ -12,39 +12,60 @@
 @import "components/index";
 @import "pages/index";
 
-body {
-    padding-top: 60px;
+
+// Navbar style
+.container-fluid {
+    padding-top: 85px;
 }
 
+@include media-breakpoint-down(lg) {
+  .container-fluid {
+    padding-top: 80px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .container-fluid {
+    padding-top: 75px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .container-fluid {
+    padding-top: 70px;
+  }
+}
+
+// Footer style
 .page-container {
     position: relative;
     min-height: 100vh;
   }
   
-.content-wrap {
+.container-fluid {
   padding-bottom: 12rem;    /* Footer height*/
 }
 
 @media (max-width : 587px) {
-  .content-wrap {
+  .container-fluid {
     padding-bottom: 600px;
   }
  }
 
 @media (max-width : 498px) {
- .content-wrap {
+ .container-fluid {
    padding-bottom: 680px;
  }
 }
 
 @media (max-width : 392px) {
-  .content-wrap {
+  .container-fluid {
     padding-bottom: 725px;
   }
  }
 
  @media (max-width : 350px) {
-  .content-wrap {
+  .container-fluid {
     padding-bottom: 825px;
   }
  }

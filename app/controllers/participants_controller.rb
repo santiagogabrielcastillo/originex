@@ -4,6 +4,19 @@ class ParticipantsController < ApplicationController
     @invitations = Participant.where(["user_id = ? and status= ?", current_user.id, false]).includes(:chatroom, :user)
   end
 
+  def create
+    @event = Event.find(params[:event_id])
+    @participant = Participant.new
+    @participant.user = current_user
+    @participant.chatroom = @event.chatroom
+    @participant.status = "true"
+    if @participant.save
+      redirect_to chatroom_path(@event.chatroom)
+    else
+      render "events/show", object: @event      
+    end
+  end
+
   def update
     @invitation.status = true
     if @invitation.save

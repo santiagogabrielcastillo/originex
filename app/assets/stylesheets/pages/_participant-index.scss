@@ -1,0 +1,20 @@
+.invitation {
+  width: 70%;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.invitation-infos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.invitation-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

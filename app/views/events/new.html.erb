@@ -1,0 +1,44 @@
+<div class="container">
+  <h1 class="text-center mb-4">Create an event for #<%= @chatroom.title %></h1>
+  <div class="row text-center">
+    <div class="col-12">
+      <%= simple_form_for [@chatroom, @event] do |f| %>
+        <%= f.input :details, input_html: {rows: "5"} %>
+        <div class="row text-center">
+          <div class="col-12 col-lg-4">
+            <%= f.input :status, collection: ["Public", "Private"] %>
+          </div>
+          <div class="col-12 col-lg-4">
+            <%= f.input :date, as: :string, input_html: {class: "datepicker"} %>
+          </div>
+          <div class="col-12 col-lg-4">
+            <%= f.input :address %>
+          </div>
+        </div>
+        <%= f.button :submit, class: 'btn-red-degrade mt-3' %>
+      <% end %>
+    </div>
+  </div>
+  <h3 class="text-center my-4">Event participants</h3>
+  <div class="row mb-4">
+    <% @users.each do |user| %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="chatroom-user text-center">
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            </div>
+            <div class="col-12 col-lg-8">
+              <div class="chatroom-user-infos">
+                <h2><%= user.full_name %></h2>
+                <p>Username: <%= user.username %></p>
+                <p>Email: <%= user.email %></p>
+                <p>Address: <%= user.address %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>

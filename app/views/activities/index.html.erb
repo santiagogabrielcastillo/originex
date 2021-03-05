@@ -1,22 +1,33 @@
 <div class="container">
-  <h1 class="text-center mt-3">Explore over our available activities</h1>
+  <h1 class="text-center m-3">Explore over our available activities</h1>
   <div class="row">
-    <div class="col-12">
+    <div class="col-10">
       <%= form_tag activities_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Find an activity"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
-      <% end %>
-      
-      <% @activities.each do |activity| %>
-        
-        <h3><%= activity.title %></h3>
-        <p><%= activity.category %> | <%= activity.zone %></p>
-        <p><%= activity.description %></p>
+          placeholder: "Find an activity" %>
+        <%= submit_tag "Search", class: "btn btn-red-degrade" %>
       <% end %>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-8">
+      <div class="card-user card-users-infos m-5">
+        <% @activities.each do |activity| %>
+          <% if activity.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key %>
+            <% else %>
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "card-users" %>
+            <% end %>       
+          <h2><%= link_to "#{activity.title}", activity_path(activity) %></h2>
+          <p><%= activity.category %> | <%= activity.zone %></p>
+          <p><%= activity.description %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  
 </div>

@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @participant = Participant.new
     @event = Event.find(params[:id])
 
     @markers = [{

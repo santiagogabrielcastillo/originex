@@ -40,3 +40,21 @@
   font-size: xx-large;
   color: lightgrey;
 }
+
+.event-user-card {
+  height: 150px;
+  width: 100px;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px grey;
+}
+
+.event-user-card-img {
+  border-radius: 9px;
+  margin: 10px;
+  height: 100px;
+  width: auto
+}

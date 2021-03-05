@@ -4,8 +4,9 @@ class EventsController < ApplicationController
   end
 
   def show
-    @participant = Participant.new
     @event = Event.find(params[:id])
+    @participant = Participant.new
+    @participants = Participant.where(@participant.chatroom == @event.chatroom)
 
     @markers = [{
       lat: @event.latitude,

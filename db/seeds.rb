@@ -1,6 +1,9 @@
 puts "Cleaning database"
 Event.destroy_all
+Participant.destroy_all
+Message.destroy_all
 Chatroom.destroy_all
+UserInterest.destroy_all
 Activity.destroy_all
 User.destroy_all
 

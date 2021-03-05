@@ -35,7 +35,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   def update
-    @user = User.find(params[:id])
+    @user = current_user.find(params[:id])
     if @user.update(configure_update_params)
       redirect_to activities_path
     else

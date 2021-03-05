@@ -19,6 +19,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
       user_interests_path
     end
   end
+
+  def update 
+    raise
+  end
+
+
   # GET /resource/sign_in
   # def create
   #   if @user.save

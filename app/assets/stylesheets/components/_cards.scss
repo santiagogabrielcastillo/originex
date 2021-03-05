@@ -74,6 +74,12 @@
   padding: 16px; 
 }
 
+.card-activity-infos a:hover {
+  color:  rgb(93, 226, 250);
+  text-decoration: none ;
+}
+
+// stars cards
 .card-stars {
   display: flex;
   align-content: flex-end;
@@ -81,13 +87,13 @@
   margin: 20px 20px;
 }
 
-.card-stars h3 {
+.card-stars h2 {
   display: flex;
   justify-content: center;
-  color: rgb(255, 216, 87);  
+  color: rgb(255, 207, 51);  
 }
 
-
+// rectangular- cards with rounded and square images
 .card-rectangular {
   overflow: hidden;
   border-radius: 9px;
@@ -117,18 +123,14 @@
 }
 
 .card-rectangular p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
-  opacity: .7;
+  opacity: 1.0;
   margin-bottom: 0;
   margin: 15px;
 }
 
-.card-stars {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-}
+
 
 .card-rectangular-square-img {
   border-radius: 9px;
@@ -148,4 +150,9 @@
   align-items: center;
   padding: 10px;
 }
-
+ 
+// profile cards
+.card-profile-info a:hover {
+  color:  rgb(242, 74, 85);
+  text-decoration: none ;
+}

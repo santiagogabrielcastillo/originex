@@ -12,13 +12,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  def after_edit_path_for(resource)
-    if current_user.user_interests.count >= 1
-      activities_path
-    else
-      user_interests_path
-    end
-  end
+  # def after_edit_path_for(resource)
+  #   if current_user.user_interests.count >= 1
+  #     activities_path
+  #   else
+  #     user_interests_path
+  #   end
+  # end
 
   def update 
     raise

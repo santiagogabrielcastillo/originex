@@ -36,7 +36,11 @@
               </div>
               <div class="d-flex justify-content-center mb-2">
                 <!--Reemplazar después por el link_to correspondiente-->
-                <a href="#" class="btn-red-degrade">Join event chatroom!</a>
+                <div class="event-show-contact-link">
+                  <%= simple_form_for([event, @participant]) do |f| %>
+                    <%= f.button :submit, "Join event chatroom!", class: "btn btn-red-degrade" %>
+                  <% end %>
+                </div>
               </div>
             </div>
           </div>

@@ -1,8 +1,8 @@
-<div class="container m-auto">
+<div class="card">
   <div class="row">
     <div class="col-xs-4 ">
-      <h3></h3>
-      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <h3>Log in</h3>
+      <%= simple_form_for(resource, as: resource_name, url: user_session_path(resource_name)) do |f| %>
         <div class="form-inputs">
           <%= f.input :email,
                       required: false,

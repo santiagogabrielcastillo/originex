@@ -9,7 +9,7 @@ class Activity < ApplicationRecord
   
   include PgSearch::Model
   pg_search_scope :search_over_activities,
-                  against: %i[ title category address ],
+                  against: %i[ title category zone ],
                   using: {
                     tsearch: { prefix: true }
                   }

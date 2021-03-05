@@ -16,7 +16,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-    @users = @chatroom.users
+    @participants = @chatroom.participants.where(status: true)
   end
 
   def create

@@ -24,7 +24,7 @@
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
           <div class="dropdown-menu mt-0 dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Profile", root_path, class: "dropdown-item" %> 
+            <%= link_to "Profile", user_interests_path, class: "dropdown-item" %> 
             <%= link_to "Edit profile", edit_user_registration_path, class: "dropdown-item" %> 
             <%= link_to "Invitations", participants_path, class: "dropdown-item" %>
             <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %> 

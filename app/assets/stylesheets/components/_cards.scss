@@ -33,6 +33,14 @@
   width: auto;
 }
 
+.card-users {
+  opacity: 1.0;
+
+  &:hover {
+    color: rgb(139, 238, 255);
+    text-decoration: none;
+  }
+}
 
 // cards of activities
 
@@ -83,13 +91,14 @@
 .card-rectangular {
   overflow: hidden;
   border-radius: 9px;
-  height: 300px;
-  width: 70%;
+  height: auto;
+  width: 90%;
   padding: auto;
   background: white;
   display: flex;
   align-items: center;
   padding: 10px;
+  
 }
 
 .card-rectangular-img-circular {
@@ -123,7 +132,7 @@
 
 .card-rectangular-square-img {
   border-radius: 9px;
-  height: 250px;
+  height: 180px;
   width: auto;
   margin: 5px;
 }
@@ -132,10 +141,11 @@
   overflow: hidden;
   border-radius: 9px;
   height: 700px;
-  width: 70%;
+  width: 90%;
   padding: auto;
   background: white;
   display: flex;
   align-items: center;
   padding: 10px;
 }
+

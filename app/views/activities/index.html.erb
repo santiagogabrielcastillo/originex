@@ -1,7 +1,7 @@
 <div class="container">
   <h1 class="text-center m-3">Explore over our available activities</h1>
   <div class="row">
-    <div class="col-10">
+    <div class="col-sm-12 ">
       <%= form_tag activities_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
@@ -13,19 +13,21 @@
   </div>
 
   <div class="row">
-    <div class="col-8">
-      <div class="card-user card-users-infos m-5">
-        <% @activities.each do |activity| %>
+    <div class="col-12">
+      <% @activities.each do |activity| %>
+        <div class="card-rectangular my-3">
           <% if activity.photo.attached? %>
-              <%= cl_image_tag current_user.photo.key %>
+              <%= cl_image_tag activity.photo.key %>
             <% else %>
-              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "card-users" %>
-            <% end %>       
-          <h2><%= link_to "#{activity.title}", activity_path(activity) %></h2>
-          <p><%= activity.category %> | <%= activity.zone %></p>
-          <p><%= activity.description %></p>
-        <% end %>
-      </div>
+              <%= image_tag "https://images.unsplash.com/photo-1534531304203-b830551771b9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDB8fHNrYXRlYm9hcmR8ZW58MHwwfDB8&auto=format&fit=crop&w=500&q=60", class: "card-rectangular-square-img" %>
+            <% end %>  
+          <div class="card-pofile-info">     
+            <h2><%= link_to "#{activity.title}", activity_path(activity) %></h2>
+            <p><%= activity.category %> | <%= activity.zone %></p>
+            <p><%= activity.description %></p>
+          </div> 
+        </div>
+      <% end %>
     </div>
   </div>
 

@@ -1,5 +1,4 @@
 .new-chat {
-
   h3 {
     font-weight: 900
   }
@@ -7,4 +6,36 @@
   p {
     opacity: 0.8;
   }
+
+}
+.user-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.user-list {
+  flex: 0 0 30%;
+}
+
+.user {
+  position: absolute;
+  transform: scale(0);
+}
+
+.user + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.user:checked + label {
+  color: white !important;
 }

@@ -13,22 +13,14 @@
   </div>
 
   <div class="row">
-<<<<<<< HEAD
-    <div class="col-8">
-      <div class="card-user card-users-infos m-5">
-        <% @activities.each do |activity| %>
-          <% if activity.photo.present? %>
-              <%= image_tag activity.photo %>
-=======
     <div class="col-12">
       <% @activities.each do |activity| %>
         <div class="card-rectangular my-3">
-          <% if activity.photo.attached? %>
-              <%= cl_image_tag activity.photo.key %>
->>>>>>> 899104117d094c164118e6ff2a0417c9a88641a7
-            <% else %>
-              <%= image_tag "https://images.unsplash.com/photo-1534531304203-b830551771b9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDB8fHNrYXRlYm9hcmR8ZW58MHwwfDB8&auto=format&fit=crop&w=500&q=60", class: "card-rectangular-square-img" %>
-            <% end %>  
+          <% if activity.photo.nil? %>
+            <%= image_tag "https://images.unsplash.com/photo-1534531304203-b830551771b9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDB8fHNrYXRlYm9hcmR8ZW58MHwwfDB8&auto=format&fit=crop&w=500&q=60", class: "card-rectangular-square-img" %>   
+          <% else %>
+            <%= image_tag activity.photo %>
+          <% end %>  
           <div class="card-profile-info">     
             <h2><%= link_to "#{activity.title}", activity_path(activity) %></h2>
             <p><%= activity.category %> | <%= activity.zone %></p>

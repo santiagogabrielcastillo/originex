@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-12">
         <div class="card-rectangular horizontal-centered">
-          <div>
-            <img src="https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2019/07/Teamlab1.jpg" class="card-rectangular-square-img" />
+          <div class="card-rectangular-square-img">
+            <%= image_tag @activity.photo %>
           </div>
           <div class="card-pofile-info">
             <h2><%= @activity.title %></h2>

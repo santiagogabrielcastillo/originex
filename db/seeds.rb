@@ -83,20 +83,22 @@ ACTIVITIES = [{
   zone: "Palermo",
   photo: "https://images.unsplash.com/photo-1565539383096-875303015bd2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjk2fHxmcmllbmRzJTIwYW5kJTIwYmVlcnxlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
 }, {
-  title: "Antiques markets ",
+  title: "Vintage marketplaces",
   category: "Food and drinks",
   description: "Traditional market from Buenos Aires, with different gastronomic options",
   zone: "San Telmo",
-  photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-},
-#  {
-#   title: "Jardín Japonés",
-#   category: "Outdoor activities",
-#   description: "Beautiful park with a lot of japanese culture",
-#   zone: "Palermo",
-#   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-#   title: "cicling",
+  photo: "https://bymsolishostcollections.com/wp-content/uploads/2018/01/SJLUYda7z_930x525__1.jpg"
+}, {
+  title: "Japanese gardens",
+  category: "Outdoor activities",
+  description: "Japanese gardens are traditional gardens whose designs are accompanied by 
+  Japanese aesthetics and philosophical ideas, avoid artificial ornamentation,
+   and highlight the natural landscape.",
+  zone: "Palermo",
+  photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnMngMo54c2QWLisHdEiLp8FC-aL8oi1GRlA&usqp=CAU"
+}
+# , {
+#   title: "Cicling",
 #   category: "Cultural activities",
 #   description: "A lot of fantastic and new art exhibitions",
 #   zone: "Palermo",

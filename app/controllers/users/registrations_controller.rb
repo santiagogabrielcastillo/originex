@@ -21,8 +21,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def update
-    raise
+  @user = current_user.user_id
+    if @user.update(configure_update_params)
+      redirect_to activities_path
+    else
+      render :new
+    end
   end
+
 
 
   # GET /resource/sign_in

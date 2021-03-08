@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   resources :chatrooms, only: :show do
     resources :messages, only: :create
     resources :events, only: %i[new create]
-    
   end
+
   resources :participants, only: %I[index update destroy]
+
+  resources :users, only: :show
 end

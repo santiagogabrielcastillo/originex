@@ -29,7 +29,9 @@
               <%# </div> %>
               <div class="card-activity-infos">
                 <div>
-                  <h1><%= participant.user.full_name %></h1>
+                  <%= link_to user_path(part.user) do %>
+                    <h1><%= participant.user.full_name %></h1>
+                  <% end %>
                   <p><%= participant.user.birthday %></p>
                   <p><%= participant.user.address %></p>
                 </div>

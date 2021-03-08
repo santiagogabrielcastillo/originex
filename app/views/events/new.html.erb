@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="text-center mb-4">Create an event for #<%= @chatroom.title %></h1>
+  <h1 class="text-center mb-4 my-4">Create an event for #<%= @chatroom.title %></h1>
   <div class="row text-center">
     <div class="col-12">
       <%= simple_form_for [@chatroom, @event] do |f| %>
@@ -26,11 +26,17 @@
         <div class="chatroom-user text-center">
           <div class="row">
             <div class="col-12 col-lg-4">
-              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+              <% if part.user.photo.attached? %>
+                <%= cl_image_tag part.user.photo.key %>
+                  <% else %>
+                <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" %>
+              <% end %> 
             </div>
             <div class="col-12 col-lg-8">
               <div class="chatroom-user-infos">
-                <h2><%= part.user.full_name %></h2>
+                <%= link_to user_path(part.user) do %>
+                  <h2><%= part.user.full_name %></h2>
+                <% end %>
                 <p>Username: <%= part.user.username %></p>
                 <p>Email: <%= part.user.email %></p>
                 <p>Address: <%= part.user.address %></p>

@@ -4,7 +4,6 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  width: 20%;
 }
 
 .card-users {
@@ -63,22 +62,22 @@
   position: relative;
 }
 
-.card-activity > img {
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-}
+    img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
 
-.card-activity h1 {
-  font-size: 18px;
-  font-weight: bold;
-  color: rgba( 255 ,87 ,97, 1.0);
-}
+    h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba( 255 ,87 ,97, 1.0);
+  }
 
-.card-activity p {
-  font-size: 12px;
-  opacity: .7;
-}
+    p {
+    font-size: 12px;
+    opacity: .7;
+  }
 
 .card-activity .location {
   position: absolute;
@@ -107,10 +106,10 @@
 
 // stars cards
 .card-stars {
+  font-size: 16px;
   display: flex;
   align-content: flex-end;
   justify-content: center;
-  margin: 20px 20px;
 }
 
 .card-stars h2 {
@@ -125,12 +124,30 @@
   border-radius: 9px;
   height: auto;
   width: 90%;
-  padding: auto;
   background: white;
   display: flex;
   align-items: center;
   padding: 10px;
   
+    h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 15px;
+  }
+    p {
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 1.0;
+    margin-bottom: 0;
+    margin: 15px;
+  }
+}
+
+.card-rectangular-square-img {
+  border-radius: 9px;
+  height: 200px;
+  width: auto;
+  margin: 5px 10px 5px 5px;
 }
 
 .card-rectangular-img-circular {
@@ -139,36 +156,11 @@
   border-radius: 50%;
   object-fit: cover;
   margin: 30px;
-
-}
-
-.card-rectangular h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 15px;
-}
-
-.card-rectangular p {
-  font-size: 14px;
-  line-height: 1.4;
-  opacity: 1.0;
-  margin-bottom: 0;
-  margin: 15px;
-}
-
-
-
-.card-rectangular-square-img {
-  border-radius: 9px;
-  height: 180px;
-  width: auto;
-  margin: 5px;
 }
 
 .card-rectangular-bigger {
   overflow: hidden;
   border-radius: 9px;
-  height: 700px;
   width: 90%;
   padding: auto;
   background: white;

@@ -13,8 +13,21 @@
   //     opacity: 1;
   //   }
 
-  .searchable-items {
+  .searchable-item {
     flex-grow: 1;
+    background-color: rgba(244, 131, 120, .01);
+    border: none;
+
+      &:hover {
+        border: 1px solid rgb(197, 197, 197);
+      }
+  }
+
+  .search-zone {
+    width: 30%;
+    background-color: rgba(244, 131, 120, .01);
+    border: 1px solid rgb(197, 197, 197);
+    font-size: 14px;
   }
 
   .search-icon {

@@ -29,6 +29,21 @@
 
       .btn-search-bar {
         margin-top: 20px;
+
+        .search-zone {
+          font-size: 16px;
+          width: 40%;
+          margin-left: 5px;
+          margin-right: 10px;
+        }
+
+        .searchable-item {
+          font-size: 16px;
+        }
+
+        .search-icon {
+          font-size: 16px;
+        }
       }
   }
 }
@@ -50,11 +65,6 @@
      .btn-search-bar {
        margin-top: 15px;
        padding: 14px 22px;
-       font-size: 20px;
- 
-       .search-icon {
-         font-size: 20px;
-       }
      }
    }
  }
@@ -77,11 +87,6 @@
      .btn-search-bar {
        margin-top: 15px;
        padding: 12px 20px;
-       font-size: 18px;
- 
-       .search-icon {
-         font-size: 18px;
-       }
      }
    }
  }
@@ -104,12 +109,19 @@
      .btn-search-bar {
        margin-top: 15px;
        padding: 10px 18px;
-       font-size: 14px;
- 
-       .search-icon {
-         font-size: 14px;
-         padding: 10px 10px;
-       }
+       
+       .search-zone {
+        font-size: 14px;
+        width: 50%;
+      }
+
+      .searchable-item {
+        font-size: 14px;
+      }
+
+      .search-icon {
+        font-size: 14px;
+      }
      }
    }
  }
@@ -131,12 +143,20 @@
      .btn-search-bar {
        margin-top: 10px;
        padding: 6px 16px;
-       font-size: 12px;
- 
-       .search-icon {
-         font-size: 12px;
-         padding: 12px 10px;
-       }
+       
+       .search-zone {
+        font-size: 12px;
+        width: 65%;
+      }
+
+      .searchable-item {
+        font-size: 12px;
+      }
+
+      .search-icon {
+        font-size: 12px;
+        padding: 10px 10px;
+      }
      }
    }
  }
@@ -158,10 +178,19 @@
       .btn-search-bar {
         margin-top: 10px;
         padding: 4px 10px;
-        font-size: 10px;
+        
+        .search-zone {
+          font-size: 10px;
+          width: 70%;
+        }
+  
+        .searchable-item {
+          font-size: 10px;
+        }
   
         .search-icon {
           font-size: 10px;
+          padding: 9px 10px;
         }
       }
     }
@@ -184,10 +213,20 @@
       .btn-search-bar {
         margin-top: 8px;
         padding: 2px 6px;
-        font-size: 6px;
+      
+        .search-zone {
+          font-size: 8px;
+          width: 70%;
+        }
+  
+        .searchable-item {
+          font-size: 8px;
+        }
   
         .search-icon {
-          font-size: 6px;
+          font-size: 8px;
+          padding: 9px 8px;
+          margin-right: 5px;
         }
       }
     }

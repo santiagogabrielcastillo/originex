@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/autocomplete', to: 'activities#autocomplete'
+
   resources :user_interests, only:  %i[index new create destroy]  
   resources :activities, only: %i[index show] do
     resources :events, only: %i[show]      

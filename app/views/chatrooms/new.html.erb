@@ -9,6 +9,7 @@
                 <div>
                   <h1><%= user.username %></h1>
                   <p><%= user.full_name %></p>
+                  <%= link_to 'See profile', user_path(user) %>
                 </div>
               </div>
             </div>

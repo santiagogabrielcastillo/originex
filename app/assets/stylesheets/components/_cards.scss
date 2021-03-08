@@ -55,9 +55,11 @@
 .card-activity {
   border-radius: 9px;
   width: 250px;
-  height: auto;
+  height: 275px;
   overflow: hidden;
-  background: white;  
+  background: white;
+  box-shadow: 1px 1px 10px lightgray;
+  position: relative;
 
     img {
     width: 100%;
@@ -75,16 +77,31 @@
     font-size: 12px;
     opacity: .7;
   }
-}
 
+  .location {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    align-items: flex-start;
 
-.card-activity .card-activity-infos {
-  padding: 16px; 
-}
+    .icon-location {
+      color: $warning;
+    }
 
-.card-activity-infos a:hover {
-  color:  rgb(93, 226, 250);
-  text-decoration: none ;
+    .text-location {
+      color: #f37b6b;
+      margin-bottom: 0;
+    }
+  }
+
+  .card-activity-infos {
+    padding: 16px; 
+
+    a:hover {
+      color:  rgb(93, 226, 250);
+      text-decoration: none ;
+    }
+  }
 }
 
 // stars cards
@@ -158,4 +175,10 @@
 .card-profile-info a:hover {
   color:  rgb(242, 74, 85);
   text-decoration: none ;
+}
+
+@include media-breakpoint-down(sm) {
+  .card-activity {
+    max-width: 350px;
+  }
 }

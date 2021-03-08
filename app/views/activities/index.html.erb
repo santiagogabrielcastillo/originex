@@ -16,8 +16,8 @@
     <div class="col-8">
       <div class="card-user card-users-infos m-5">
         <% @activities.each do |activity| %>
-          <% if activity.photo.attached? %>
-              <%= cl_image_tag current_user.photo.key %>
+          <% if activity.photo.present? %>
+              <%= image_tag activity.photo %>
             <% else %>
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "card-users" %>
             <% end %>       

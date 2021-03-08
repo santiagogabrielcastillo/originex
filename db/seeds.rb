@@ -37,68 +37,162 @@ end
 ACTIVITIES = [{
     title: "Go for a run",
     category: "Outdoor sports",
-    description: "Enjoy the nature while running among friends!",
-    zone: "Palermo"
+    description: "On the definitive list of amazing exercise activities,
+     running ranks pretty highly — the practical benefits include convenience and affordability, 
+     but from a health standpoint, it’s an effective way to keep both your body and brain in great shape.Just lace up your running shoes and you’re ready to pound the pavement — or the treadmill, the track, the park, or the trail behind your house. 
+     The options are endless. And you don’t have to carve out precious alone time to run, either. ",
+    zone: "Palermo",
+    photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
   }, {
-    title: "Go to the Art's museum",
+    title: "Go to an art exposition",
     category: "Cultural activities",
     description: "Discover the Museo de Arte Latinoamericano de Buenos Aires (MALBA)",
-    zone: "Palermo"
+    zone: "Palermo",
+    photo:
   }, {
-    title: "Eat a pizza",
+    title: "pizza",
     category: "Food and drinks",
     description: "Have a pizza in an iconic place of Buenos Aires, Pizzería Guerrín",
-    zone: "Microcentro"
+    zone: "Microcentro",
+    photo:
   }, {
-  title: "play football in the park",
+  title: "Football",
   category: "Outdoor sports",
   description: "Meet some people to play ball with!",
-  zone: "Devoto"
+  zone: "Devoto",
+  photo:
 }, {
-  title: "Go to a recital",
+  title: "Go to a concert",
   category: "Cultural activities",
   description: "check in",
-  zone: "Belgrano"
+  zone: "Belgrano",
+  photo:
 }, {
-  title: "Eat a pizza",
+  title: "beer tour",
   category: "Food and drinks",
   description: "Have a pizza in an iconic place of Buenos Aires, Pizzería Guerrín",
-  zone: "Microcentro"
+  zone: "Microcentro",
+  photo:
 }, {
   title: "Mercado San Nicolás",
   category: "Food and drinks",
   description: "Traditional market from Buenos Aires, with different gastronomic options",
-  zone: "Centro"
+  zone: "Centro",
+  photo:
 }, {
   title: "Jardín Japonés",
   category: "Outdoor activities",
   description: "Beautiful park with a lot of japanese culture",
-  zone: "Palermo"
+  zone: "Palermo",
+  photo:
 }, {
-  title: "Museo de Artes Plásticas Eduardo Sívori",
+  title: "cicling",
   category: "Cultural activities",
   description: "A lot of fantastic and new art exhibitions",
-  zone: "Palermo"
+  zone: "Palermo",
+  photo:
 } ,{
-  title: "Picnic at Hipódromo de Palermo",
+  title: "Picnic at the park",
   category: "Food and drinks",
   description: "Let's eat in an iconic place of Buenos Aires, while enjoying the sunset",
-  zone: "Palermo"
+  zone: "Palermo",
+  photo:
 }, {
   title: "Go skateboarding",
   category: "Outdoor sports",
   description: "Enjoy this amazing sport with friends!",
-  zone: "Caballito"
+  zone: "Caballito",
+  photo:
 }, {
-  title: "Reserva Ecológica",
+  title: "",
   category: "Outdoor activities",
   description: "Walk by the Rio de La Plata river",
-  zone: "Puerto Madero"
+  zone: "Puerto Madero",
+  photo:
 }, {
-  title: "Cycling next to Aeroparque",
+  title: "kitesurf",
   category: "Outdoor sports",
   description: "Enjoy this beautiful sport while enjoying the landscape",
-  zone: "Palermo"
+  zone: "Palermo",
+  photo:
+}, {
+  title: "sailing",
+  category: "Outdoor sports",
+  description: "Enjoy the nature while running among friends!",
+  zone: "Palermo",
+  photo:
+}, {
+  title: "paintball",
+  category: "Cultural activities",
+  description: "Discover the Museo de Arte Latinoamericano de Buenos Aires (MALBA)",
+  zone: "Palermo",
+  photo:
+}, {
+  title: "board games",
+  category: "Food and drinks",
+  description: "Have a pizza in an iconic place of Buenos Aires, Pizzería Guerrín",
+  zone: "Microcentro",
+  photo:
+}, {
+title: "",
+category: "Outdoor sports",
+description: "Meet some people to play ball with!",
+zone: "Devoto",
+photo:
+}, {
+title: "ping-pon and beer",
+category: "Food and drinks",
+description: "",
+zone: "Belgrano",
+photo:
+}, {
+title: "Visit to historic an iconic places",
+category: "Food and drinks",
+description: "Have a pizza in an iconic place of Buenos Aires, Pizzería Guerrín",
+zone: "Microcentro",
+photo:
+}, {
+title: "Theater",
+category: "Cultural activities",
+description: "Traditional market from Buenos Aires, with different gastronomic options",
+zone: "Centro",
+photo:
+}, {
+title: "kayaking",
+category: "Outdoor sports",
+description: "Beautiful park with a lot of japanese culture",
+zone: "Palermo",
+photo:
+}, {
+title: "escape room",
+category: "Cultural activities",
+description: "A lot of fantastic and new art exhibitions",
+zone: "Palermo",
+photo:
+} ,{
+title: "Go climbing",
+category: "Outdoor sports",
+description: "",
+zone: "Palermo",
+photo:
+}, {
+title: "Go skateboarding",
+category: "",
+description: "",
+zone: "Caballito",
+photo:
+}, {
+title: "",
+category: "",
+description: "",
+zone: "",
+photo:
+}, {
+title: "",
+category: "",
+description: "",
+zone: "",
+photo:
 }
 ]
 

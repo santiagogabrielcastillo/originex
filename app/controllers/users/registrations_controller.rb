@@ -5,7 +5,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_in_params, only: [:create]
 
   def after_sign_up_path_for(resource)
-    if current_user.user_interests.count >= 1
+    if current_user.user_interests.count >=1
       activities_path
     else
       user_interests_path
@@ -20,9 +20,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  def update 
-    raise
+  def update
+  @user = current_user.user_id
+    if @user.update(configure_update_params)
+      redirect_to activities_path
+    else
+      render :new
+    end
   end
+
 
 
   # GET /resource/sign_in

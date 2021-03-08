@@ -16,6 +16,28 @@
         <p>Aliquam ullamcorper turpis orci, in maximus eros convallis imperdiet. Aliquam ut pharetra velit, ac accumsan ex. Vivamus eu ornare eros, sed euismod metus. Pellentesque at erat ut risus interdum finibus at ac massa. Praesent et pellentesque purus. Sed varius malesuada nulla, a ultrices risus varius congue.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat lacus at tincidunt imperdiet. Cras ac justo eget nunc scelerisque tempus in sit amet libero. Vestibulum sagittis laoreet sollicitudin. Proin id orci leo.</p>
       </div>
+      <div class="d-flex">
+        <% @participants.each do |participant| %>
+          <div class="col-12 col-md-4 col-xl-4 m-2">
+            <div class="card-activity">
+              <%# <div class="event-user-card-img"> %>
+                <% if participant.user.photo.attached? %>
+                  <%= cl_image_tag participant.user.photo.key %>
+                    <% else %>
+                  <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" %>
+                <% end %>
+              <%# </div> %>
+              <div class="card-activity-infos">
+                <div>
+                  <h1><%= participant.user.full_name %></h1>
+                  <p><%= participant.user.birthday %></p>
+                  <p><%= participant.user.address %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
     <div class="col-4">
       <div id="event-info">
@@ -24,7 +46,6 @@
           data-markers="<%= @markers.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
-        <%# <div class="d-md-flex"> %>
           <div class="d-flex mt-3">       
             <i class="my-auto fas fa-map-marker-alt"></i>
             <p class="my-auto ml-3"><%= @event.address %></p>
@@ -41,10 +62,9 @@
             <i class="my-auto fas fa-running"></i>
             <p class="my-auto ml-3"><%= @event.activity.category %></p>
           </div>
-        <%# </div>       %>
         <div class="event-show-contact-link">
           <%= simple_form_for([@event, @participant]) do |f| %>
-            <%= f.button :submit, "Contact event organizer", class: "btn btn-red-degrade" %>
+            <%= f.button :submit, "Join event chatroom", class: "btn btn-red-degrade" %>
           <% end %>
         </div>
       </div>

@@ -1,31 +1,41 @@
 <div class="container">
   <h1 class="text-center m-3">Explore over our available activities</h1>
   <div class="row">
-    <div class="col-10">
-      <%= form_tag activities_path, method: :get do %>
+    <div class="col-12 col-md-6 col-lg-4">
+      <%= form_tag activities_path, class: "d-flex align-items-center", method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
           placeholder: "Find an activity" %>
-        <%= submit_tag "Search", class: "btn btn-red-degrade" %>
+        <%= submit_tag "Search", class: "btn btn-red-degrade search-activites" %>
       <% end %>
     </div>
   </div>
 
   <div class="row">
+<<<<<<< HEAD
     <div class="col-8">
       <div class="card-user card-users-infos m-5">
         <% @activities.each do |activity| %>
           <% if activity.photo.present? %>
               <%= image_tag activity.photo %>
+=======
+    <div class="col-12">
+      <% @activities.each do |activity| %>
+        <div class="card-rectangular my-3">
+          <% if activity.photo.attached? %>
+              <%= cl_image_tag activity.photo.key %>
+>>>>>>> 899104117d094c164118e6ff2a0417c9a88641a7
             <% else %>
-              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "card-users" %>
-            <% end %>       
-          <h2><%= link_to "#{activity.title}", activity_path(activity) %></h2>
-          <p><%= activity.category %> | <%= activity.zone %></p>
-          <p><%= activity.description %></p>
-        <% end %>
-      </div>
+              <%= image_tag "https://images.unsplash.com/photo-1534531304203-b830551771b9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDB8fHNrYXRlYm9hcmR8ZW58MHwwfDB8&auto=format&fit=crop&w=500&q=60", class: "card-rectangular-square-img" %>
+            <% end %>  
+          <div class="card-profile-info">     
+            <h2><%= link_to "#{activity.title}", activity_path(activity) %></h2>
+            <p><%= activity.category %> | <%= activity.zone %></p>
+            <p><%= activity.description %></p>
+          </div> 
+        </div>
+      <% end %>
     </div>
   </div>
 

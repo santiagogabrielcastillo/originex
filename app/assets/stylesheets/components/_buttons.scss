@@ -20,20 +20,22 @@
   .search-icon {
     height: 100%;
     width: 100px;
-    border-radius: 50px;
+    border-radius: 3px;
     flex-grow: 0;
-
-    .fas {
-      font-size: 20px;
-      color: white;
+    font-size: 20px;
+    padding: 8px 10px;
+    width: fit-content;
+    color: rgba(39, 39, 39, 0.5);
+    background: #8beeff;
+    opacity: 0.8;
+    border: none;
 
       &:hover {
-        color: rgb(139, 238, 255);
+        opacity: 1;
         text-decoration: none;
       }
     }
   }
-}
 
 .btn-red-degrade {
     color: rgb(255, 255, 255);

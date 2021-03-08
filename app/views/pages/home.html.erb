@@ -10,7 +10,7 @@
             data: { 'autocomplete-target' => 'input' } %>
           <ul data-autocomplete-target="results" class="option-list"></ul>
         </div>
-        <%= select_tag :zone, options_for_select(ZONES), include_blank: false,
+        <%= select_tag :zone, options_for_select(ZONES), include_blank: true,
           class: "form-control search-zone my-1" %>
         <%= button_tag "", class: "search-icon text-right justify-content-end fas fa-search" %>
       <% end %>

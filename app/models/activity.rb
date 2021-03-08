@@ -5,7 +5,6 @@ class Activity < ApplicationRecord
   has_many :events, through: :chatrooms
   has_many :user_interests
   has_many :users, through: :user_interests
-  has_one_attached :photo
 
   validates :title, :description, :category, presence: true
   

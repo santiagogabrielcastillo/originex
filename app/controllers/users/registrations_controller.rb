@@ -40,14 +40,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   end
   # end
 
-  # def update
-  #   super
-  #   if @user.save
-  #     redirect_to activities_path
-  #   else
-  #     render :new
-  #   end
-  # end
+  def update
+    @user = current_user.find(params[:id])
+    if @user.update(configure_update_params)
+      redirect_to activities_path
+    else
+      render :new
+    end
+  end
+
   # POST /resource/sign_in
   # def create
   #   super
@@ -61,7 +62,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_in_params
-  #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
-  # end
+  def configure_update_params
+    devise_parameter_sanitizer.permit(:update, keys: [:user, :filename, :email, :fullname, :address, :phone_number, :birthday])
+  end
 end

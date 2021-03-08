@@ -74,5 +74,14 @@
 @include media-breakpoint-down(sm) {
   .navbar-originex {
     padding: 8px 12px;
+    
+    #dropdown-section img {
+      display: none;
+    }
+
+  }
+  
+  .btn-menu {
+    display: block;
   }
 }

@@ -34,6 +34,7 @@ import { cleanInputForExport } from '../components/init_chatroom';
 import { questionAnsweredAppears } from '../plugins/clickable_faq_icon';
 import { initFlatpickr } from '../components/init_flatpickr';
 import { initFlatpickrBday } from '../components/init_flatpickr';
+import { initStimulusAutocomplete } from '../components/init_stimulus_autocomplete';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -45,5 +46,6 @@ document.addEventListener('turbolinks:load', () => {
   questionAnsweredAppears();
   initFlatpickr();
   initFlatpickrBday();
+  initStimulusAutocomplete();
 });
 

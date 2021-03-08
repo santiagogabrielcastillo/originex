@@ -1,15 +1,18 @@
   <div class="banner row">
-    <div class="container banner-content col-6">
+    <div class="container banner-content col-10 col-md-8 col-xl-6">
       <h1>Share new <br/> experiences</h1>
        <%= form_tag activities_path, class: "d-flex align-items-center btn-search-bar", method: :get do %>
         <div data-controller="autocomplete" data-autocomplete-url-value="/autocomplete">
           <%= text_field_tag :query,
-            params[:query],
-            class: "form-control searchable-items my-1 mx-3 w-100",
-            placeholder: "Find an activity",
+          params[:query],
+          class: "form-control searchable-item my-1 col-md-mx-3",
+          placeholder: "Find an activity...",
             data: { 'autocomplete-target' => 'input' } %>
-            <ul data-autocomplete-target="results" class="option-list"></ul>
+          <ul data-autocomplete-target="results" class="option-list"></ul>
         </div>
+        <%= select_tag :zone, options_for_select(ZONES), include_blank: false,
+          class: "form-control search-zone my-1" %>
+        <%= button_tag "", class: "search-icon text-right justify-content-end fas fa-search" %>
       <% end %>
     </div>
     <div class="banner-background col-5 col-lg-6">
@@ -20,22 +23,14 @@
   
   <!-- aca seria iterar por reviews y hay que modificar las cards -->
   <div class="container mt-5">
-    <div class="row m-2 justify-content-start">
+    <div class="row m-2 justify-content-center">
       <% @activities.each do |activity| %>
-        <div class="card-activity col-12 col-md-6 col-lg-4 col-xl-3 m-3 p-0">
+        <div class="card-activity col-12 col-md-5 col-lg-3 m-3 p-0">
           <img src="https://images.unsplash.com/photo-1541525897844-9851970da95a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fGxvbmdib2FyZGluZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-        <div class="card-activity-infos">
-          <div>
-           <h1><%= link_to "#{activity.title}", activities_path(activity) %></h1>
-            <p><%= activity.description %></p>
-          </div>
-        </div>
-          <div class="card-stars">
-            <h2><i class="fas fa-star"></i></h2>
-            <h2><i class="fas fa-star"></i></h2>
-            <h2><i class="fas fa-star"></i></h2>
-            <h2><i class="fas fa-star"></i></h2>
-            <h2><i class="fas fa-star"></i></h2>
+          <div class="card-activity-infos">
+             <h1><%= link_to "#{activity.title}", activities_path(activity) %></h1>
+              <p><%= activity.description %></p>
+             <div class="d-flex location"> <i class="mx-1 icon-location fas fa-map-marker-alt"></i> <p class="text-location"><%= activity.zone %></p> </div>
           </div>
         </div>
       <% end %>

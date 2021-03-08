@@ -12,21 +12,21 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  def after_edit_path_for(resource)
-    if current_user.user_interests.count >= 1
-      activities_path
-    else
-      user_interests_path
-    end
-  end
+  # def after_edit_path_for(resource)
+  #   if current_user.user_interests.count >= 1
+  #     activities_path
+  #   else
+  #     user_interests_path
+  #   end
+  # end
 
   def update
-  @user = current_user.user_id
-    if @user.update(configure_update_params)
-      redirect_to activities_path
-    else
-      render :new
-    end
+    @user = current_user.id
+      if @user.save(configure_permitted_parameters)
+        user_registration_path
+      else
+        render :edit
+      end
   end
 
 

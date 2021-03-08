@@ -11,11 +11,12 @@
                 <%= cl_image_tag part.user.photo.key %>
                   <% else %>
                 <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" %>
-              <% end %>
             </div>
             <div class="col-12 col-lg-8">
               <div class="chatroom-user-infos">
-                <h2><%= part.user.full_name %></h2>
+                <%= link_to user_path(part.user) do %>
+                  <h2><%= part.user.full_name %></h2>
+                <% end %>
                 <p>Username: <%= part.user.username %></p>
                 <p>Email: <%= part.user.email %></p>
                 <p>Address: <%= part.user.address %></p>

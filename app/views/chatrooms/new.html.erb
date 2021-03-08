@@ -1,4 +1,21 @@
 <div class="main-container">
+  
+  <div class="container new-chat m-3">
+    <h3>Meet new people, open your mind.</h3>
+    <p>Invite people interested in the same activity that you to your chatroom! Know each other and create a new event!</p>
+    <div class="row">
+      <div class="col-12 col-md-6 col-xl-8">
+          <%= simple_form_for([@activity, @chatroom]) do |f| %>
+            <%= f.input :title %>
+            <%= f.input :description %>
+            <%= f.input :users, collection: @users, label_method: :full_name, value_method: :id, include_blank: false, input_html: {multiple: true}, class: "user-list" %>
+            <%= f.button :submit, class: 'btn-red-degrade' %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
     <div class="row">
       <% @users.each do |user| %>
         <div class="col-12 col-md-6 col-xl-4">
@@ -15,23 +32,6 @@
             </div>
         </div>
       <% end %>
-    </div>
-  
-  <div class="m-5">
-    <div class="row">
-      <div class="col-12 col-md-6 col-xl-8">  
-        <div class="m-2">
-          <h3>Create your own chatroom</h3>
-          <p>Choose people to share the experience and start a chat to arrange the details</p>
-        </div>
-          <%= simple_form_for([@activity, @chatroom]) do |f| %>
-            <%= f.input :title %>
-            <%= f.input :description %>
-            <%= f.input :users, collection: @users, label_method: :full_name, value_method: :id, include_blank: false, input_html: {multiple: true} %>
-            <%= f.button :submit, class: 'btn-red-degrade' %>
-          <% end %>
-
-      </div>
     </div>
   </div>
 </div>

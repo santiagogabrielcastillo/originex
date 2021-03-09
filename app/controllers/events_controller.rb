@@ -25,6 +25,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.chatroom = @chatroom
     @event.activity = @chatroom.activity
+    @participants = @chatroom.participants.where(status: true)
     if @event.save
       redirect_to activity_event_path(@event.activity, @event)
     else
@@ -39,6 +40,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:details, :status, :date, :address)
+    params.require(:event).permit(:details, :status, :date, :address, :photo)
   end
 end

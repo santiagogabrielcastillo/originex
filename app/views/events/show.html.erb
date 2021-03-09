@@ -50,11 +50,11 @@
         </div>
         <div class="d-flex mt-3">       
           <i class="my-auto fas fa-calendar-alt"></i>
-          <p class="my-auto ml-2"><%= @event.date %></p>
+          <p class="my-auto ml-2"><%= @date.strftime("%d-%m-%Y") %></p>
         </div>
         <div class="d-flex mt-3">       
           <i class="my-auto fas fa-clock"></i>
-          <p class="my-auto ml-2"></p>
+          <p class="my-auto ml-2"><%= @time %></p>
         </div>
         <div class="d-flex mt-3">       
           <i class="my-auto fas fa-running"></i>

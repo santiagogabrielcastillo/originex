@@ -3,8 +3,10 @@ class ActivitiesController < ApplicationController
   def index
     if params[:query].present?
       @activities = Activity.search_over_activities(params[:query])
-    else
+    elsif user_signed_in?
       @activities = current_user.activities
+    else
+     @activities = Activity.all 
     end
   end
 

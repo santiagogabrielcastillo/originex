@@ -78,7 +78,7 @@ ACTIVITIES = [{
   zone: "Paternal",
   photo: "https://images.unsplash.com/photo-1544698310-74ea9d1c8258?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8c29jY2VyfGVufDB8MHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
 }, {
-  title: "Music concert",
+  title: "Concert",
   category: "Cultural activities",
   description: "Buenos Aires is regarded by Argentinians as “the city that never sleeps,” and from a musical standpoint, they have a valid point. You can catch live music across the city from Monday to Sunday, with styles ranging from urban to electronic, rock to reggae, and classical to hip-hop.",
   zone: "Caballito",
@@ -86,107 +86,96 @@ ACTIVITIES = [{
 }, {
   title: "Small beer places",
   category: "Food and drinks",
-  description: "Have a party streak in you? You will be delighted to learn that when the lights go down in Palermo, the city comes alive in a legendary fashion ne ",
-  zone: "Boedo",
+  description: "From Palermo to San Telmo to Retiro and beyond, the city is full of top-quality watering holes.",
+  zone: "Palermo",
   photo: "https://images.unsplash.com/photo-1565539383096-875303015bd2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjk2fHxmcmllbmRzJTIwYW5kJTIwYmVlcnxlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
 }, {
-  title: "Antiques markets ",
+  title: "Vintage marketplaces",
+  category: "Indoor activities",
+  description: "Traditional market from Buenos Aires, with different gastronomic options",
+  zone: "San Telmo",
+  photo: "https://bymsolishostcollections.com/wp-content/uploads/2018/01/SJLUYda7z_930x525__1.jpg"
+}, {
+  title: "Parks and gardens",
+  category: "Outdoor activities",
+  description: "Japanese gardens are traditional gardens whose designs are accompanied by 
+  Japanese aesthetics and philosophical ideas, avoid artificial ornamentation,
+   and highlight the natural landscape.",
+  zone: "Palermo",
+  photo: "https://turismo.buenosaires.gob.ar/sites/turismo/files/jarin_japones_panoramica1200.jpg"
+}, {
+  title: "Urban Cicling",
+  category: "Outdoor sports",
+  description: "More and more people are challenging the car-dominated culture of our cities. And why not? Urban cycling is fun, healthy and lets you see your town in a new and interesting way. A bike can get you to the grocery store, concerts, to school or work—you name it. ",
+  zone: "Recoleta",
+  photo: "https://images.unsplash.com/photo-1587829723005-8c65e895fa12?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
+} ,{
+  title: "Picnic at the park",
   category: "Food and drinks",
-  description: "Traditional market from Buenos Aires, with different gastronomic options.",
+  description: "Picnic definition is - an excursion or outing with food usually provided by members of the group and eaten in the open; also : the food provided for a picnic. ",
+  zone: "Saavedra",
+  photo: "https://images.unsplash.com/photo-1455734729978-db1ae4f687fc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjQxfHxwaWNuaWN8ZW58MHwwfDB8&auto=format&fit=crop&w=500&q=60"
+}, {
+  title: "Skateboarding",
+  category: "Outdoor sports",
+  description: "Skateboarding is an action sport that involves riding and performing tricks using a skateboard, as well as a recreational activity, an art form, an entertainment industry job, and a method of transportation.",
+  zone: "Caballito",
+  photo: "https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60"
+}, {
+  title: "Go Sailing",
+  category: "Outdoor activities",
+  description: "Sailing is a sport fueled by the wind and the passion of the sailors who take the helm.Whether you’re interested in day sailing, cruising, competitive racing, or charter vacations, there is a sailboat for you and a lifetime of sailing adventures ahead.",
+  zone: "Puerto Madero",
+  photo: "https://images.unsplash.com/photo-1572160284221-09b54258561f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHNhaWwlMjBib2F0JTIwY2l0eXxlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+}, {
+  title: "Kitesurf",
+  category: "Outdoor sports",
+  description: "Argentina might not be on the most popular kiteboarding destinations list, but it definitely has some good spots and ... If you're not sure where to go, you can go on organized kite tours where they take you around the ... Capital: Buenos Aires.",
+  zone: "Nuñez",
+  photo: "https://media.lacapital.com.ar/p/ba1978e4fdc824b88884b4be3308a2af/adjuntos/203/imagenes/029/427/0029427312/una-playa-llena-personas-haciendo-kitesurf-deporte-patentado-1977-gijsbertus-adrianus-panhuise.jpg"
+}, {
+  title: "Paintball",
+  category: "Outdoor sports",
+  description: "Discover the Museo de Arte Latinoamericano de Buenos Aires (MALBA)",
+  zone: "Parque Patricios",
+  photo: "https://images.unsplash.com/photo-1595239094941-3fca37f737a7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzF8fHBhaW50YmFsbHxlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+}, {
+  title: "Board games",
+  category: "Indoor activity",
+  description: "You have allways some board game fanatic like your self, there are lots of places you can go",
+  zone: "Microcentro",
+  photo:"https://images.unsplash.com/photo-1532457573542-37fe94c98cf2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxheWluZyUyMGJvYXJkJTIwZ2FtZXN8ZW58MHwwfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+}, {
+  title: "Inline skating",
+  category: "Outdoor sports",
+  description: "Uses similar balance points, engages many of the same muscle groups from skiing, and many moves use the same body position. Over the past 10 years it has become more of a thing, and if there’s a good bike path I’ll blade for fun.",
+  zone: "Devoto",
+  photo: "https://media.istockphoto.com/photos/rollerblading-on-asphalt-road-picture-id599489564?k=6&m=599489564&s=612x612&w=0&h=XhAN3YF53dbIEwhdnR1fKX4VijUYN0iLcT7dlntb9CE="
+  }, {
+  title: "Ping-pong and beer",
+  category: "Food and drinks",
+  description: "There ara some awsome places, vibrant and full of young people having fun, playing ping pong, pool or table football. With super low-key that brings you back to the pre-smart phone Flappy bird days. it's a great atmosphere to grab some beers with friends and start a game of foosball. ",
+  zone: "Villa Crespo",
+  photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuvpUKD1LIsXDYem_sLYz_ZycWvYzPnJJwGg&usqp=CAU"
+  }, {
+  title: "Visit to historic an iconic places",
+  category: "Cultural activities",
+  description: "Buenos Aires is Argentina’s big, cosmopolitan capital city. Its center is the Plaza de Mayo, lined with stately 19th-century buildings including Casa Rosada, the iconic, balconied presidential palace. Other major attractions include Teatro Colón, a grand 1908 opera house with nearly 2,500 seats, and the modern MALBA museum, displaying Latin American art.",
   zone: "Monserrat",
+  photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAjIXx9czfJTaCMGcV9KaaHOggeReja75yqA&usqp=CAU"
+  }, {
+  title: "Theater",
+  category: "Cultural activities",
+  description: "The great thing about Buenos Aires is that there is an almost ridiculous number of theaters of every imaginable size, putting on every conceivable type of show, from the huge musical productions, to independent comedies, dramas, and other alternative shows in more modest locations",
+  zone: "Villa Crespo",
+  photo: "http://thebubble.com/wp-content/uploads/2018/01/savia-play-buenos-aires.jpg"
+  }, {
+  title: "Escape room",
+  category: "Indoor Activities",
+  description: "A lot of fantastic and new art exhibitions",
+  zone: "Palermo",
   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-},
-#  {
-#   title: "Jardín Japonés",
-#   category: "Outdoor activities",
-#   description: "Beautiful park with a lot of japanese culture",
-#   zone: "Palermo",
-#   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-#   title: "cicling",
-#   category: "Cultural activities",
-#   description: "A lot of fantastic and new art exhibitions",
-#   zone: "Palermo",
-#   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# } ,{
-#   title: "Picnic at the park",
-#   category: "Food and drinks",
-#   description: "Let's eat in an iconic place of Buenos Aires, while enjoying the sunset",
-#   zone: "Palermo",
-#   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-#   title: "Go skateboarding",
-#   category: "Outdoor sports",
-#   description: "Enjoy this amazing sport with friends!",
-#   zone: "Caballito",
-#   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-#   title: "dhhghg",
-#   category: "Outdoor activities",
-#   description: "Walk by the Rio de La Plata river",
-#   zone: "Puerto Madero",
-#   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-#   title: "kitesurf",
-#   category: "Outdoor sports",
-#   description: "Enjoy this beautiful sport while enjoying the landscape",
-#   zone: "Palermo",
-#   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-#   title: "sailing",
-#   category: "Outdoor sports",
-#   description: "Enjoy the nature while running among friends!",
-#   zone: "Palermo",
-#   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-#   title: "paintball",
-#   category: "Cultural activities",
-#   description: "Discover the Museo de Arte Latinoamericano de Buenos Aires (MALBA)",
-#   zone: "Palermo",
-#   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-#   title: "board games",
-#   category: "Food and drinks",
-#   description: "Have a pizza in an iconic place of Buenos Aires, Pizzería Guerrín",
-#   zone: "Microcentro",
-#   photo:
-# }, {
-# title: " bla bla",
-# category: "Outdoor sports",
-# description: "Meet some people to play ball with!",
-# zone: "Devoto",
-# photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-# title: "ping-pon and beer",
-# category: "Food and drinks",
-# description: "hgghfhgfg",
-# zone: "Belgrano",
-# photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-# title: "Visit to historic an iconic places",
-# category: "Food and drinks",
-# description: "Have a pizza in an iconic place of Buenos Aires, Pizzería Guerrín",
-# zone: "Microcentro",
-# photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-# title: "Theater",
-# category: "Cultural activities",
-# description: "Traditional market from Buenos Aires, with different gastronomic options",
-# zone: "Centro",
-# photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-# title: "kayaking",
-# category: "Outdoor sports",
-# description: "Beautiful park with a lot of japanese culture",
-# zone: "Palermo",
-# photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }, {
-# title: "escape room",
-# category: "Cultural activities",
-# description: "A lot of fantastic and new art exhibitions",
-# zone: "Palermo",
-# photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
-# }
+  }
 ]
 
 

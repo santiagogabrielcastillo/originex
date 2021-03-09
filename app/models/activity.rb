@@ -9,9 +9,21 @@ class Activity < ApplicationRecord
   validates :title, :description, :category, presence: true
   
   include PgSearch::Model
-  pg_search_scope :search_over_activities,
-                  against: %i[ title category zone ],
-                  using: {
-                    tsearch: { prefix: true }
-                  }
+  pg_search_scope :search_over_title_and_category, against: %i[title category], using: { tsearch: { prefix: true } }
+  pg_search_scope :search_over_zone, against: :zone, using: { tsearch: { prefix: true } }
+
+  def self.search(args)
+    zone_query = args[:zone]
+    title_category_query = args[:title_category].presence
+    results = []
+    if zone_query
+      by_zone = Activity.search_over_zone(zone_query)
+      by_zone.each { |instance| results << instance }
+    end
+    if title_category_query
+      by_title_category = Activity.search_over_title_and_category(title_category_query)
+      by_title_category.each { |instance| results << instance }
+    end
+    return results
+  end
 end

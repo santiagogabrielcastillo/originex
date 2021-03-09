@@ -1,8 +1,7 @@
 .show-banner {
-  padding: 30px 0;
+  padding: 25px 0;
   background-size: 100%;
   background-position: center;
-  // background: linear-gradient( rgb(242, 74, 85), rgb(244,244,244));
   opacity: 0.9; 
 }
 
@@ -26,4 +25,16 @@
   font-size: 80px;
   color: black;
 
+}
+
+.activity-header img {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px black;
+  object-fit: cover;
+}
+
+.fa-user-friends {
+  font-size: 30px;
 }

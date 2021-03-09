@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-8">
+    <div class="col-sm-12 col-md-8">
       <div class="event-show-title">
         <h1><strong><%= @event.details %></strong></h1>
       </div>
@@ -16,35 +16,53 @@
         <p>Aliquam ullamcorper turpis orci, in maximus eros convallis imperdiet. Aliquam ut pharetra velit, ac accumsan ex. Vivamus eu ornare eros, sed euismod metus. Pellentesque at erat ut risus interdum finibus at ac massa. Praesent et pellentesque purus. Sed varius malesuada nulla, a ultrices risus varius congue.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat lacus at tincidunt imperdiet. Cras ac justo eget nunc scelerisque tempus in sit amet libero. Vestibulum sagittis laoreet sollicitudin. Proin id orci leo.</p>
       </div>
+      <h4>You'll be joining...</h4>
+      <div class="row grid">
+        <% @participants.each do |participant| %>
+          <div>
+            <div class="event-user-card text-center">
+              <% if participant.user.photo.attached? %>
+                <%= cl_image_tag participant.user.photo.key, width: 90, height: 90, crop: :thumb, gravity: :face %>
+              <% else %>
+                <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" %>
+              <% end %>
+              <div class="d-flex flex-column justify-content-center w-100">              
+                <%= link_to user_path(participant.user) do %>
+                  <h2><%= participant.user.username %></h2>
+                <% end %>
+                <p><%= participant.user.full_name %></p>                
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <div class="col-4">
+    <div class="col-sm-12 col-md-4">
       <div id="event-info">
         <div id="map"
           style="width: 100%; height: 300px; border-radius: 5px; box-shadow: 0 0 15px grey; margin-top: 30px;"
           data-markers="<%= @markers.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
-        <%# <div class="d-md-flex"> %>
-          <div class="d-flex mt-3">       
-            <i class="my-auto fas fa-map-marker-alt"></i>
-            <p class="my-auto ml-3"><%= @event.address %></p>
-          </div>
-          <div class="d-flex mt-3">       
-            <i class="my-auto fas fa-calendar-alt"></i>
-            <p class="my-auto ml-3"><%= @event.date %></p>
-          </div>
-          <div class="d-flex mt-3">       
-            <i class="my-auto fas fa-clock"></i>
-            <p class="my-auto ml-3"></p>
-          </div>
-          <div class="d-flex mt-3">       
-            <i class="my-auto fas fa-running"></i>
-            <p class="my-auto ml-3"><%= @event.activity.category %></p>
-          </div>
-        <%# </div>       %>
+        <div class="d-flex mt-3">       
+          <i class="my-auto fas fa-map-marker-alt"></i>
+          <p class="my-auto ml-2"><%= @event.address %></p>
+        </div>
+        <div class="d-flex mt-3">       
+          <i class="my-auto fas fa-calendar-alt"></i>
+          <p class="my-auto ml-2"><%= @date.strftime("%d-%m-%Y") %></p>
+        </div>
+        <div class="d-flex mt-3">       
+          <i class="my-auto fas fa-clock"></i>
+          <p class="my-auto ml-2"><%= @time %></p>
+        </div>
+        <div class="d-flex mt-3">       
+          <i class="my-auto fas fa-running"></i>
+          <p class="my-auto ml-2"><%= @event.activity.category %></p>
+        </div>
         <div class="event-show-contact-link">
           <%= simple_form_for([@event, @participant]) do |f| %>
-            <%= f.button :submit, "Contact event organizer", class: "btn btn-red-degrade" %>
+            <%= f.button :submit, "Join chat", class: "btn btn-red-degrade" %>
           <% end %>
         </div>
       </div>
@@ -52,10 +70,10 @@
   </div>
   
   <div class="row">
-    <div class="back-link col-12">
-      <div>
-        <%= link_to "Back to activity", activity_path(@event.activity_id), class: "btn-red-degrade" %>
-      </div>    
+    <div class="col-12">
+      <div class="back-link">
+        <%= link_to "Back to activity", activity_path(@event.activity_id), class: "btn btn-red-degrade" %>
+      </div>
     </div>
   </div>
 </div>

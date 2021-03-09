@@ -1,7 +1,7 @@
 <div class="message" id="message-<%= message.id %>">
   <div class="author">
     <!--Descomentar cuando los usuarios tengan foto-->
-    <%#= image_tag message.user.avatar_url, class: "avatar" %>
+    <%= image_tag message.user.avatar_url, class: "avatar" %>
     <span><%= message.user.username %></span>
     <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
   </div>

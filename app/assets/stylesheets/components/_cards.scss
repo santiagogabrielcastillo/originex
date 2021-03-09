@@ -1,3 +1,4 @@
+
 .card-users {
   overflow: hidden;
   height: 150px;
@@ -33,64 +34,116 @@
   width: auto;
 }
 
+.card-users {
+  opacity: 1.0;
+
+  &:hover {
+    color: rgb(139, 238, 255);
+    text-decoration: none;
+  }
+}
 
 // cards of activities
 
 .card-activity {
   border-radius: 9px;
   width: 250px;
-  height: 400px;
+  height: 275px;
   overflow: hidden;
-  background: white;  
+  background: white;
+  box-shadow: 1px 1px 10px lightgray;
+  position: relative;
+
+    img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+
+    h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba( 255 ,87 ,97, 1.0);
+  }
+
+    p {
+    font-size: 12px;
+    opacity: .7;
+  }
+
+  .location {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    align-items: flex-start;
+
+    .icon-location {
+      color: $warning;
+    }
+
+    .text-location {
+      color: #f37b6b;
+      margin-bottom: 0;
+    }
+  }
+
+  .card-activity-infos {
+    padding: 16px; 
+
+    a:hover {
+      color:  rgb(93, 226, 250);
+      text-decoration: none ;
+    }
+  }
 }
 
-.card-activity > img {
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-}
-
-.card-activity h1 {
-  font-size: 18px;
-  font-weight: bold;
-  color: rgba( 255 ,87 ,97, 1.0);
-}
-
-.card-activity p {
-  font-size: 12px;
-  opacity: .7;
-}
-
-
-.card-activity .card-activity-infos {
-  padding: 16px; 
-}
-
+// stars cards
 .card-stars {
+  font-size: 16px;
   display: flex;
   align-content: flex-end;
   justify-content: center;
-  margin: 20px 20px;
 }
 
-.card-stars h3 {
+.card-stars h2 {
   display: flex;
   justify-content: center;
-  color: rgb(255, 216, 87);  
+  color: rgb(255, 207, 51);  
 }
 
-
+// rectangular- cards with rounded and square images
 .card-rectangular {
   overflow: hidden;
   border-radius: 9px;
-  height: 300px;
-  width: 70%;
-  padding: auto;
+  height: auto;
+  width: 90%;
   background: white;
   display: flex;
   align-items: center;
   padding: 10px;
+  
+    h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 15px;
+  }
+    p {
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 1.0;
+    margin-bottom: 0;
+    margin: 15px;
+  }
+
+    img {
+    border-radius: 9px;
+    height: 200px;
+    width: 250px;
+    margin: 5px 10px 5px 5px;
+  }
 }
+
+
 
 .card-rectangular-img-circular {
   width: 200px;
@@ -98,44 +151,27 @@
   border-radius: 50%;
   object-fit: cover;
   margin: 30px;
-
-}
-
-.card-rectangular h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 15px;
-}
-
-.card-rectangular p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin: 15px;
-}
-
-.card-stars {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-}
-
-.card-rectangular-square-img {
-  border-radius: 9px;
-  height: 250px;
-  width: auto;
-  margin: 5px;
 }
 
 .card-rectangular-bigger {
   overflow: hidden;
   border-radius: 9px;
-  height: 700px;
-  width: 70%;
+  width: 90%;
   padding: auto;
   background: white;
   display: flex;
   align-items: center;
   padding: 10px;
+}
+ 
+// profile cards
+.card-profile-info a:hover {
+  color:  rgb(242, 74, 85);
+  text-decoration: none ;
+}
+
+@include media-breakpoint-down(sm) {
+  .card-activity {
+    max-width: 350px;
+  }
 }

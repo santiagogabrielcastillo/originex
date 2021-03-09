@@ -8,15 +8,14 @@
           <%= simple_form_for([@activity, @chatroom]) do |f| %>
             <%= f.input :title %>
             <%= f.input :description %>
-            <%= f.association :users, collection: @users, as: :radio_buttons, label_method: :username, value_method: :full_name, include_blank: false, collection_wrapper_tag: 'div',
-            collection_wrapper_class: 'user-wrapper', item_wrapper_class: "user-list", input_html: {multiple: true, class: "user"} %>
+            <%= f.input :users, collection: @users.map {|user| "#{content_tag :p, user.full_name, class: "username"} #{cl_image_tag((user.photo.key), class: "avatar-bordered")} ".html_safe }, as: :check_boxes, include_blank: false, item_wrapper_class: "user-list", input_html: {multiple: true, class: "user"} %>
             <%= f.button :submit, class: 'btn-red-degrade' %>
           <% end %>
       </div>
     </div>
   </div>
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <% @users.each do |user| %>
         <div class="col-12 col-md-6 col-xl-4">
@@ -35,6 +34,7 @@
       <% end %>
     </div>
   </div>
+  -->
 </div>
 
 

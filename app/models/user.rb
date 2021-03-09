@@ -9,5 +9,4 @@ class User < ApplicationRecord
   has_many :chatrooms, through: :participants
   accepts_nested_attributes_for :user_interests
   has_one_attached :photo
-
 end

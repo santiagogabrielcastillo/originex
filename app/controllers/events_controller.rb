@@ -5,7 +5,9 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @participants = @event.chatroom.participants.where(status:true)    
+    @date = Date.parse(@event.date.to_s.split[0])
+    @time = @event.date.to_s.split[1]
+    @participants = @event.chatroom.participants.where(status: true)
     @participant = Participant.new
 
     @markers = [{

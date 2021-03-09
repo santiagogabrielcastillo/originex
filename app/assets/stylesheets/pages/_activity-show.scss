@@ -33,8 +33,17 @@
   border-radius: 5px;
   box-shadow: 0 0 15px black;
   object-fit: cover;
+  object-position: center;
 }
 
 .fa-user-friends {
+  font-size: 30px;
+}
+
+.fa-map-marked-alt {
+  font-size: 30px;
+}
+
+.fa-clipboard-check {
   font-size: 30px;
 }

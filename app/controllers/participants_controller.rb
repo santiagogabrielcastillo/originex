@@ -1,6 +1,7 @@
 class ParticipantsController < ApplicationController
   before_action :set_invitation, only: %I[update destroy]
   def index
+    raise
     @invitations = Participant.where(["user_id = ? and status= ?", current_user.id, false]).includes(:chatroom, :user)
   end
 

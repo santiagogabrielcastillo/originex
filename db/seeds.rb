@@ -43,7 +43,7 @@ USERS.each do |user|
   new_user.photo.attach(io: user[:photo], filename: "user.png", content_type: "image/png")
   new_user.save!
 end
-puts "users created"
+puts "Users created"
 
 ACTIVITIES = [{
     title: "Go for a run",
@@ -182,7 +182,8 @@ ACTIVITIES = [{
 ACTIVITIES.each do |activity|
   Activity.create!(activity)
 end
-puts "activities created"
+puts "Activities created"
+
 CHATROOMS = [{
     title: "Futbol 5 - Belgrano",
     description: "Vamos a jugar un picadito los sabado.",
@@ -213,6 +214,7 @@ CHATROOMS = [{
 CHATROOMS.each do |chatroom|
   Chatroom.create!(chatroom)
 end
+puts "Chatrooms created"
 
 EVENTS = [{
   status: "public",
@@ -262,5 +264,6 @@ EVENTS = [{
 EVENTS.each do |event|
   Event.create!(event)
 end
+puts "Events created"
 
-puts "3 users, 2 activities, 6 chatrooms and 6 events created"
+puts "Done:)"

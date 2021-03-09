@@ -6,7 +6,7 @@
         <%= f.input :details, input_html: {rows: "5"} %>
         <div class="row text-center">
           <div class="col-12 col-lg-4">
-            <%= f.input :status, collection: ["Public", "Private"] %>
+            <%= f.input :status, collection: ["Public", "Private"], include_blank: false, prompt: "Select status" %>
           </div>
           <div class="col-12 col-lg-4">
             <%= f.input :date, as: :string, input_html: {class: "datepicker"} %>

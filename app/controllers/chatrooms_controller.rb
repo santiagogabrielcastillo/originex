@@ -7,6 +7,7 @@ class ChatroomsController < ApplicationController
   end
   
   def create
+    raise
     @chatroom = Chatroom.new(chatroom_params)
     @chatroom.activity = @activity
     if @chatroom.save

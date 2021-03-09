@@ -12,11 +12,13 @@
 
           <div class="form-inputs">
             <%= f.input :photo, as: :file %>
-            <%= f.input :email, required: true, autofocus: true %>
 
             <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
               <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
             <% end %>
+            <%= f.input :username,
+                        hint: "Please enter your username",
+                        input_html: { autocomplete: "username" } %>
             <%= f.input :full_name,
                         hint: "Please enter you first and your last name",
                         input_html: { autocomplete: "full_name" } %>
@@ -28,6 +30,7 @@
                         required: false,
                         iput_html: { autocomplete: "phone_number" } %>
             <%= f.input :birthday, as: :string, required: false, input_html: {class: "datepicker1"} %>
+            <%= f.input :email, required: true, autofocus: true %>
             
             <%= f.input :password,
                         hint: "leave it blank if you don't want to change it",

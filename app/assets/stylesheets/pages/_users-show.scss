@@ -16,31 +16,46 @@
 }
 
 .user-avatar img {
-  margin-top: 60px;
-  width: 70%;
-  height: 70%;
-  border-radius: 50%;
+  border-radius: 9px;
+  box-shadow: 0 0 15px black;
+  margin-left: -10px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
-.user-activity {
-  width: 70%;
+.user-info-card {
+  background-color: white;
+  border-radius: 10px;
+  margin: 30px 10px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: rgba( 255 ,87 ,97, 1.0);
+  }
+
+}
+
+.user-show-interest-card {
+  width: 125px;
+  height: 130px;
   background-color: white;
   box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.2);
   border-radius: 7px;
-  height: auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 
   img {
     width: 100%;
-    height: 50%;
+    height: 65px;
     object-fit: cover;
     border-radius: 7px 7px 0 0 ;
   }
 }
 
-.user-activity-info {
+.user-show-interest-card-info {
   padding: 10px 15px;
 
   h2 {
@@ -54,5 +69,23 @@
 
   a:hover {
     text-decoration: none;
+  }
+}
+
+@media(max-width: 540px){
+  .grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    padding: 0px 15px;
+    grid-gap: 32px 10px;
+  }
+}
+
+@media(min-width: 541px){
+  .grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-gap: 0px 0px;
   }
 }

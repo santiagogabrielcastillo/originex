@@ -16,10 +16,9 @@
 }
 
 .user-avatar img {
-  margin-top: 60px;
-  width: 70%;
-  height: 70%;
-  border-radius: 50%;
+  border-radius: 9px;
+  box-shadow: 0 0 15px black;
+  margin: 10px;
 }
 
 .user-activity {
@@ -54,5 +53,36 @@
 
   a:hover {
     text-decoration: none;
+  }
+}
+
+.user-info-card {
+  background-color: white;
+  border-radius: 10px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: rgba( 255 ,87 ,97, 1.0);
+  }
+
+}
+
+@media(max-width: 540px){
+  .grid {
+    display:grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    padding: 0px 15px;
+    grid-gap: 32px 0px;
+  }
+}
+
+@media(min-width: 541px){
+  .grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0px 0px;
   }
 }

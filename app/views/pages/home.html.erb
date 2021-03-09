@@ -29,7 +29,7 @@
           <%= image_tag activity.photo %>
           <div class="card-activity-infos">
              <h1><%= link_to "#{activity.title}", activities_path(activity) %></h1>
-              <%# <p><%= activity.description %></p> %>
+              <p><%= activity.description</p> %>
              <div class="d-flex location"> <i class="mx-1 icon-location fas fa-map-marker-alt"></i> <p class="text-location"><%= activity.zone %></p> </div>
           </div>
         </div>

@@ -1,10 +1,3 @@
-.card {
-  background-color: white;
-  border-radius: 9px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-}
 
 .card-users {
   overflow: hidden;
@@ -145,7 +138,7 @@
     img {
     border-radius: 9px;
     height: 200px;
-    width: auto;
+    width: 250px;
     margin: 5px 10px 5px 5px;
   }
 }

@@ -1,28 +1,36 @@
 <div class="container">
   <h1 class="text-center m-3">Explore over our available activities</h1>
   <div class="row">
-    <div class="col-12 col-md-6 col-lg-6">
+    <div class="col-12 col-md-10 col-lg-8">
       <%= form_tag activities_path, class: "d-flex align-items-center", method: :get do %>
-        <div data-controller="autocomplete" data-autocomplete-url-value="/autocomplete">
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control search-index",
-            placeholder: "Find an activity...",
-            data: { 'autocomplete-target' => 'input' } %>
-            <ul data-autocomplete-target="results" class="option-list-index"></ul>
+      <div class="row">
+        <div class="col-10 col-md-5 px-1 mx-auto">
+          <div data-controller="autocomplete" data-autocomplete-url-value="/autocomplete">
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control search-index",
+              placeholder: "Find an activity...",
+              data: { 'autocomplete-target' => 'input' } %>
+              <ul data-autocomplete-target="results" class="option-list-index"></ul>
+          </div>
         </div>
-        <%= select_tag(:zone,
-          options_for_select(ZONES),
-          include_blank: false,
-          prompt: "Select zone",
-          class: "form-control search-zone search-zone-index my-1")
-        %>
-        <%= submit_tag "Search", class: "btn btn-red-degrade search-activites" %>
+        <div class="col-10 col-md-5 px-1 mx-auto">
+          <%= select_tag(:zone,
+            options_for_select(ZONES),
+            include_blank: false,
+            prompt: "Select zone",
+            class: "form-control search-zone search-zone-index my-1")
+          %>
+        </div>
+        <div class="col-12 col-md-2 d-flex justify-content-center">
+          <%= submit_tag "Search", class: "btn btn-red-degrade search-activites" %>
+        </div>
+      </div>
       <% end %>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row pb-3">
     <div class="col-12">
       <% if @activities.empty? %>
         <div class="mt-4">

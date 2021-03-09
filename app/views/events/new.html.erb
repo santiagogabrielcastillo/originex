@@ -1,7 +1,7 @@
 <div class="container">
   <h1 class="text-center mb-4 my-4">Create an event for #<%= @chatroom.title %></h1>
   <div class="row text-center">
-    <div class="col-12">
+    <div class="col-12">  
       <%= simple_form_for [@chatroom, @event] do |f| %>
         <%= f.input :details, input_html: {rows: "5"} %>
         <div class="row text-center">
@@ -13,6 +13,9 @@
           </div>
           <div class="col-12 col-lg-4">
             <%= f.input :address %>
+          </div>
+          <div class="form-inputs mx-4">
+            <%= f.input :photo, as: :file %>
           </div>
         </div>
         <%= f.button :submit, class: 'btn-red-degrade mt-3' %>

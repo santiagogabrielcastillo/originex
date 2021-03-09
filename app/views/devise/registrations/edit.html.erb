@@ -3,11 +3,11 @@
    <div class="col-8">
       <div class="container">
         <h2>Edit your profile</h2> 
-        <img src="app/assets/images/photo-1469334031218-e382a71b716b.jpg" alt="" class="card-rectangular-img-circular">
+        <%= cl_image_tag current_user.photo.key, class:"card-rectangular-img-circular"%> 
       </div>
         <%= resource_name.to_s.humanize %>
 
-        <%= simple_form_for(resource, as: resource_name, url: user_registration_path(resource_name), html: { method: :patch }) do |f| %>
+        <%= simple_form_for(resource, as: resource_name, url: user_registration_path, html: { method: :patch }) do |f| %>
         <%= f.error_notification %>
 
           <div class="form-inputs">
@@ -43,7 +43,7 @@
   
             
             <%# <div class="form-actions"> %>
-              <%= f.button :submit, "Update", class:"btn-btn-primary" %>
+            <%= f.button :submit, "Update", class: "btn btn-red-degrade" %>
           </div>
         <% end %>      
     </div>

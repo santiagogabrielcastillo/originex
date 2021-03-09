@@ -10,33 +10,239 @@ Activity.destroy_all
 User.destroy_all
 
 USERS = [{
-  email: "something1@gmail.com",
+  email: "santialmiron@gmail.com",
   password: "123123",
-  username: "Pato",
-  full_name: "Roberto Bonano",
+  username: "Cabezon",
+  full_name: "Santiago Almiron",
   phone_number: "123789456",
   birthday: Date.new(1984-6-9),
   address: "Av. Cabildo 1298, Buenos Aires, Argentina",
-  photo: URI.open("http://www.venmond.com/demo/vendroid/img/avatar/big.jpg")
+  description: "I am from Junín, I was studying the second year of mechanics Ing when I realized that it was not my thing and I decided to go for the programming side and, occasionally, web development, so I am very happy to be able to participate in the Bootcamp.",
+  photo: URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1612288076/se0rvhfjaqithgqheaur.jpg")
   }, {
-  email: "something2@gmail.com",
+  email: "maxiamodei@gmail.com",
   password: "123123",
-  username: "Chiquito",
-  full_name: "Martin Quesada",
+  username: "Cerebro",
+  full_name: "Maximiliano Amodei",
   phone_number: "987654321",
   birthday: Date.new(1990-1-9),
   address: "Av. Santa Fe 1298, Buenos Aires, Argentina",
-  photo: URI.open("http://www.venmond.com/demo/vendroid/img/avatar/big.jpg")
+  description: "Before joining Le Wagon I studied economics and finance and started working in planning and accounting sectors for a company. Then, after discovering it was a boring job I wanted to make a career shift and decided to join the bootcamp",
+  photo: URI.open("https://avatars.githubusercontent.com/u/70491418?v=4")
   }, {
-  email: "something3@gmail.com",
+  email: "santicastillo@gmail.com",
   password: "123123",
   username: "Genio",
-  full_name: "Santi Pastrano",
+  full_name: "Santiago Castillo",
   phone_number: "987456123",
   birthday: Date.new(1976-5-7),
   address: "Paraguay 1450, Buenos Aires, Argentina",
-  photo: URI.open("http://www.venmond.com/demo/vendroid/img/avatar/big.jpg")
+  description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+  photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+}, {
+  email: "rayleon@gmail.com",
+  password: "123123",
+  username: "O Rei",
+  full_name: "Rey de Leon",
+  phone_number: "906256123",
+  birthday: Date.new(1976-5-7),
+  address: "Paraguay 750, Buenos Aires, Argentina",
+  description: "Currently, i been working as Director of Finance and Operations for Media companies. I looking to learn code to either change my career or build my own Starup.",
+  photo: URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1612188000/slp2v362avwl3xtoqd1o.jpg")
+}, {
+  email: "gonzaenei@gmail.com",
+  password: "123123",
+  username: "Cebolla",
+  full_name: "Gonzalo Enei",
+  phone_number: "987450591",
+  birthday: Date.new(1976-5-7),
+  address: "Juncal 1899",
+  description: "Interested in startups and how they grow. I currently work at Fintual, a wealth management startup for Latam. Excited to get coding knowledge to further improve my work as a PM.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/48967446?v=4")
+}, {
+  email: "natalygarcia@gmail.com",
+  password: "123123",
+  username: "Chocolate",
+  full_name: "Nataly Garcia",
+  phone_number: "847453423",
+  birthday: Date.new(1976-5-7),
+  address: "Av. Aurelio Miró Quesada 500, San Isidro, Peru",
+  description: "Soy administradora de empresas, peruana y tengo 10 años de experiencia liderando equipos comerciales multidisciplinarios en Telecomunicaciones, Consumo Masivo y Banca y tengo 5 años trabajando de manera remota/virtual.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/72904191?v=4")
+}, {
+  email: "erichoare@gmail.com",
+  password: "123123",
+  username: "El Arquitecto",
+  full_name: "Eric Hoare",
+  phone_number: "981155420",
+  birthday: Date.new(1976-5-7),
+  address: "Rojas 699, Buenos Aires, Argentina",
+  description: "My name is Eric Hoare, I'm 36 years old. For years, I worked in the oil industry leading a team in charge of installing well casing and torque inspection. About 4 years ago I decided to make a radical change in my life and pursue architecture. I'm currently in my 4th year of the career.",
+  photo: URI.open("https://avatars0.githubusercontent.com/u/75059530?v=4")
+}, {
+  email: "jesushuiza@gmail.com",
+  password: "123123",
+  username: "Comadreja",
+  full_name: "Jesus Huiza",
+  phone_number: "900056158",
+  birthday: Date.new(1976-5-7),
+  address: "Pedro Moran 2500, Buenos Aires, Argentina",
+  description: "Soy un profesional de informática en mainframe con mas de 20 años de experiencia queriendo conocer programar en nuevas plataformas. Tengo 47 años, vivo en Caracas, Mi expectativas son formarme para poder programar y dirigir a mi equipo de trabajo en nuevos proyectos.",
+  photo: URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1612744249/hm37mh36nqwxzlhebd8k.jpg")
+}, {
+  email: "juanillingworth@gmail.com",
+  password: "123123",
+  username: "Comerciante",
+  full_name: "Juan Illingworth",
+  phone_number: "529456123",
+  birthday: Date.new(1976-5-7),
+  address: "Manuel Ugarte 2011, Buenos Aires, Argentina",
+  description: "Born in Guayaquil, Ecuador. Living in Buenos Aires for nine years now. Com Student at Universidad de Ciencias Empresariales y Sociales (BsAs) & Sommelier at Gato Dumas.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/74078499?v=4")
+}, {
+  email: "lupeperez@gmail.com",
+  password: "123123",
+  username: "La Artista",
+  full_name: "Lucia Perez",
+  phone_number: "987400183",
+  birthday: Date.new(1976-5-7),
+  address: "Sta María del Buen Aire 400, Buenos Aires, Argentina",
+  description: "Hi, my name is Lucia. I´m a photographer, and i little bit of a videographer. Almost all my background is releated with design and arts, but i love programming so, here i am, trying to get into this awsome world.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/65425730?v=4")
+}, {
+  email: "emirodriguez@gmail.com",
+  password: "123123",
+  username: "El Contador",
+  full_name: "Emiliano Rodriguez",
+  phone_number: "980987123",
+  birthday: Date.new(1976-5-7),
+  address: "Arismendi 2801, Buenos Aires, Argentina",
+  description: "I am an accountant and I am interested in learning programming to be able to incorporate new tools and technologies that add value to my professional career",
+  photo: URI.open("https://avatars3.githubusercontent.com/u/75991836?v=4")
+}, {
+  email: "ariwaisburg@gmail.com",
+  password: "123123",
+  username: "Loco",
+  full_name: "Ariel Waisburg",
+  phone_number: "089836111",
+  birthday: Date.new(1976-5-7),
+  address: "Av. Callao 1046, Buenos Aires, Argentina",
+  description: "I am Ariel, a 19 year old Argentine entrepreneur in love with startups, their development and data.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/72884862?v=4")
+}, {
+  email: "nicokennedy@gmail.com",
+  password: "123123",
+  username: "Cabeza",
+  full_name: "Nicolas Kennedy",
+  phone_number: "985556763",
+  birthday: Date.new(1976-5-7),
+  address: "Av. Dorrego 1782, Buenos Aires, Argentina",
+  description: "I am the co-founder of El Semiller Cowrking. During my last years I've worked in the Oil & Gas industry (Exxon, etc.) and I'm currently looking forward for new challenges within the entrepreneurial world - close to Tech.",
+  photo: URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1570572891/jjnpprepy6ktoh1afgdz.jpg")
+}, {
+  email: "felihernandez@gmail.com",
+  password: "123123",
+  username: "La Fiera",
+  full_name: "Feli Hernandez",
+  phone_number: "987098762",
+  birthday: Date.new(1976-5-7),
+  address: "Pedernera 301, Buenos Aires, Argentina",
+  description: "I'm an experienced teacher with great skills to take the best of every student. I love teaching.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/9454245?v=4")
+}, {
+  email: "nadiasalmen@gmail.com",
+  password: "123123",
+  username: "Official Originex's TA",
+  full_name: "Nadia Salmen",
+  phone_number: "456456190",
+  birthday: Date.new(1976-5-7),
+  address: "Washington 501, Buenos Aires, Argentina",
+  description: "Industrial engineer experienced in supply chain, logistics and business planning.
+  I want to learn to code to develop technological solutions for sustainability and environmental global issues through the use of data intelligence. I am currently in search of a professional change that allows me to work independently and gives me more flexibility.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/60677572?v=4")
 }]
+
+# {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }
 
 USERS.each do |user|
   new_user = User.new(user)

@@ -41,37 +41,6 @@
   color: lightgrey;
 }
 
-.event-user-card {
-  overflow: hidden;
-  height: 150px;
-  width: 100px;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 9px;
-  display:flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  box-shadow: 0 0 15px lightgrey;
-
-  img {
-    // height: 60%;
-    // width: auto;
-    margin: 5px;
-    border-radius: 9px;
-  }
-
-  h2 {
-    font-size: 12px;
-    font-weight: bold;
-    margin: 0;
-    color: rgba( 255 ,87 ,97, 1.0);
-  }
-
-  p {
-    font-size: 10px;
-  }
-}
-
 @media(max-width: 540px){
   .grid {
     display:grid;

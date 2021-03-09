@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 col-md-5 col-lg-3">
+    <div class="col-sm-12 col-md-12 col-lg-12">
       <div class="user-info-card">
         <div class="user-avatar">
           <% if @user.photo.attached? %>
@@ -10,7 +10,9 @@
           <% end %>
         </div>
         <div class="d-flex flex-column w-100 mx-3">
-          <div class="d-flex justify-content-between"><h2><%= @user.username %></h2><h2 class="mr-4"><%= age %></h2></div>
+          <div class="d-flex">
+            <h2><%= @user.username %></h2><h2 class="ml-5"><%= age %></h2>
+          </div>
           <h6><%= @user.full_name %></h6>         
           <p><i class="fas fa-envelope mr-1"></i><a href="<%= @user.email %>">Contact</a></p>
           <p>Currently in: <em><strong><%= @chats.count %> chats!</strong></em></p>
@@ -20,19 +22,18 @@
   </div>
 </div>  
 <div class="container">
+<h2><%= @user.username %> is also interested in...</h2>
   <div class="row grid">
     <% @user.activities.each do |act| %>
       <div>
         <div class="d-flex justify-content-center my-3">
-          <div class="user-activity">
+          <div class="user-show-interest-card">
             <img src="<%= act.photo %>" />
             <%#= image_tag 'filename' %>
-            <div class="user-activity-info">
+            <div class="user-show-interest-card-info">
               <%= link_to activity_path(act) do %>
-                <h5><%= act.title %></h5>
-              <% end %>
-              <p><%= act.description %></p>
-              <div class="d-flex justify-content-between"><p>Where?</p><h5><%= act.zone %></h5></div>
+                <h6><%= act.title %></h6>
+              <% end %>              
             </div>
           </div>
         </div>

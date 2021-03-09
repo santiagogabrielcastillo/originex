@@ -5,8 +5,9 @@ class ChatroomsController < ApplicationController
     @users -= [current_user]
     @chatroom = Chatroom.new
   end
-
+  
   def create
+    raise
     @chatroom = Chatroom.new(chatroom_params)
     @chatroom.activity = @activity
     if @chatroom.save

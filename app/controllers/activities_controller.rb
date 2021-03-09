@@ -1,10 +1,13 @@
 class ActivitiesController < ApplicationController
   skip_before_action :authenticate_user!, only: %I[index autocomplete]
   def index
-    if params[:query].present?
-      @activities = Activity.search_over_activities(params[:query])
+    if params[:zone].present? || params[:query].present? 
+      @activities = Activity.search({
+        title_category: params[:query],
+        zone: params[:zone]
+      })
     else
-      @activities = current_user.activities
+      @activities = Activity.where(id: current_user.user_interests.pluck(:activity_id))
     end
   end
 

@@ -1,3 +1,5 @@
+require 'open-uri'
+
 puts "Cleaning database"
 Event.destroy_all
 Participant.destroy_all
@@ -14,27 +16,32 @@ USERS = [{
   full_name: "Roberto Bonano",
   phone_number: "123789456",
   birthday: Date.new(1984-6-9),
-  address: "Av. Cabildo 1298, Buenos Aires, Argentina"
-}, {
+  address: "Av. Cabildo 1298, Buenos Aires, Argentina",
+  photo: URI.open("http://www.venmond.com/demo/vendroid/img/avatar/big.jpg")
+  }, {
   email: "something2@gmail.com",
   password: "123123",
   username: "Chiquito",
   full_name: "Martin Quesada",
   phone_number: "987654321",
   birthday: Date.new(1990-1-9),
-  address: "Av. Santa Fe 1298, Buenos Aires, Argentina"
-}, {
+  address: "Av. Santa Fe 1298, Buenos Aires, Argentina",
+  photo: URI.open("http://www.venmond.com/demo/vendroid/img/avatar/big.jpg")
+  }, {
   email: "something3@gmail.com",
   password: "123123",
   username: "Genio",
   full_name: "Santi Pastrano",
   phone_number: "987456123",
   birthday: Date.new(1976-5-7),
-  address: "Paraguay 1450, Buenos Aires, Argentina"
+  address: "Paraguay 1450, Buenos Aires, Argentina",
+  photo: URI.open("http://www.venmond.com/demo/vendroid/img/avatar/big.jpg")
 }]
 
 USERS.each do |user|
-  User.create!(user)
+  new_user = User.new(user)
+  new_user.photo.attach(io: user[:photo], filename: "user.png", content_type: "image/png")
+  new_user.save!
 end
 puts "users created"
 

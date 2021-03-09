@@ -48,13 +48,13 @@ ACTIVITIES = [{
     zone: "Nuñez",
     photo: "https://images.unsplash.com/photo-1602619075660-d0f5459cb189?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80"
     }, {
-    title: "BA Art exposition",
+    title: "BA Art exhibition",
     category: "Cultural activities",
     description: "Buenos Aires has a lot more to offer if you’re willing to dig around a bit. 
     For those who enjoy art, or simply just want to get out the house and do something different, there are a lots of exhibitions hosted 
     by some of the trendiest and most alternative galleries in Buenos Aires.",
     zone: "Palermo",
-    photo: "http://the-creative-business.com/wp-content/uploads/2014/06/512px-Robert_Mapplethorpe_Exhibition.jpg"
+    photo: "https://images.unsplash.com/photo-1541665234574-8e72eb7cd028?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8ZXhoaWJpdGlvbnxlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
   }, {
     title: "Pizza tour",
     category: "Food and drinks",

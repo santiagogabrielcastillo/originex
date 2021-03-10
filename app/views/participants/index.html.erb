@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="mt-4">Chatroom invitations</h1>
+  <h1 class="my-4">Chatroom invitations</h1>
   <div class="row">
     <div class="col-12">
       <% if @invitations.empty? %>
@@ -12,41 +12,22 @@
           <div class="row">
             <div class="col-12">
               <h3>#<%= invitation.chatroom.title %></h3>
-              <p><%= invitation.chatroom.description %></p>
+              <p><em><%= invitation.chatroom.description %></em></p>
             </div>
           </div>
           <div class="invitation-infos">
             <div class="row w-100">
-              <div class="col-12 col-md-8">
+              <div class="col-12 col-md-8 d-flex flex-column justify-content-center">
                 <div class="invitation-participants">
-                  <p><i class="fas fa-users"></i> <%= invitation.chatroom.participants.where(status: true).count %> participants in this chatroom</p>
-                  <%= link_to 'Show activity info', activity_path(invitation.chatroom.activity), class: 'mb-2' %>
-                  <!-- <ul>
-                    <% invitation.chatroom.participants.where(status: true).each do |part| %>
-                      <% if part.user != current_user %>
-                        <div>
-                            <div class="event-user-card text-center">
-                              <% if part.user.photo.attached? %>
-                                <%= cl_image_tag part.user.photo.key, width: 90, height: 90, crop: :thumb, gravity: :face %>
-                              <% else %>
-                                <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" %>
-                              <% end %>
-                              <div class="d-flex flex-column justify-content-center w-100">              
-                                <%= link_to user_path(part.user) do %>
-                                  <h2><%= part.user.username %></h2>
-                                <% end %>
-                                <p><%= part.user.full_name %></p>                
-                              </div>
-                            </div>
-                          </div>
-                      <% end %>
-                    <% end %>
-                  </ul> -->
+                  <div><p><i class="fas fa-users"></i> <%= invitation.chatroom.participants.where(status: true).count %> participants in this chatroom</p></div>
+                  <%= link_to activity_path(invitation.chatroom.activity), class: 'mb-2' do %>
+                    <p><i class="fas fa-info-circle"></i> Show activity info</p>
+                  <% end %>
                 </div>
               </div>
               <div class="col-12 col-md-4">
                 <div class="invitation-buttons">
-                  <%= link_to 'Accept invitation', participant_path(invitation), method: :patch, class: 'btn-red-degrade text-nowrap my-3 mx-auto px-2' %>
+                  <%= link_to 'Accept invitation', participant_path(invitation), method: :patch, class: 'btn-red-degrade text-nowrap mb-3 mx-auto px-2' %>
                   <%= link_to 'Ignore invitation', participant_path(invitation), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn-red-degrade text-nowrap mx-auto px-2' %>
                 </div>
               </div>

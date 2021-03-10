@@ -1,8 +1,9 @@
 .invitation {
-  width: 80%;
+  width: 65%;
   background-color: white;
   border-radius: 10px;
   padding: 20px;
+  box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.3);
   margin-bottom: 15px;
 
   h3 {
@@ -17,8 +18,17 @@
   padding: 0 10px;
 }
 
+.invitation-participants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
 .invitation-buttons {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
 }

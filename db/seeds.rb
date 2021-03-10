@@ -10,33 +10,239 @@ Activity.destroy_all
 User.destroy_all
 
 USERS = [{
-  email: "something1@gmail.com",
+  email: "santialmiron@gmail.com",
   password: "123123",
-  username: "Pato",
-  full_name: "Roberto Bonano",
+  username: "Cabezon",
+  full_name: "Santiago Almiron",
   phone_number: "123789456",
   birthday: Date.new(1984-6-9),
   address: "Av. Cabildo 1298, Buenos Aires, Argentina",
-  photo: URI.open("http://www.venmond.com/demo/vendroid/img/avatar/big.jpg")
+  description: "I am from Junín, I was studying the second year of mechanics Ing when I realized that it was not my thing and I decided to go for the programming side and, occasionally, web development, so I am very happy to be able to participate in the Bootcamp.",
+  photo: URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1612288076/se0rvhfjaqithgqheaur.jpg")
   }, {
-  email: "something2@gmail.com",
+  email: "maxiamodei@gmail.com",
   password: "123123",
-  username: "Chiquito",
-  full_name: "Martin Quesada",
+  username: "Cerebro",
+  full_name: "Maximiliano Amodei",
   phone_number: "987654321",
   birthday: Date.new(1990-1-9),
   address: "Av. Santa Fe 1298, Buenos Aires, Argentina",
-  photo: URI.open("http://www.venmond.com/demo/vendroid/img/avatar/big.jpg")
+  description: "Before joining Le Wagon I studied economics and finance and started working in planning and accounting sectors for a company. Then, after discovering it was a boring job I wanted to make a career shift and decided to join the bootcamp",
+  photo: URI.open("https://avatars.githubusercontent.com/u/70491418?v=4")
   }, {
-  email: "something3@gmail.com",
+  email: "santicastillo@gmail.com",
   password: "123123",
   username: "Genio",
-  full_name: "Santi Pastrano",
+  full_name: "Santiago Castillo",
   phone_number: "987456123",
   birthday: Date.new(1976-5-7),
   address: "Paraguay 1450, Buenos Aires, Argentina",
-  photo: URI.open("http://www.venmond.com/demo/vendroid/img/avatar/big.jpg")
+  description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+  photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+}, {
+  email: "rayleon@gmail.com",
+  password: "123123",
+  username: "O Rei",
+  full_name: "Rey de Leon",
+  phone_number: "906256123",
+  birthday: Date.new(1976-5-7),
+  address: "Paraguay 750, Buenos Aires, Argentina",
+  description: "Currently, i been working as Director of Finance and Operations for Media companies. I looking to learn code to either change my career or build my own Starup.",
+  photo: URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1612188000/slp2v362avwl3xtoqd1o.jpg")
+}, {
+  email: "gonzaenei@gmail.com",
+  password: "123123",
+  username: "Cebolla",
+  full_name: "Gonzalo Enei",
+  phone_number: "987450591",
+  birthday: Date.new(1976-5-7),
+  address: "Juncal 1899",
+  description: "Interested in startups and how they grow. I currently work at Fintual, a wealth management startup for Latam. Excited to get coding knowledge to further improve my work as a PM.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/48967446?v=4")
+}, {
+  email: "natalygarcia@gmail.com",
+  password: "123123",
+  username: "Chocolate",
+  full_name: "Nataly Garcia",
+  phone_number: "847453423",
+  birthday: Date.new(1976-5-7),
+  address: "Av. Aurelio Miró Quesada 500, San Isidro, Peru",
+  description: "Soy administradora de empresas, peruana y tengo 10 años de experiencia liderando equipos comerciales multidisciplinarios en Telecomunicaciones, Consumo Masivo y Banca y tengo 5 años trabajando de manera remota/virtual.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/72904191?v=4")
+}, {
+  email: "erichoare@gmail.com",
+  password: "123123",
+  username: "El Arquitecto",
+  full_name: "Eric Hoare",
+  phone_number: "981155420",
+  birthday: Date.new(1976-5-7),
+  address: "Rojas 699, Buenos Aires, Argentina",
+  description: "My name is Eric Hoare, I'm 36 years old. For years, I worked in the oil industry leading a team in charge of installing well casing and torque inspection. About 4 years ago I decided to make a radical change in my life and pursue architecture. I'm currently in my 4th year of the career.",
+  photo: URI.open("https://avatars0.githubusercontent.com/u/75059530?v=4")
+}, {
+  email: "jesushuiza@gmail.com",
+  password: "123123",
+  username: "Comadreja",
+  full_name: "Jesus Huiza",
+  phone_number: "900056158",
+  birthday: Date.new(1976-5-7),
+  address: "Pedro Moran 2500, Buenos Aires, Argentina",
+  description: "Soy un profesional de informática en mainframe con mas de 20 años de experiencia queriendo conocer programar en nuevas plataformas. Tengo 47 años, vivo en Caracas, Mi expectativas son formarme para poder programar y dirigir a mi equipo de trabajo en nuevos proyectos.",
+  photo: URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1612744249/hm37mh36nqwxzlhebd8k.jpg")
+}, {
+  email: "juanillingworth@gmail.com",
+  password: "123123",
+  username: "Comerciante",
+  full_name: "Juan Illingworth",
+  phone_number: "529456123",
+  birthday: Date.new(1976-5-7),
+  address: "Manuel Ugarte 2011, Buenos Aires, Argentina",
+  description: "Born in Guayaquil, Ecuador. Living in Buenos Aires for nine years now. Com Student at Universidad de Ciencias Empresariales y Sociales (BsAs) & Sommelier at Gato Dumas.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/74078499?v=4")
+}, {
+  email: "lupeperez@gmail.com",
+  password: "123123",
+  username: "La Artista",
+  full_name: "Lucia Perez",
+  phone_number: "987400183",
+  birthday: Date.new(1976-5-7),
+  address: "Sta María del Buen Aire 400, Buenos Aires, Argentina",
+  description: "Hi, my name is Lucia. I´m a photographer, and i little bit of a videographer. Almost all my background is releated with design and arts, but i love programming so, here i am, trying to get into this awsome world.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/65425730?v=4")
+}, {
+  email: "emirodriguez@gmail.com",
+  password: "123123",
+  username: "El Contador",
+  full_name: "Emiliano Rodriguez",
+  phone_number: "980987123",
+  birthday: Date.new(1976-5-7),
+  address: "Arismendi 2801, Buenos Aires, Argentina",
+  description: "I am an accountant and I am interested in learning programming to be able to incorporate new tools and technologies that add value to my professional career",
+  photo: URI.open("https://avatars3.githubusercontent.com/u/75991836?v=4")
+}, {
+  email: "ariwaisburg@gmail.com",
+  password: "123123",
+  username: "Loco",
+  full_name: "Ariel Waisburg",
+  phone_number: "089836111",
+  birthday: Date.new(1976-5-7),
+  address: "Av. Callao 1046, Buenos Aires, Argentina",
+  description: "I am Ariel, a 19 year old Argentine entrepreneur in love with startups, their development and data.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/72884862?v=4")
+}, {
+  email: "nicokennedy@gmail.com",
+  password: "123123",
+  username: "Cabeza",
+  full_name: "Nicolas Kennedy",
+  phone_number: "985556763",
+  birthday: Date.new(1976-5-7),
+  address: "Av. Dorrego 1782, Buenos Aires, Argentina",
+  description: "I am the co-founder of El Semiller Cowrking. During my last years I've worked in the Oil & Gas industry (Exxon, etc.) and I'm currently looking forward for new challenges within the entrepreneurial world - close to Tech.",
+  photo: URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1570572891/jjnpprepy6ktoh1afgdz.jpg")
+}, {
+  email: "felihernandez@gmail.com",
+  password: "123123",
+  username: "La Fiera",
+  full_name: "Feli Hernandez",
+  phone_number: "987098762",
+  birthday: Date.new(1976-5-7),
+  address: "Pedernera 301, Buenos Aires, Argentina",
+  description: "I'm an experienced teacher with great skills to take the best of every student. I love teaching.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/9454245?v=4")
+}, {
+  email: "nadiasalmen@gmail.com",
+  password: "123123",
+  username: "Official Originex's TA",
+  full_name: "Nadia Salmen",
+  phone_number: "456456190",
+  birthday: Date.new(1976-5-7),
+  address: "Washington 501, Buenos Aires, Argentina",
+  description: "Industrial engineer experienced in supply chain, logistics and business planning.
+  I want to learn to code to develop technological solutions for sustainability and environmental global issues through the use of data intelligence. I am currently in search of a professional change that allows me to work independently and gives me more flexibility.",
+  photo: URI.open("https://avatars.githubusercontent.com/u/60677572?v=4")
 }]
+
+# {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }, {
+#   email: "santicastillo@gmail.com",
+#   password: "123123",
+#   username: "Genio",
+#   full_name: "Santiago Castillo",
+#   phone_number: "987456123",
+#   birthday: Date.new(1976-5-7),
+#   address: "Paraguay 1450, Buenos Aires, Argentina",
+#   description: "I'm 25 and from Argentina. I'm a chemical engineer but I want to make a radical change in my professional like, so I'm looking forward to learning web development and other new skills :)",
+#   photo: URI.open("https://avatars0.githubusercontent.com/u/71985198?v=4")
+# }
 
 USERS.each do |user|
   new_user = User.new(user)
@@ -172,9 +378,9 @@ ACTIVITIES = [{
   }, {
   title: "Escape room",
   category: "Indoor Activities",
-  description: "A lot of fantastic and new art exhibitions",
+  description: "An escape room, also known as an escape game, is a game in which a team of players cooperatively discover clues, solve puzzles, and accomplish tasks in one or more rooms in order to progress and accomplish a specific goal in a limited amount of time. The goal is often to escape from the site of the game.",
   zone: "Palermo",
-  photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1e2CCEXKmh817j_bmakhNoKD5ojAzdZFUQ&usqp=CAU"
+  photo: "data:image/jpeg;base64,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"
   }
 ]
 

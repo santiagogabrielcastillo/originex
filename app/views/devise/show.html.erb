@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-12">
+  <div id="user-" class="row bg-white">
+    <div class="col-3">
       <div class="user-info-card">
         <div class="user-avatar">
           <% if @user.photo.attached? %>
@@ -17,6 +17,11 @@
           <p><i class="fas fa-envelope mr-1"></i><a href="<%= @user.email %>">Contact</a></p>
           <p>Currently in: <em><strong><%= @chats.count %> chats!</strong></em></p>
         </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="d-flex align-items-center h-100">
+        <p><%= @user.description %></p>
       </div>
     </div>
   </div>

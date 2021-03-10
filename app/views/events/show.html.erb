@@ -2,7 +2,11 @@
   <div class="row">
     <div class="col-12">
       <div class="d-flex align-items-center pt-15">
-        <% cl_image_tag @event.photo.key %>          
+        <% if @event.photo.attached? %>
+          <%= cl_image_tag @event.photo.key, class: "event-header-image" %>
+        <% else %>
+          <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" %>
+        <% end %>     
       </div>
     </div>
   </div>

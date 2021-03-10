@@ -1,0 +1,30 @@
+.container-edit {
+  background-color: rgb(255, 255, 255);
+  border-radius: 9px;
+  padding: 2rem;
+
+  h2 {
+    font-size: 3vw;
+
+  }
+}
+
+
+
+@media (max-width : 887px) {
+  h2 {
+    font-size: 2rem;
+  }
+ }
+
+@media (max-width : 498px) {
+  h2 {
+    font-size: 1.5rem;;
+ }
+}
+
+ @media (max-width : 320px) {
+  h2 {
+    font-size: 1rem;;
+ }
+ }

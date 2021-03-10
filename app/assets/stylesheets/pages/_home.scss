@@ -3,7 +3,7 @@
 
   h2 {
     font-weight: 600;
-  }
+  } 
 
   p {
     margin-bottom: 0;
@@ -12,10 +12,14 @@
   .arrow {
     color: $warning;
   }
-}
 
-#query {
-  border: 1px solid #c5c5c5;
+  .btn-faq {
+    background: linear-gradient(to right, rgb(62, 226, 255), rgb(139, 238, 255));
+
+    &:hover {
+      background: linear-gradient(to right, rgb(242, 74, 85), rgb(243, 123, 107));
+    }
+  }
 }
 
 .option-list {

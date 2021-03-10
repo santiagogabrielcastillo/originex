@@ -15,24 +15,24 @@
 
 
 // Navbar style
-.my-container-fluid {
+.container-fluid {
     padding-top: 85px;
 }
 
 @include media-breakpoint-down(lg) {
-  .my-container-fluid {
+  .container-fluid {
     padding-top: 80px;
   }
 }
 
 @include media-breakpoint-down(md) {
-  .my-container-fluid {
+  .container-fluid {
     padding-top: 75px;
   }
 }
 
 @include media-breakpoint-down(sm) {
-  .my-container-fluid {
+  .container-fluid {
     padding-top: 70px;
   }
 }
@@ -43,36 +43,36 @@
     min-height: 100vh;
   }
   
-.my-container-fluid {
+.container-fluid {
   padding-bottom: 12rem;    /* Footer height*/
 }
 
 @media (max-width : 587px) {
-  .my-container-fluid {
+  .container-fluid {
     padding-bottom: 600px;
   }
  }
 
 @media (max-width : 498px) {
- .my-container-fluid {
+ .container-fluid {
    padding-bottom: 680px;
  }
 }
 
 @media (max-width : 392px) {
-  .my-container-fluid {
+  .container-fluid {
     padding-bottom: 725px;
   }
  }
 
  @media (max-width : 350px) {
-  .my-container-fluid {
+  .container-fluid {
     padding-bottom: 825px;
   }
  }
 
  @media (max-width : 320px) {
-  .my-container-fluid {
+  .container-fluid {
     padding-bottom: 1000px;
   }
  }

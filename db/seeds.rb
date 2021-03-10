@@ -446,7 +446,7 @@ EVENTS = [{
   activity_id: Activity.all[0].id,
   chatroom_id: Chatroom.all[1].id,
   address: "Av. Las Heras 3353, Buenos Aires, Argentina",
-  photo: URI.open("https://lh3.googleusercontent.com/proxy/My9Bv-AiwM5HsbRpTDV8DL8HcxNinAWf1-za_3yqjcR-wdiuANkYNeHoC05XU5yPOklZiegC0zDRf9-vJJbhTEGpmu6dBkj_UOUDbt_cIFiEVXGkMRtf8Wzr2JM_Rr-BlTjH_mggTOZQA8KShg")
+  photo: URI.open("https://www.manchestermarathon.co.uk/wp-content/uploads/sites/9/2018/11/Charity-runners.jpg")
 }, {
   status: "public",
   details: "Crazy people, but happy. Amazing moment! We run until the sunrise.",

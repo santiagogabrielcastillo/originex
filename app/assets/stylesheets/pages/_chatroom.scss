@@ -10,13 +10,6 @@
   } 
 }
 
-// .chatroom-form {
-//   height: auto;
-//   padding: 25px;
-//   border-radius: 10px;
-//   background-color: dimgrey;
-// }
-
 .users-cards {
   flex-grow: 1;
 }
@@ -28,21 +21,21 @@
   border-radius: 10px;
 }
 
-.chatroom-users {
-  width: 37%;
-  min-height: 575px;
-  overflow: hidden;
-  padding: 25px;
-  border-radius: 10px;
-  background: linear-gradient(to bottom, rgba(238, 134, 120, 0.3), rgba(255, 255, 255, 1.0) );
-  position: sticky;
+@media (max-width : 587px) {
+  .chatroom-users {
+    width: 37%;
+    min-height: 575px;
+    overflow: hidden;
+    padding: 25px;
+    border-radius: 10px;
+    position: sticky;
 
-  h2 {
-    font-size: 35px;
-    margin-bottom: 17px;
+    h2 {
+      font-size: 35px;
+      margin-bottom: 17px;
+    }
   }
 }
-
 .chatroom-user {
   margin: 0 auto;
   overflow: hidden;

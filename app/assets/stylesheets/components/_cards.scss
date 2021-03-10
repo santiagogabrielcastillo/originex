@@ -130,8 +130,8 @@
 
     img {
     border-radius: 9px;
-    height: 30vh;
-    width: 20vw;
+    height: 20vh;
+    width: 17vw;
     margin-right: 1rem;
   }
 }
@@ -162,37 +162,55 @@
 }
 
 @media (max-width : 1480px) {
-  .card-profile-info {
+  .card-rectangular {
     flex-direction: row;
+
+    img {
+      border-radius: 9px;
+      height: 20vh;
+      width: 17vw;
+      margin-right: 1rem;
+    }
+  }
+  .card-profile-info {
     h2 {
       margin: 15px;
       font-size: 3vw;
       font-weight: 900;
     }
-    
-    img {
-      border-radius: 9px;
-      width: 20vw;
-      margin-right: 1rem;
-    }
     p {
-      font-size: 16px;
+      font-size: 12px;
     }
   }
  }
 
-
-@media (max-width : 887px) {
-  .card-profile-info {
+ @media (max-width : 1280px) {
+  .card-rectangular {
     flex-direction: row;
+
+    img {
+      border-radius: 9px;
+      height: 20vh;
+      width: 29vw;
+      margin-right: 1rem;
+    }
+  }
+ }
+@media (max-width : 887px) {
+  .card-rectangular {
+    flex-direction: row;
+
+    img {
+      border-radius: 9px;
+      height: 25vh;
+      width: 34vw;
+      margin-right: 1rem;
+    }
+  }
+  .card-profile-info {
     h2 {
       font-size: 5vw;
       font-weight: 900;
-    }
-    img {
-      border-radius: 9px;
-      width: 20vw;
-      margin-right: 1rem;
     }
     p {
       font-size: 12px;
@@ -201,35 +219,42 @@
  }
 
 @media (max-width : 498px) {
-  .card-profile-info {
+  .card-rectangular {
     flex-direction: column;
+    
+
+    img {
+      border-radius: 9px;
+      height: 20vh;
+      width: 70vw;
+      margin-right: 1rem;
+    }
+  }
+  .card-profile-info {
     h2 {
       font-size: 7vw;
       font-weight: 900;
     }
-    img {
-      border-radius: 9px;
-      width: 15vw;
-      margin-right: 1rem;
-    }
     p {
-      font-size: 9px;
+      font-size: 10px;
     }
   }
 }
 
  @media (max-width : 320px) {
-  .card-profile-info {
+  .card-rectangular {
     flex-direction: column;
-
+    img {
+      border-radius: 9px;
+      height: 20vh;
+      width: 65vw;
+      margin-right: 1rem;
+    }
+  }
+  .card-profile-info {
     h2 {
       font-size: 7vw;
       font-weight: 900;
-    }
-    img {
-      border-radius: 9px;
-      width: 20vw;
-      height: auto;
     }
     p {
       font-size: 8px;

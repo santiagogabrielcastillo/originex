@@ -25,7 +25,7 @@ ACTIVITIES = [{
     For those who enjoy art, or simply just want to get out the house and do something different, there are a lots of exhibitions hosted 
     by some of the trendiest and most alternative galleries in Buenos Aires.",
     zone: "Palermo",
-    photo: "http://the-creative-business.com/wp-content/uploads/2014/06/512px-Robert_Mapplethorpe_Exhibition.jpg"
+    photo: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Exposition_%22Gauguin%2C_Van_Gogh%2C_les_peintres_de_la_couleur%22.jpg"
   }, {
     title: "Pizza tour",
     category: "Food and drinks",

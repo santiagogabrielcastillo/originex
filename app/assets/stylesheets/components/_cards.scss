@@ -115,35 +115,26 @@
 .card-rectangular {
   overflow: hidden;
   border-radius: 9px;
-  height: auto;
-  width: 90%;
-  background: white;
+  background: rgb(255, 255, 255);
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 1.2rem;
   
-    h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 15px;
-  }
     p {
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.4rem;
     opacity: 1.0;
     margin-bottom: 0;
-    margin: 15px;
+    margin: 1rem;
   }
 
     img {
     border-radius: 9px;
-    height: 200px;
-    width: 250px;
-    margin: 5px 10px 5px 5px;
+    height: 30vh;
+    width: 20vw;
+    margin-right: 1rem;
   }
 }
-
-
 
 .card-rectangular-img-circular {
   width: 200px;
@@ -169,6 +160,98 @@
   color:  rgb(242, 74, 85);
   text-decoration: none ;
 }
+
+@media (max-width : 1480px) {
+  .card-profile-info {
+
+    h2 {
+      margin: 15px;
+      font-size: 3vw;
+      font-weight: 900;
+    }
+    
+    img {
+      border-radius: 9px;
+      width: 20vw;
+      margin-right: 1rem;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+ }
+
+
+@media (max-width : 887px) {
+  .card-profile-info {
+
+    h2 {
+      font-size: 5vw;
+      font-weight: 900;
+    }
+    img {
+      border-radius: 9px;
+      width: 20vw;
+      margin-right: 1rem;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+ }
+
+@media (max-width : 498px) {
+  .card-profile-info {
+    h2 {
+      font-size: 7vw;
+      font-weight: 900;
+    }
+    img {
+      border-radius: 9px;
+      width: 15vw;
+      margin-right: 1rem;
+    }
+    p {
+      font-size: 9px;
+    }
+  }
+}
+
+ @media (max-width : 320px) {
+  .card-profile-info {
+    h2 {
+      font-size: 7vw;
+      font-weight: 900;
+    }
+    img {
+      border-radius: 9px;
+      width: 20vw;
+      height: auto;
+    }
+    p {
+      font-size: 8px;
+    }
+  }
+ }
+
+ 
+@media (max-width : 887px) {
+  .card-profile-info {
+    font: size 1.0em;
+  }
+ }
+
+@media (max-width : 498px) {
+  .card-profile-info {
+    font: size 0.7em;
+ }
+}
+
+ @media (max-width : 320px) {
+  .card-profile-info {
+    font: size 0.3em;
+ }
+ }
 
 @include media-breakpoint-down(sm) {
   .card-activity {

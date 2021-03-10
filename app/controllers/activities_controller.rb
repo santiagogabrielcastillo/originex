@@ -6,8 +6,6 @@ class ActivitiesController < ApplicationController
         title_category: params[:query],
         zone: params[:zone]
       })
-    elsif user_signed_in?
-      @activities = Activity.where(id: current_user.user_interests.pluck(:activity_id))
     else
       @activities = Activity.all 
     end

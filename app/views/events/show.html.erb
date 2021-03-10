@@ -60,8 +60,12 @@
           <p class="my-auto ml-2"><%= @event.activity.category %></p>
         </div>
         <div class="event-show-contact-link">
-          <%= simple_form_for([@event, @participant]) do |f| %>
-            <%= f.button :submit, "Join chat", class: "btn btn-red-degrade" %>
+          <% if @user_participant.empty? %>
+            <%= simple_form_for([@event, @participant]) do |f| %>
+              <%= f.button :submit, "Join chat", class: "btn btn-red-degrade" %>
+            <% end %>
+          <% else %>
+            <%= link_to 'Show chatroom', chatroom_path(@event.chatroom), class: "btn btn-red-degrade" %>
           <% end %>
         </div>
       </div>

@@ -1,10 +1,13 @@
 .invitation {
-  width: 70%;
+  width: 80%;
   background-color: white;
-  color: black;
   border-radius: 10px;
-  padding: 25px;
+  padding: 20px;
   margin-bottom: 15px;
+
+  h3 {
+    color: rgb(242, 74, 85);
+  }
 }
 
 .invitation-infos {
@@ -16,7 +19,6 @@
 
 .invitation-buttons {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

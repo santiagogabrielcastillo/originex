@@ -1,28 +1,59 @@
 <div class="container">
-  <h1 class="text-center">Chatroom invitations</h1>
+  <h1 class="mt-4">Chatroom invitations</h1>
   <div class="row">
     <div class="col-12">
-      <% @invitations.each do |invitation| %>
-      <div class="invitation">
-        <h3>Chatroom #<%= invitation.chatroom.title %></h3>
-        <p><%= invitation.chatroom.description %></p>
-        <div class="invitation-infos">
-          <div class="invitation-participants">
-            <h4>Chatroom participants</h4>
-            <ul>
-              <% invitation.chatroom.participants.where(status: true).each do |part| %>
-                <% if part.user != current_user %>
-                  <li><%= part.user.full_name %></li>
-                <% end %>
-              <% end %>
-            </ul>
+      <% if @invitations.empty? %>
+        <div class="mt-5">
+          You don't have any invitations yet!
+        </div>
+      <% else %>
+        <% @invitations.each do |invitation| %>
+        <div class="invitation">
+          <div class="row">
+            <div class="col-12">
+              <h3>#<%= invitation.chatroom.title %></h3>
+              <p><%= invitation.chatroom.description %></p>
+            </div>
           </div>
-          <div class="invitation-buttons">
-            <%= link_to 'Accept invitation', participant_path(invitation), method: :patch %>
-            <%= link_to 'Ignore invitation', participant_path(invitation), method: :delete, data: {confirm: 'Are you sure?'} %>
+          <div class="invitation-infos">
+            <div class="row w-100">
+              <div class="col-12 col-md-8">
+                <div class="invitation-participants">
+                  <p><i class="fas fa-users"></i> <%= invitation.chatroom.participants.where(status: true).count %> participants in this chatroom</p>
+                  <%= link_to 'Show activity info', activity_path(invitation.chatroom.activity), class: 'mb-2' %>
+                  <!-- <ul>
+                    <% invitation.chatroom.participants.where(status: true).each do |part| %>
+                      <% if part.user != current_user %>
+                        <div>
+                            <div class="event-user-card text-center">
+                              <% if part.user.photo.attached? %>
+                                <%= cl_image_tag part.user.photo.key, width: 90, height: 90, crop: :thumb, gravity: :face %>
+                              <% else %>
+                                <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" %>
+                              <% end %>
+                              <div class="d-flex flex-column justify-content-center w-100">              
+                                <%= link_to user_path(part.user) do %>
+                                  <h2><%= part.user.username %></h2>
+                                <% end %>
+                                <p><%= part.user.full_name %></p>                
+                              </div>
+                            </div>
+                          </div>
+                      <% end %>
+                    <% end %>
+                  </ul> -->
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="invitation-buttons">
+                  <%= link_to 'Accept invitation', participant_path(invitation), method: :patch, class: 'btn-red-degrade text-nowrap my-3 mx-auto px-2' %>
+                  <%= link_to 'Ignore invitation', participant_path(invitation), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn-red-degrade text-nowrap mx-auto px-2' %>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+        <% end %>
       <% end %>
     </div>
   </div>

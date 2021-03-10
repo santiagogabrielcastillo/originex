@@ -32,3 +32,14 @@
   align-items: center;
   margin-top: 0;
 }
+
+@media(max-width: 540px) {
+  .invitation {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .invitation-buttons {
+    width: 90%;
+  }
+}

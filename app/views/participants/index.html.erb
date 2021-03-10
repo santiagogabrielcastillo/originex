@@ -27,8 +27,8 @@
               </div>
               <div class="col-12 col-md-4">
                 <div class="invitation-buttons">
-                  <%= link_to 'Accept invitation', participant_path(invitation), method: :patch, class: 'btn-red-degrade text-nowrap mb-3 mx-auto px-2' %>
-                  <%= link_to 'Ignore invitation', participant_path(invitation), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn-red-degrade text-nowrap mx-auto px-2' %>
+                  <%= link_to 'Accept', participant_path(invitation), method: :patch, class: 'btn-red-degrade text-nowrap mb-3 mx-auto px-4' %>
+                  <%= link_to 'Ignore', participant_path(invitation), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn-red-degrade text-nowrap mx-auto px-4' %>
                 </div>
               </div>
             </div>

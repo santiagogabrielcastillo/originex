@@ -37,9 +37,18 @@
   .invitation {
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 15px;
+  }
+}
+
+@media(max-width: 360px) {
+  .invitation {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
   }
 
-  .invitation-buttons {
-    width: 90%;
+  h3 {
+    font-size: 20px;
   }
 }

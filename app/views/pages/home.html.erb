@@ -29,12 +29,14 @@
   <div class="container mt-5">
     <div class="row m-2 justify-content-center">
       <% @activities.each do |activity| %>
-        <div class="card-activity col-12 col-md-5 col-lg-3 m-3 p-0">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 my-3">
+          <div class="card-activity"> 
           <%= image_tag activity.photo %>
           <div class="card-activity-infos">
-             <h1><%= link_to "#{activity.title}", activities_path(activity) %></h1>
-              <p><%= truncate(activity.description, length: 100) %></p>
+             <h1><%= link_to "#{truncate(activity.title, length: 18)}", activity_path(activity) %></h1>
+              <p><%= truncate(activity.description, length: 85) %></p>
              <div class="d-flex location"> <i class="mx-1 icon-location fas fa-map-marker-alt"></i> <p class="text-location"><%= activity.zone %></p> </div>
+          </div>
           </div>
         </div>
       <% end %>

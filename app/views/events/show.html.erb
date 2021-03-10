@@ -1,17 +1,13 @@
 <div class="container">
-  <div class="row">
+  <div class="row bg-white py-4 px-3 shadow rounded">
     <div class="col-12">
-      <div class="d-flex align-items-center pt-15">
-        <% if @event.photo.attached? %>
-          <%= cl_image_tag @event.photo.key, class: "event-header-image" %>
-        <% else %>
-          <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" %>
-        <% end %>     
-      </div>
+      <% if @event.photo.attached? %>
+        <%= cl_image_tag @event.photo.key, class: "event-header-image" %>
+      <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8cGFydHl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", class: "event-header-image" %>
+      <% end %>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-8">
+    <div class="col-sm-12 col-md-8 pt-4">
       <div class="event-show-title">
         <h1><strong><%= @event.details %></strong></h1>
       </div>
@@ -41,7 +37,7 @@
         <% end %>
       </div>
     </div>
-    <div class="col-sm-12 col-md-4">
+    <div class="col-sm-12 col-md-4 pt-4">
       <div id="event-info">
         <div id="map"
           style="width: 100%; height: 300px; border-radius: 5px; box-shadow: 0 0 15px grey; margin-top: 30px;"
@@ -80,7 +76,7 @@
   <div class="row">
     <div class="col-12">
       <div class="back-link">
-        <%= link_to "Back to activity", activity_path(@event.activity_id), class: "btn btn-red-degrade" %>
+        <%= link_to "Back to activity", activity_path(@event.activity_id), class: "btn-link" %>
       </div>
     </div>
   </div>

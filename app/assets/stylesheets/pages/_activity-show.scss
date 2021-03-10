@@ -1,13 +1,13 @@
 .show-banner {
   padding: 25px 0;
-  background-size: 100%;
+  background-size: 90%;
   background-position: center;
   opacity: 0.9; 
 }
 
 .show-banner h2 {
   color:  rgb(242, 74, 85);
-  font-size: 28px;
+  font-size: 40px;
 }
 
 .horizontal-centered {
@@ -31,9 +31,24 @@
   width: 100%;
   height: 300px;
   border-radius: 5px;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px grey;
   object-fit: cover;
   object-position: center;
+}
+
+.activity-detail h3 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.details-button {
+  margin-right: 6px;
+  margin-top: -10px;
+}
+.event-img-placeholder {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
 }
 
 .fa-user-friends {
@@ -46,4 +61,12 @@
 
 .fa-clipboard-check {
   font-size: 30px;
+}
+
+.fa-calendar-alt {
+  font-size: 14px;
+}
+
+.fa-broadcast-tower {
+  font-size: 14px;
 }

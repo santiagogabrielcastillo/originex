@@ -9,12 +9,11 @@
     </div>
     <div class="col-sm-12 col-md-8 pt-4">
       <div class="event-show-title">
-        <h1><strong><%= @event.details %></strong></h1>
+        <h3><%= @event.activity.category %></h3>
+        <h1><strong><%= @event.chatroom.title %></strong></h1>
       </div>
       <div class="event-show-details">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat lacus at tincidunt imperdiet. Cras ac justo eget nunc scelerisque tempus in sit amet libero. Vestibulum sagittis laoreet sollicitudin. Proin id orci leo.</p>
-        <p>Aliquam ullamcorper turpis orci, in maximus eros convallis imperdiet. Aliquam ut pharetra velit, ac accumsan ex. Vivamus eu ornare eros, sed euismod metus. Pellentesque at erat ut risus interdum finibus at ac massa. Praesent et pellentesque purus. Sed varius malesuada nulla, a ultrices risus varius congue.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat lacus at tincidunt imperdiet. Cras ac justo eget nunc scelerisque tempus in sit amet libero. Vestibulum sagittis laoreet sollicitudin. Proin id orci leo.</p>
+        <p><%= @event.details %></p>
       </div>
       <h4>You'll be joining...</h4>
       <div class="row grid">

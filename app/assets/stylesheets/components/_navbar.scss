@@ -10,6 +10,7 @@
   
   .avatar-section {
     position: relative;
+    width: 20%;
 
     .avatar-img {
       position: absolute;
@@ -57,6 +58,12 @@
       border-bottom: 1px solid rgb(151, 151, 151);
     }
   }
+
+  .buttons-container {
+    position: absolute;
+    right: 0;
+    width: 220px;
+  }
 }
 
 @include media-breakpoint-down(lg) {
@@ -68,20 +75,33 @@
 @include media-breakpoint-down(md) {
   .navbar-originex {
     padding: 10px 14px;
+
+    .avatar-section {
+      width: 10%;
+    }
   }
 }
 
 @include media-breakpoint-down(sm) {
   .navbar-originex {
     padding: 8px 12px;
-    
-    #dropdown-section img {
-      display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px)  {
+  .navbar-originex {
+    .navbar-link {
+      font-size: 0.9rem;
     }
 
-  }
-  
-  .btn-menu {
-    display: block;
+     .buttons-container {
+      width: 160px;
+    }
+
+    .btn-navbar {
+      font-size: 0.9rem;
+      white-space: nowrap;
+      padding: 6px 16px;
+    }
   }
 }

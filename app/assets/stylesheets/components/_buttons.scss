@@ -1,5 +1,6 @@
 .btn-search-bar {
   color: #ffffff;
+  justify-content: space-between;
   font-weight:  600;
   padding: 16px 32px;
   border-radius: 50px;
@@ -9,36 +10,35 @@
 
   .searchable-item {
     flex-grow: 1;
-    background-color: rgba(244, 131, 120, .01);
-    color: rgb(197, 197, 197);
+    background-color: white;
+    color: black;
     border: none;
 
-      &:hover {
-        border: 1px solid rgb(197, 197, 197);
-      }
+    &:hover {
+      border: 1px solid black;
+    }
   }
 
   .search-zone {
-    background-color: rgba(244, 131, 120, .01);
-    color: rgb(197, 197, 197);
-    border: 1px solid rgb(197, 197, 197);
+    background-color: white;
+    color: black;
   }
 
   .search-icon {
     height: 100%;
     width: 100px;
-    border-radius: 3px;
+    border-radius: 50%;
     flex-grow: 0;
     font-size: 20px;
-    padding: 11px 12px;
+    padding: 14px 14px;
     width: fit-content;
-    color: rgba(39, 39, 39, 0.5);
-    background: #8beeff;
-    opacity: 0.8;
+    color: rgba(39, 39, 39, 0.7);
+    background: linear-gradient(to right, rgba(62, 226, 255, 0.9), rgba(139, 238, 255, 0.9));
     border: none;
 
       &:hover {
-        opacity: 1;
+        color: rgb(39, 39, 39);
+        background: linear-gradient(to right, rgb(62, 226, 255), rgb(139, 238, 255));
         text-decoration: none;
       }
     }

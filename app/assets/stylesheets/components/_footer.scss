@@ -12,17 +12,21 @@
     .copyright {
       color: $primary;
     }
-    
-    .inline .circle {
-      flex-grow: 0;
-      font-size: 20px;
-      color: $primary;
-    }
 
-    .inline p {
-      flex-grow: 1;
-      padding-left: 20px;
-    } 
+    .services {
+      padding-top: 40px;
+      
+      .inline .circle {
+        flex-grow: 0;
+        font-size: 20px;
+        color: $primary;
+      }
+    
+      .inline p {
+        flex-grow: 1;
+        padding-left: 20px;
+      }
+    }
 
     .footer-links {
       display: flex;

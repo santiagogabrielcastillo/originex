@@ -9,7 +9,7 @@ class EventsController < ApplicationController
     @time = @event.date.to_s.split[1]
     @participants = @event.chatroom.participants.where(status: true)
     @participant = Participant.new
-
+    @user_participant = Participant.where('user_id = ? and chatroom_id = ?', current_user.id, @event.chatroom.id)
     @markers = [{
       lat: @event.latitude,
       lng: @event.longitude

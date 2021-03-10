@@ -1,5 +1,8 @@
 .main-container {
-  display: flex;
+  display: flex; 
+  align-items: center;
+  padding: 1.2rem;
+  
   width: 100%;
   margin: 0 auto;
  
@@ -8,6 +11,16 @@
     font-weight: bold;
     color: rgba( 0, 0, 0, .9);
   } 
+}
+
+.chat-header {
+  // background-color: $pink;
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0.9);
+  padding: 7px 20px;
+  h4 {
+    margin: 0;
+  }
 }
 
 .users-cards {
@@ -20,10 +33,24 @@
   padding: 15px;
   border-radius: 10px;
 }
+.chatroom-users {
+  flex-direction: row;
+  width: 37%;
+  min-height: 575px;
+  overflow: hidden;
+  padding: 25px;
+  border-radius: 10px;
+  position: sticky;
+
+  h2 {
+    font-size: 35px;
+    margin-bottom: 17px;
+  }
+}
 
 @media (max-width : 587px) {
   .chatroom-users {
-    width: 37%;
+    flex-direction: row;
     min-height: 575px;
     overflow: hidden;
     padding: 25px;
@@ -35,11 +62,33 @@
       margin-bottom: 17px;
     }
   }
+  .chatroom {
+    flex-direction: row;
+  }
+}
+
+@media (max-width : 320px) {
+  .chatroom-users {
+    flex-direction: column;
+    
+    // min-height: 575px;
+    // overflow: hidden;
+    // padding: 25px;
+    // border-radius: 10px;
+    // position: sticky;
+
+    h2 {
+      font-size: 35px;
+      margin-bottom: 17px;
+    }
+  }
+
+  .chatroom {
+    flex-direction: column;
+  }
 }
 .chatroom-user {
-  margin: 0 auto;
   overflow: hidden;
-  width: 80%;
   height: auto;
   background: white;
   display: flex;
@@ -66,6 +115,14 @@
     margin: 10px;
     height: auto;
     width: 90%;
+  }
+}
+
+@media (max-width : 320px) {
+  .chatroom-user {
+    p {
+      display: none;
+    }
   }
 }
 

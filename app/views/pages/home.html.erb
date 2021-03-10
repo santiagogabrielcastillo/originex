@@ -1,5 +1,5 @@
   <div class="banner row">
-    <div class="container banner-content col-10 col-md-8 col-xl-5">
+    <div class="container banner-content col-10 col-md-8 col-xl-6">
       <h1>Share new <br/> experiences</h1>
        <%= form_tag activities_path, class: "d-flex align-items-center btn-search-bar", method: :get do %>
         <div data-controller="autocomplete" data-autocomplete-url-value="/autocomplete">
@@ -29,12 +29,14 @@
   <div class="container mt-5">
     <div class="row m-2 justify-content-center">
       <% @activities.each do |activity| %>
-        <div class="card-activity col-12 col-md-5 col-lg-3 m-3 p-0">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 my-3">
+          <div class="card-activity"> 
           <%= image_tag activity.photo %>
           <div class="card-activity-infos">
-             <h1><%= link_to "#{activity.title}", activities_path(activity) %></h1>
-              <p><%= truncate(activity.description, length: 100) %></p>
+             <h1><%= link_to "#{truncate(activity.title, length: 18)}", activity_path(activity) %></h1>
+              <p><%= truncate(activity.description, length: 85) %></p>
              <div class="d-flex location"> <i class="mx-1 icon-location fas fa-map-marker-alt"></i> <p class="text-location"><%= activity.zone %></p> </div>
+          </div>
           </div>
         </div>
       <% end %>
@@ -107,5 +109,5 @@
       </div>
     </div>
     
-    <%= link_to "See more", root_path, class: "btn btn-red-degrade" %>
+    <%= link_to "See more", root_path, class: "btn-faq btn-red-degrade" %>
   </div>

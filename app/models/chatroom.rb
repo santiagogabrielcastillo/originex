@@ -6,4 +6,5 @@ class Chatroom < ApplicationRecord
   has_many :users, through: :participants
 
   validates :title, :description, presence: true
+
 end

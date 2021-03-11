@@ -1,5 +1,8 @@
+<div class="container pt-5 container-events">
+<h1 style="font-weight: 600;">My events</h1>
+<p>See what events you joined in, check the details, and chat with your friends!</p>
 <% if @user_events.size >= 1 %>
-  <div class="row">
+  <div class="row justify-content-center">
     <% @user_events.each do |user_event| %>
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card-activity my-3">              
@@ -24,3 +27,4 @@
 <% else %>
   <h3>What are you waiting for? Start joining events!</h3>
 <% end %>
+</div>

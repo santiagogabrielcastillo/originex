@@ -14,12 +14,23 @@
                         input_html: { autocomplete: "current-password" } %>
               <%# f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           </div>
+          <%= render 'devise/shared/forgotpass', class: "my-2" %>
 
-          <div class="form-actions my-2">
-            <%= f.button :submit, "Log in", class: "btn btn-red-degrade" %>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-actions my-3 d-flex justify-content-between">
+                <div class="my-auto">
+                  <%= f.button :submit, "Log in", class: "btn btn-red-degrade py-1" %>
+                </div>
+                <div class="mx-3">
+                  <p class="mb-1">Don't have an account?</p>
+                  <%= render 'devise/shared/signup', class: "" %>
+                </div>
+              </div>
+            </div> 
           </div>
         <% end %>
-        <%= render "devise/shared/links", class: "mx-2" %>
+        <%#= render "devise/shared/links", class: "mx-2" %>
       </div>
     </div>
   </div>

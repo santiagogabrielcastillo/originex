@@ -4,12 +4,19 @@
   padding: 2rem;
 
   h2 {
-    font-size: 3vw;
-
+    font-size: 4vw;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
   }
 }
+.container-edit-photo {
+  display: flex;
+  align-items: center;
+ }
 
-
+.color {
+  color: black;
+}
 
 @media (max-width : 887px) {
   h2 {

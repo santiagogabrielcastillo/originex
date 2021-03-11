@@ -64,6 +64,19 @@
   }
 }
 
+@include media-breakpoint-down(lg) {
+  .footer {
+    
+    .column {
+      margin-top: 15px;
+      
+      .services {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
  @media (max-width : 587px) {
   .footer {
     height: fit-content;

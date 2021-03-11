@@ -1,7 +1,7 @@
 <div class="container vertical-center">
   <div class="row justify-content-center">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <h3>These are your interests!</h3>
+      <h3>Select your interests</h3>
       <p>If you pick one we will show you related activities <i class="smile fas fa-smile-wink"></i></p>
       <%= simple_form_for current_user, url: user_interests_path, method: :post do |f| %>
         <%= f.association :activities, as: :check_boxes, input_html: { class: "tag-selector" },

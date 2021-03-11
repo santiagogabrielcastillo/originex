@@ -1,10 +1,10 @@
-<div class="main-container mb-5">
+<div class="main-container">
   <div class="chatroom-users mr-4">
-    <h2 class="text-center mb-5">Participants</h2>
+    <h2 class="mb-5">Participants</h2>
     <div class="row">
       <% @participants.each do |part| %>
       <div class="col-12">
-        <div class="chatroom-user text-center mb-3">
+        <div class="chatroom-user mb-3">
           <div class="row">
             <div class="col-12 col-lg-4">
               <% if part.user.photo.attached? %>
@@ -13,7 +13,7 @@
                 <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" %>
               <% end %>
             </div>
-            <div class="col-12 col-lg-8">
+            <div class="col-3 col-lg-8">
               <div class="chatroom-user-infos">
                 <%= link_to user_path(part.user) do %>
                   <h2><%= part.user.full_name %></h2>
@@ -33,7 +33,7 @@
         <% if @chatroom.event %>
           <%= link_to 'See event details', event_path(@chatroom.event), class: 'btn-red-degrade mt-5' %>
         <% else %>
-          <%= link_to 'Create event', new_chatroom_event_path(@chatroom), class: 'btn-red-degrade mt-5' %>
+          <%= link_to 'Create event', new_chatroom_event_path(@chatroom), class: 'btn-red-degrade mt-5 btn-block' %>
         <% end %>
       </div>
     </div>
@@ -41,7 +41,7 @@
   <div class="chatroom">
     <div class="row">
       <div class="col-12">
-        <div class="chat-header mx-"><h1>#<%= @chatroom.title %></h1></div>
+        <div class="chat-header mx-4"><h1>#<%= @chatroom.title %></h1></div>
         <p class="mx-2"><%= @chatroom.description %></p>
         <hr>
         <div  class="mx-3" id="messages" data-chatroom-id="<%= @chatroom.id %>">

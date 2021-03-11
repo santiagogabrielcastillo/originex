@@ -157,7 +157,7 @@
  
 // profile cards
 .card-profile-info a:hover {
-  color:  rgb(242, 74, 85);
+  color:  rgb(139, 238, 255);
   text-decoration: none ;
 }
 
@@ -194,6 +194,7 @@
       height: 20vh;
       width: 19vw;
       margin-right: 1rem;
+      object-fit: cover;
     }
   }
   .card-profile-info {

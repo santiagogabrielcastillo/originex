@@ -1,14 +1,15 @@
 <div class="main-container">
-  
   <div class="container new-chat m-3">
     <h3>Meet new people, open your mind.</h3>
-    <p>Invite people interested in the same activity that you to your chatroom! Know each other and organize an event!</p>
+    <p>Let's live new experiencies!</p> 
+    <p class="my-0">In order to organize a new event, invite people interested in the same activity that you to your chatroom!</p> 
+    <p class="mt-0">Get to know each other, talk and arrange an event!</p>
     <div class="row">
-      <div class="col-12 col-md-6 col-xl-8">
+      <div class="col-12 col-md-7 col-xl-9">
           <%= simple_form_for([@activity, @chatroom]) do |f| %>
             <%= f.input :title %>
             <%= f.input :description %>
-            <%= f.input :users, collection: @users, as: :check_boxes, label_method: lambda { |user| "#{content_tag :p, user.full_name, class: "username"} #{cl_image_tag((user.photo.key), class: "avatar-bordered")} ".html_safe }, value_method: :id, include_blank: false, item_wrapper_class: "user-list", input_html: {multiple: true, class: "user"} %>
+            <%= f.input :users, collection: @users, as: :check_boxes, label_method: lambda { |user| "#{content_tag :p, user.full_name, class: "username"} #{cl_image_tag((user.photo.key), class: "avatar")} ".html_safe }, value_method: :id, include_blank: false, item_wrapper_class: "user-list", input_html: {multiple: true, class: "user"} %>
             <%= f.button :submit, class: 'btn-red-degrade' %>
           <% end %>
       </div>

@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="container">
-      <h3 class=" my-3">Join events and have fun!</h3>
+      <h3 class="join-events-title my-3">Join events and have fun!</h3>
       <div class="row">
         <% @events.each do |event| %>
           <div class="col-12 col-md-6 col-lg-4">
@@ -48,8 +48,8 @@
                 <div>
                   <h1><%= link_to "#{event.chatroom.title}", event_path(event), class: "event-title" %></h1>
                   <div>
-                    <p class="my-1"><i class="icon-event fas fa-calendar-alt mr-3"></i><%= event.date.to_datetime.strftime('%a %d/%m/%Y') %></p>
-                    <p class="my-1"><i class="icon-event fas fa-broadcast-tower mr-3"></i><%= event.status.capitalize %></p>
+                    <p class="my-1"><i class="icon-event fas fa-calendar-alt mr-3" style="font-size: 18px"></i><%= event.date.to_datetime.strftime('%a %d/%m/%Y') %></p>
+                    <p class="my-1"><i class="icon-event fas fa-broadcast-tower mr-3" style="font-size: 13px"></i><%= event.status.capitalize %></p>
                   </div>
                 </div>
               </div>

@@ -1,32 +1,32 @@
 <% content_for :meta_title, "#{@activities.first.title} - #{DEFAULT_META["meta_product_name"]}'s activities" %>
 <% content_for :meta_description, "Explore over our activities and find one that fits your interests. Have fun, meet people and keep inovating in your daily life!" %>
 
-<div class="container">
-  <h1 class="text-center m-3">Explore over our available activities</h1>
-  <div class="row">
-    <div class="col-12 col-md-10 col-lg-8">
-      <%= form_tag activities_path, class: "d-flex align-items-center", method: :get do %>
-      <div class="row">
-        <div class="col-10 col-md-5 px-1 mx-auto">
+<div class="container container-index">
+  <h1 class="text-left m-3">Explore over our available activities</h1>
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-10 col-lg-8 my-2">
+      <%= form_tag activities_path, class: "d-flex justify-content-center align-items-center btn-search-bar search-bar-index", method: :get do %>
+      <div class="row align-items-center w-100">
+        <div class="col-6 px-1 mx-auto">
           <div data-controller="autocomplete" data-autocomplete-url-value="/autocomplete">
             <%= text_field_tag :query,
               params[:query],
-              class: "form-control search-index",
+              class: "form-control searchable-item",
               placeholder: "Find an activity...",
               data: { 'autocomplete-target' => 'input' } %>
               <ul data-autocomplete-target="results" class="option-list-index"></ul>
           </div>
         </div>
-        <div class="col-10 col-md-5 px-1 mx-auto">
+        <div class="col-5 px-1 mx-auto">
           <%= select_tag(:zone,
             options_for_select(ZONES),
             include_blank: false,
             prompt: "Select zone",
-            class: "form-control search-zone search-zone-index my-1")
+            class: "form-control search-zone search-zone-index")
           %>
         </div>
-        <div class="col-12 col-md-2 d-flex justify-content-center">
-          <%= submit_tag "Search", class: "btn btn-red-degrade search-activites" %>
+        <div class="icon-column col-1 d-flex justify-content-end px-0">
+          <%= button_tag "", class: "search-icon activity-search-icon text-right justify-content-end fas fa-search" %>        
         </div>
       </div>
       <% end %>

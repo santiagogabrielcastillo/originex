@@ -4,16 +4,18 @@ save the new collection
 
 iterar x cada activity, y en cada una hacer un eventlistener, if click then save into array of user selected activities %>
 
-<div class="container">
+<div class="container justify-content-center">
   <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <h3>Please, select your interests</h3>
-      <%= simple_form_for current_user, url: user_interests_path, method: :post do |f| %>
-        <%= f.association :activities, as: :check_boxes, input_html: { class: "tag-selector" },
-                          item_wrapper_class: 'tag-item' %>
-        <%= f.button :submit, class:"btn-red-degrade" %>
-        <%= link_to "Edit your profile",  edit_user_registration_path, class: "btn-red-degrade" %>
-      <% end %>
+    <div class="col-xs-12 col-sm-9 col-lg-9">
+      <div class="container-edit">
+        <h2 class="title-interest">Choose the activities you´d like to do</h2>
+        <%= simple_form_for current_user, url: user_interests_path, method: :post do |f| %>
+          <%= f.association :activities, as: :check_boxes, input_html: { class: "tag-selector" },
+                            item_wrapper_class: 'tag-item' %>
+          <%= f.button :submit, class:"btn-red-degrade" %>
+          <%# <%= link_to "Edit your profile",  edit_user_registration_path, class: "btn-red-degrade" %> %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

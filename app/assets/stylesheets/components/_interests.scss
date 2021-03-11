@@ -12,7 +12,7 @@
   display: inline-block;
   font-size: 0.9rem;
   border-radius: 50rem;
-  padding: 0.7rem 1.0rem;
+  padding: 0.5rem 0.9rem;
   background-color:white;
   color:  rgb(242, 74, 85);
   border: 1px solid  rgb(242, 74, 85);
@@ -22,5 +22,14 @@
 
 .tag-selector:checked + label {
   background-color:  rgb(242, 74, 85);
-  // color:  rgb(255, 255, 255);;
+  color:  rgb(255, 255, 255);
+}
+.form-check-label {
+  color: white;
+}
+
+.title-interest {
+  font-size: 3vw;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.3);
 }

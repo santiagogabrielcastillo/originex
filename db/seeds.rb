@@ -445,7 +445,7 @@ EVENTS = [{
   date: DateTime.new(2021,4,9,21),
   activity_id: Activity.all[0].id,
   chatroom_id: Chatroom.all[1].id,
-  address: "Av. Las Heras 3353, Buenos Aires, Argentina",
+  address: "Av. Gral. Las Heras 3353, CABA, Argentina",
   photo: URI.open("https://www.manchestermarathon.co.uk/wp-content/uploads/sites/9/2018/11/Charity-runners.jpg")
 }, {
   status: "public",
@@ -453,7 +453,7 @@ EVENTS = [{
   date: DateTime.new(2021,4,2,5),
   activity_id: Activity.all[0].id,
   chatroom_id: Chatroom.all[2].id,
-  address: "Billinghurst 2500, Buenos Aires, Argentina",
+  address: "Billinghurst 2500, CABA, Argentina",
   photo: URI.open("https://image.freepik.com/free-photo/woman-running-beach-sunrise_101709-73.jpg")
 }, {
   status: "public",

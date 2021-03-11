@@ -1,13 +1,8 @@
 <div class="container m-5">
   <div class="row justify-content-center">
     <div class="col-xs-12 col-md-8 col-lg-8">
-<<<<<<< HEAD
-      <div class="container-edit">
-          <h3>Edit profile</h3>
-=======
       <div class="container-edit p-4">
           <h2 class="m-4">Edit your profile</h2>
->>>>>>> master
           <% if current_user.photo.attached? %> 
             <%= cl_image_tag current_user.photo.key, class:"card-rectangular-img-circular m-2"%>
           <% end %>

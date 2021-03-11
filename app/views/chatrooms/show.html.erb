@@ -1,9 +1,11 @@
+<% content_for :meta_title, "Meet People - #{@chatroom.title}" %>
+<% content_for :meta_description, "Chat with people that has similar interests with you. Get to know them and organize the event!" %>
+
+
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-4 chatroom-users">
-
       <h1 class="mb-3"><%= @chatroom.activity.title %></h1>
-
       <h2 class="mb-3">Participants</h2>
       <div class="row">      
         <% @participants.each do |part| %>
@@ -26,10 +28,9 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div>   
           </div>
         <% end %>
-
       </div>
 
 
@@ -40,7 +41,6 @@
           <%= link_to 'Create event', new_chatroom_event_path(@chatroom), class: 'btn-red-degrade mt-3 btn-block text-center' %>
         <% end %>
       </div>
-
     </div>
     <div class="col-12 col-md-8 col-lg-8 chatroom">
       <div class="row">

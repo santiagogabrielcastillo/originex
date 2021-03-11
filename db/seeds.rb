@@ -282,7 +282,7 @@ USERS = [{
   email: "felihernandez@gmail.com",
   password: "123123",
   username: "La Fiera",
-  full_name: "Feli Hernandez",
+  full_name: "Feli Hernez",
   phone_number: "987098762",
   birthday: Date.new(1976-5-7),
   address: "Pedernera 301, Buenos Aires, Argentina",

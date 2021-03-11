@@ -1,3 +1,10 @@
+<% if  @user_participant %>
+  <% content_for :meta_title, "Meet #{@event.chatroom.title} participants - #{DEFAULT_META["meta_product_name"]}'s friends" %>
+<% else %>
+  <% content_for :meta_title, "Join Event - #{@event.chatroom.title}! - #{DEFAULT_META["meta_product_name"]}'s friends" %>
+<% end %>
+<% content_for :meta_description, "Explore over our activities and find one that fits your interests. Have fun, meet people and keep inovating in your daily life!" %>
+
 <div class="container">
   <div class="row bg-white py-4 px-3 shadow rounded-lg">
     <div class="col-12">

@@ -1,16 +1,8 @@
-.main-container {
-  display: flex; 
-  align-items: center;
-  padding: 1.2rem;
-  
-  width: 100%;
-  margin: 0 auto;
  
-  h2 {
+h2 {
     font-weight: 600;
     color: rgba( 0, 0, 0, .3);
-  } 
-}
+} 
 
 .chat-header {
   // background-color: $pink;
@@ -30,17 +22,16 @@
 .chatroom {
   flex-grow: 1;
   background-color: white ;
-  padding: 15px;
+  padding: 2rem;
   border-radius: 10px;
+  position: sticky;
+
 }
 .chatroom-users {
   flex-direction: row;
-  width: 37%;
-  min-height: 575px;
-  overflow: hidden;
-  padding: 25px;
+  padding: 2rem;
   border-radius: 10px;
-  position: sticky;
+
 
   h1 {
     font-size: 2.5rem;
@@ -56,26 +47,45 @@
   }
 }
 
-@media (max-width : 587px) {
+@media (max-width : 800px) {
   .chatroom-users {
     flex-direction: row;
-    min-height: 575px;
-    overflow: hidden;
-    padding: 25px;
-    border-radius: 10px;
-    position: sticky;
-
     h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       margin-bottom: 0.8rem;
       color:rgb(242, 74, 85)
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+  .chatroom-user-infos {
+    display: flex;
+    p {
+      display: none;
+    }
+  }
+}
+
+@media (max-width : 587px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .chatroom-users {
+
+    h1 {
+      margin-bottom: 0.8rem;
+      color:rgb(242, 74, 85)
+    }
+
+    h2 {
+      font-size: 1rem;
       margin-bottom: 1rem;
     }
   }
+
   .chatroom-user {
     background-color: transparent!important;
     border-radius: 0px;
@@ -89,22 +99,25 @@
 }
 
 @media (max-width : 320px) {
+  h1 {
+    font-size: 2rem;
+  }
   .chatroom-users {
     flex-direction: column;
-    h1 {
-      font-size: 2.3rem;
-      margin-bottom: 0.8rem;
+    h1 {    
+      margin-bottom: 0.7rem;
       color:rgb(242, 74, 85)
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 0.8rem;
       margin-bottom: 0.8rem;
     }
   }
   .chatroom-user {
     background-color: transparent;
     border-radius: 0px;
+
   }
   .chatroom-user-infos {
     display: none;
@@ -112,6 +125,7 @@
 }
 
 .chatroom-user {
+  flex-direction: column;
   background: white;
   display: flex;
   border-radius: 9px;
@@ -119,19 +133,17 @@
   img {
     border-radius: 50%;
     margin: 10px;
-    height: auto;
-    width: 90%;
   }
 
     a > h2 {
     font-size: 1rem;
     font-weight: 700;
     margin: 0.3rem 0rem;
-    color:  rgb(242, 74, 85);
+    color:  rgba(242, 74, 85, 0.9);
     
     &:hover {
-        color: rgba(139, 238, 255, 1.0);
-        text-decoration: none;
+        color: rgb(36,238,217);
+        text-decoration-line: none;
     }
   }
 }

@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row bg-white py-4 px-3 shadow rounded">
+  <div class="row bg-white py-4 px-3 shadow rounded-lg">
     <div class="col-12">
       <% if @event.photo.attached? %>
         <%= cl_image_tag @event.photo.key, class: "event-header-image" %>

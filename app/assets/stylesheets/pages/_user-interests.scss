@@ -3,16 +3,17 @@
 
   display: flex;
   align-items: center;
+  
+  h3 {
+    font-weight: 900;
+  }
+  
+  p {
+    font-weight: 400;
+  }
 }
 
 .col-form-label {
   display: none;
 }
 
-h3 {
-  font-weight: 900;
-}
-
-p {
-  font-weight: 300;
-}

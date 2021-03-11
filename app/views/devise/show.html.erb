@@ -13,11 +13,16 @@
       <div class="user-info-card ml-3">
         <div class="d-flex flex-column w-100 justify-content-center">
           <div class="d-flex">
-            <h2><%= @user.username %></h2><h2 class="ml-5"><%= age %></h2>
+            <div class="user-headers d-flex">
+            <h2><%= @user.username %></h2>
+            <h2 class="ml-5"><%= age %></h2>
+            </div>
+            <%= link_to edit_user_registration_path, class: "edit-div" do %>
+              <i class="edit-icon fas fa-edit"></i>
+            <% end %> 
           </div>
           <h6><%= @user.full_name %></h6>         
           <p><i class="fas fa-envelope mr-1"></i><a href="<%= @user.email %>">Contact</a></p>
-          
         </div>
       </div>
       <div class="ml-3">

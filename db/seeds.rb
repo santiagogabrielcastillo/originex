@@ -27,7 +27,7 @@ ACTIVITIES = [{
     zone: "Palermo",
     photo: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Exposition_%22Gauguin%2C_Van_Gogh%2C_les_peintres_de_la_couleur%22.jpg"
   }, {
-    title: "Pizza tour",
+    title: "Pizza lovers",
     category: "Food and drinks",
     description: "Why pizza in Buenos Aires? Let’s go back to the roots of Buenos Aires. 
     Between 1857 and 1940 more than 3 million Italians immigrated to Buenos Aires. 
@@ -95,7 +95,7 @@ ACTIVITIES = [{
   title: "Kitesurf",
   category: "Outdoor sports",
   description: "Argentina might not be on the most popular kiteboarding destinations list, but it definitely has some good spots and ... If you're not sure where to go, you can go on organized kite tours where they take you around the ... Capital: Buenos Aires.",
-  zone: "Nuñez",
+  zone: "Núñez",
   photo: "https://media.lacapital.com.ar/p/ba1978e4fdc824b88884b4be3308a2af/adjuntos/203/imagenes/029/427/0029427312/una-playa-llena-personas-haciendo-kitesurf-deporte-patentado-1977-gijsbertus-adrianus-panhuise.jpg"
 }, {
   title: "Paintball",
@@ -107,13 +107,13 @@ ACTIVITIES = [{
   title: "Board games",
   category: "Indoor activity",
   description: "You have allways some board game fanatic like your self, there are lots of places you can go",
-  zone: "Microcentro",
+  zone: "Villa Urquiza",
   photo:"https://images.unsplash.com/photo-1532457573542-37fe94c98cf2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxheWluZyUyMGJvYXJkJTIwZ2FtZXN8ZW58MHwwfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
 }, {
   title: "Inline skating",
   category: "Outdoor sports",
   description: "Uses similar balance points, engages many of the same muscle groups from skiing, and many moves use the same body position. Over the past 10 years it has become more of a thing, and if there’s a good bike path I’ll blade for fun.",
-  zone: "Devoto",
+  zone: "Versalles",
   photo: "https://media.istockphoto.com/photos/rollerblading-on-asphalt-road-picture-id599489564?k=6&m=599489564&s=612x612&w=0&h=XhAN3YF53dbIEwhdnR1fKX4VijUYN0iLcT7dlntb9CE="
   }, {
   title: "Ping-pong and beer",
@@ -351,15 +351,15 @@ puts "Users created"
 
 CHATROOMS = [{
     title: "Runners from Caballito",
-    description: "Good vibes, cool, sporty and open-minded people.",
+    description: "Good vibes! Cool, sporty and open-minded people are welcome.",
     activity_id: Activity.all[0].id
   }, {
     title: "Running for a dream",
     description: "Let's sweat to help!",
     activity_id: Activity.all[0].id
   }, {
-    title: "Dawners",
-    description: "Fans of running at dawn",
+    title: "Sunrise runners",
+    description: "Fans of running until sunrise",
     activity_id: Activity.all[0].id
   } , {
     title: "To the lovely arts museum!",
@@ -382,7 +382,7 @@ CHATROOMS = [{
     description: "Guerrin has no comparison, that's why we are going to eat some pizzas and drink beer.",
     activity_id: Activity.all[2].id
   }, {
-    title: "Exploring",
+    title: "The special pizza: La Mezzetta",
     description: "Looking for people wanting to know new places to eat pizza, I got bored of them!",
     activity_id: Activity.all[2].id
   }, {
@@ -416,7 +416,7 @@ CHATROOMS.first(7).each do |chatroom|
   new_chatroom = Chatroom.create!(chatroom)
   new_chatroom.users = User.first(6)
   new_chatroom.participants.each do |participant|
-    participant.status = true
+    participant.update(status: true)
   end
 end
 
@@ -424,7 +424,7 @@ CHATROOMS.last(8).each do |chatroom|
   new_chatroom = Chatroom.create!(chatroom)
   new_chatroom.users = User.last(6)
   new_chatroom.participants.each do |participant|
-    participant.status = true
+    participant.update(status: true)
   end
 end
 
@@ -432,7 +432,7 @@ puts "Chatrooms created"
 
 EVENTS = [{
   status: "public",
-  details: "We leave the central park of the neighborhood and run approximately 10km.",
+  details: "You do not want to miss the opportunity to run through the beautiful fairways on a beautiful afternoon. Let's enjoy the art of sport!",
   date: DateTime.new(2021,3,20,15),
   activity_id: Activity.all[0].id,
   chatroom_id: Chatroom.all[0].id,
@@ -441,7 +441,7 @@ EVENTS = [{
 
 }, {
   status: "public",
-  details: "Motivating people in unhealthy conditions to run.",
+  details: "Have you ever felt motivated? Inspired? Exactly that is what we want to generate in people with unhealthy conditions. Running, meeting people and making an impact on others are the objectives of this event.",
   date: DateTime.new(2021,4,9,21),
   activity_id: Activity.all[0].id,
   chatroom_id: Chatroom.all[1].id,
@@ -449,7 +449,7 @@ EVENTS = [{
   photo: URI.open("https://www.manchestermarathon.co.uk/wp-content/uploads/sites/9/2018/11/Charity-runners.jpg")
 }, {
   status: "public",
-  details: "Crazy people, but happy. Amazing moment! We run until the sunrise.",
+  details: "Usually someone sees this and thinks: 'how crazy they are' If you never ran at dawn, we invite you to join a group of people who love to do it, and if you did, join in and repeat it! We run until the sunrise.",
   date: DateTime.new(2021,4,2,5),
   activity_id: Activity.all[0].id,
   chatroom_id: Chatroom.all[2].id,
@@ -457,7 +457,7 @@ EVENTS = [{
   photo: URI.open("https://image.freepik.com/free-photo/woman-running-beach-sunrise_101709-73.jpg")
 }, {
   status: "public",
-  details: "We will go to the bellas artes museum and then to eat together!",
+  details: "We are going to visit one of the most beautiful museums that the city of Buenos Aires has. We will explore cultures, artists and a lot of history, and then we will eat together. Do not miss it!",
   date: DateTime.new(2021,3,14,11),
   activity_id: Activity.all[1].id,
   chatroom_id: Chatroom.all[3].id,
@@ -466,7 +466,7 @@ EVENTS = [{
 
 }, {
   status: "public",
-  details: "Assist to buenos aires museum of modern art for a whole day",
+  details: "Attending the museum of modern art in Buenos Aires is a demonstration of interest in the magnificent modern era that our precious art has lived through. If that happens to you, do not hesitate to chat for a while and we will surely have a great time!",
   date: DateTime.new(2021,5,2,9),
   activity_id: Activity.all[1].id,
   chatroom_id: Chatroom.all[4].id,
@@ -474,7 +474,7 @@ EVENTS = [{
   photo: URI.open("https://www.eluniversal.com.mx/sites/default/files/2020/08/15/reapertura_de_museos_cdmx.jpg")
 }, {
   status: "public",
-  details: "MALBA guided tour!",
+  details: "The guided tour offered by MALBA is an incredible space to exchange with people who are interested in art and at the same time talk with a guide who has a more specific knowledge. It is very lovely moment.",
   date: DateTime.new(2021,3,28,12),
   activity_id: Activity.all[1].id,
   chatroom_id: Chatroom.all[5].id,
@@ -482,7 +482,7 @@ EVENTS = [{
   photo: URI.open("https://a0.muscache.com/pictures/ebc0f813-18d2-4a48-99f4-49981e99559e.jpg")
 }, {
   status: "public",
-  details: "We are going to Angelin's pizza, the best in town.",
+  details: "The creators of the Pizza Canchera, since 1938. Not much have changed since then: one (extraordinary) pizza at a time, for the next in (your imaginary) line.Service is excellent and very friendly. Join us and let's enjoy eating pizza together!",
   date: DateTime.new(2021,3,20,15),
   activity_id: Activity.all[2].id,
   chatroom_id: Chatroom.all[6].id,
@@ -491,7 +491,7 @@ EVENTS = [{
 
 }, {
   status: "public",
-  details: "Guerrin, this is so exciting!.",
+  details: "An old famous pizza eatery with stand-up eating counters and also a sit down restaurant at back. The dough is thicker with lots of cheese on top. I had tried a traditional Argentinian recipe: onion, ham and cheese. Of course, don’t forget to drizzle some oregano on top when you eat it. They also serve empanadas which are freshly made in front of you. Would you miss it?",
   date: DateTime.new(2021,4,2,21),
   activity_id: Activity.all[2].id,
   chatroom_id: Chatroom.all[7].id,
@@ -499,7 +499,7 @@ EVENTS = [{
   photo: URI.open("https://lamejorpizzeria.com/wp-content/uploads/2010/12/Pizzeria-Guerrin-buenos-aires.jpg")
 }, {
   status: "public",
-  details: "I will show you an amazing italian pizza in Argentina, this is crazy!",
+  details: "Pizzas in Argentine style, they called it fugazzeta, very tasty and have crispy crusts. A long established local eatery where most locals go, you can’t go wrong. Let's go together and have a fun.",
   date: DateTime.new(2021,4,2,5),
   activity_id: Activity.all[2].id,
   chatroom_id: Chatroom.all[8].id,
@@ -563,7 +563,7 @@ EVENTS.first(7).each do |event|
   new_event.chatroom.users = User.first(6)
   new_event.save!
   new_event.chatroom.participants.each do |participant|
-    participant.status = true
+    participant.update(status: true)
   end
 end
 
@@ -573,7 +573,7 @@ EVENTS.last(8).each do |event|
   new_event.chatroom.users = User.last(6)
   new_event.save!
   new_event.chatroom.participants.each do |participant|
-    participant.status = true
+    participant.update(status: true)
   end
 end
 puts "Events created"

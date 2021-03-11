@@ -14,7 +14,7 @@
         <p class="event-show-details pt-0"><%= @event.details %></p>
       </div>
       <h4 class="pt-3 pb-5">See who is already at this event!</h4>
-      <div class="row grid">
+      <div class="row grid mb-5" style="row-gap: 1rem;">
         <% @participants.each do |participant| %>
           <div>
             <div class="event-user-card text-center">

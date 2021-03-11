@@ -292,12 +292,6 @@
  }
  }
 
-@include media-breakpoint-down(sm) {
-  .card-activity {
-    max-width: 350px;
-  }
-}
-
 // event user cards
 .event-user-card {
   overflow: hidden;

@@ -2,13 +2,13 @@
     <div class="container banner-content col-10 col-md-8 col-xl-6">
       <h1>Share new <br/> experiences</h1>
        <%= form_tag activities_path, class: "d-flex align-items-center btn-search-bar", method: :get do %>
-        <div data-controller="autocomplete" data-autocomplete-url-value="/autocomplete">
+        <div class="flex-grow-1 position-relative" data-controller="autocomplete" data-autocomplete-url-value="/autocomplete">
           <%= text_field_tag :query,
           params[:query],
           class: "form-control searchable-item my-1 col-md-mx-3",
           placeholder: "Find an activity...",
             data: { 'autocomplete-target' => 'input' } %>
-          <ul data-autocomplete-target="results" class="option-list"></ul>
+          <ul data-autocomplete-target="results" class="option-list w-100"></ul>
         </div>
         <%= select_tag(:zone,
           options_for_select(ZONES),

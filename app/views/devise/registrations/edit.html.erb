@@ -1,8 +1,8 @@
 <div class="container m-5">
-  <div class="row m-2 justify-content-center">
+  <div class="row justify-content-center">
     <div class="col-xs-12 col-md-8 col-lg-8">
-      <div class="container-edit p-5">
-          <h3>Edit your profile</h3>
+      <div class="container-edit p-4">
+          <h2 class="m-4">Edit your profile</h2>
           <% if current_user.photo.attached? %> 
             <%= cl_image_tag current_user.photo.key, class:"card-rectangular-img-circular"%>
           <% end %>
@@ -22,7 +22,7 @@
                           input_html: { autocomplete: "username" } %>
               <%= f.input :full_name,
                           hint: "Please enter you first and your last name",
-                          input_html: { autocomplete: "full_name" } %>                           
+                          input_html: { autocomplete: "full_name" } %>  
               <%= f.input :description,
                           hint: "Write a little description about you" %>   
               <%= f.input :address,
@@ -46,7 +46,7 @@
                           hint: "We need your current password to confirm your changes",
                           required: true,
                           input_html: { autocomplete: "current-password" } %>
-                <%= f.button :submit, "Update", class:"btn-red-degrade my-5" %>
+                <%= f.button :submit, "Update", class:"btn-red-degrade my-3" %>
             </div>
           <% end %> 
         </div>     

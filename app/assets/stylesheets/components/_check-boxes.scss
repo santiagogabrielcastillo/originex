@@ -22,5 +22,8 @@
 
 .tag-selector:checked + label {
   background-color:  rgb(242, 74, 85);
-  // color:  rgb(255, 255, 255);;
+  color:  rgb(255, 255, 255);
+}
+.form-check-label {
+  color: white;
 }

@@ -1,6 +1,12 @@
 class EventsController < ApplicationController
   before_action :set_chatroom, only: %i[new create]
   def index
+    @user_participants = Participant.where('user_id = ?', current_user.id)
+    chatroom_ids = []
+    @user_participants.each do |user_participant|
+      chatroom_ids << user_participant.chatroom_id
+    end
+    @user_events = Event.where(chatroom_id: chatroom_ids)
   end
 
   def show

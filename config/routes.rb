@@ -5,11 +5,11 @@ Rails.application.routes.draw do
 
   resources :user_interests, only:  %i[index new create destroy]  
   resources :activities, only: %i[index show] do
-    resources :events, only: %i[show]      
+    resources :events, only: %i[index show]      
     resources :chatrooms, only: %i[new create]
   end
 
-  resources :events, only: %i[show] do
+  resources :events, only: %i[index show] do
     resources :participants, only: %i[new create]
   end
 

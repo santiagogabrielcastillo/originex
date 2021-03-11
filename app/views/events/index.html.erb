@@ -1,0 +1,26 @@
+<% if @user_events.size >= 1 %>
+  <div class="row">
+    <% @user_events.each do |user_event| %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card-activity my-3">              
+          <% if user_event.photo.attached? %>
+            <%= cl_image_tag user_event.photo.key, style: "height: 60%;" %>
+          <% else %>
+            <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png", :class => "event-img-placeholder" %>
+          <% end %>                            
+          <div class="pl-3 pt-3">
+            <div>
+              <h1><%= link_to "#{user_event.chatroom.title}", event_path(user_event), class: "event-title" %></h1>
+              <div>
+                <p class="my-1"><i class="icon-event fas fa-calendar-alt mr-3"></i><%= user_event.date.to_datetime.strftime('%a %d/%m/%Y') %></p>
+                <p class="my-1"><i class="icon-event fas fa-broadcast-tower mr-3"></i><%= user_event.status.capitalize %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <h3>What are you waiting for? Start joining events!</h3>
+<% end %>

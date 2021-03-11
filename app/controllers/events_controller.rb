@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_chatroom, only: %i[new create]
   def index
-    @user_participants = Participant.where('user_id = ?', current_user.id)
+    @user_participants = Participant.where('user_id = ? and status = ?', current_user.id, true)
     chatroom_ids = []
     @user_participants.each do |user_participant|
       chatroom_ids << user_participant.chatroom_id

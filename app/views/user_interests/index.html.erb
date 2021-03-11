@@ -1,20 +1,13 @@
-<%# display a list of all activities 
-choose an activity and insert it in a new activity mini collection : user interests
-save the new collection 
-
-iterar x cada activity, y en cada una hacer un eventlistener, if click then save into array of user selected activities %>
-
-<div class="container">
-  <div class="row">
+<div class="container vertical-center">
+  <div class="row justify-content-center">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <h3>Please, select your interests</h3>
+      <h3>These are your interests!</h3>
+      <p>If you pick one we will show you related activities <i class="smile fas fa-smile-wink"></i></p>
       <%= simple_form_for current_user, url: user_interests_path, method: :post do |f| %>
         <%= f.association :activities, as: :check_boxes, input_html: { class: "tag-selector" },
                           item_wrapper_class: 'tag-item' %>
-        <%= f.button :submit, class:"btn-red-degrade" %>
-        <%= link_to "Edit your profile",  edit_user_registration_path, class: "btn-red-degrade" %>
+        <%= f.submit "Update interests", class:"btn-red-degrade", style: "border: none;" %>
       <% end %>
     </div>
   </div>
 </div>
-

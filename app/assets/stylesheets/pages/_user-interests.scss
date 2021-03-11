@@ -1,0 +1,22 @@
+.vertical-center {
+  min-height: 60vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.col-form-label {
+  display: none;
+}
+
+h3 {
+  font-weight: 900;
+}
+
+p {
+  font-weight: 300;
+}
+
+.smile {
+  color: $info;
+}

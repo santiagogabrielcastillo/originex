@@ -8,14 +8,12 @@
       <% end %>
     </div>
     <div class="col-sm-12 col-md-8 pt-4">
-      <div class="event-show-title">
-        <h3><%= @event.activity.category %></h3>
-        <h1><strong><%= @event.chatroom.title %></strong></h1>
+      <div class="event-show-title py-3">
+        <h2 class="mb-3" style="font-weight: 600; color: #f24a55;"><%= @event.chatroom.title %></h2>
+        <h3 style="font-weight: 600; font-size: 18px;"><%= @event.activity.title %> | <%= @event.activity.zone %></h3>
+        <p class="event-show-details pt-0"><%= @event.details %></p>
       </div>
-      <div class="event-show-details">
-        <p><%= @event.details %></p>
-      </div>
-      <h4>You'll be joining...</h4>
+      <h4 class="pt-3 pb-5">See who is already at this event!</h4>
       <div class="row grid">
         <% @participants.each do |participant| %>
           <div>
@@ -35,6 +33,7 @@
           </div>
         <% end %>
       </div>
+      <%= link_to "Back to activity", activity_path(@event.activity_id), style: "position: absolute; bottom: 0;", class: "btn-link" %>
     </div>
     <div class="col-sm-12 col-md-4 pt-4">
       <div id="event-info">
@@ -65,7 +64,7 @@
               <%= f.button :submit, "Join chat", class: "btn btn-red-degrade" %>
             <% end %>
           <% else %>
-            <%= link_to 'Show chatroom', chatroom_path(@event.chatroom), class: "btn btn-red-degrade" %>
+            <%= link_to 'Chatroom', chatroom_path(@event.chatroom), class: "btn btn-red-degrade" %>
           <% end %>
         </div>
       </div>
@@ -73,10 +72,6 @@
   </div>
   
   <div class="row">
-    <div class="col-12">
-      <div class="back-link">
-        <%= link_to "Back to activity", activity_path(@event.activity_id), class: "btn-link" %>
-      </div>
-    </div>
+    
   </div>
 </div>

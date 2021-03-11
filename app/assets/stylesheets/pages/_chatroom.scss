@@ -7,20 +7,20 @@
   margin: 0 auto;
  
   h2 {
-    font-size: 100px;
-    font-weight: bold;
-    color: rgba( 0, 0, 0, .9);
+    font-weight: 700;
+    color: rgba( 0, 0, 0, .3);
   } 
 }
 
 .chat-header {
   // background-color: $pink;
   border-radius: 10px;
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.7);
   padding: 7px 20px;
-  h4 {
-    margin: 0;
+  h1 {
+    font-weight: 600;
   }
+
 }
 
 .users-cards {
@@ -43,8 +43,8 @@
   position: sticky;
 
   h2 {
-    font-size: 35px;
-    margin-bottom: 17px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -58,8 +58,8 @@
     position: sticky;
 
     h2 {
-      font-size: 35px;
-      margin-bottom: 17px;
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
   }
   .chatroom {
@@ -76,9 +76,12 @@
       margin-bottom: 1rem;
     }
   }
-
-  .chatroom {
-    flex-direction: column;
+  .chatroom-user {
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  .chatroom-user-infos {
+    display: none;
   }
 }
 .chatroom-user {
@@ -86,18 +89,22 @@
   display: flex;
   border-radius: 9px;
 
-  p {
-    display: none;
-  }
-
   img {
-    border-radius: 9px;
+    border-radius: 50%;
     margin: 10px;
     height: auto;
     width: 90%;
   }
+
+    a > h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.3rem 0rem;
+    color:  rgb(242, 74, 85);
+
+    a:hover {
+      color: rgb(139, 238, 255);
+    }
+  }
 }
 
-.chatroom-user-infos {
-  padding: 10px;
-}

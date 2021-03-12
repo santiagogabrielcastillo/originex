@@ -18,7 +18,13 @@
       <div class="notification">
         <% if !Participant.where('user_id = ? and status = ?', current_user.id, false).empty? %>
           <%= link_to participants_path do %>
-            <%= Participant.where('user_id = ? and status = ?', current_user.id, false).count %> invitation/s!
+            <i class="fas fa-paper-plane m-2"></i>
+            <%= Participant.where('user_id = ? and status = ?', current_user.id, false).count %> 
+            <% if Participant.where('user_id = ? and status = ?', current_user.id, false).count == 1 %>
+              invitation!
+            <% else %>
+              invitations!
+            <% end %>
           <% end %>
         <% end %>
       </div>

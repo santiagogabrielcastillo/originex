@@ -98,3 +98,29 @@
 //   display:flex;
 //   flex-wrap: wrap;
 // }
+
+.chatroom-user-event {
+  width: 80%;
+  background: white;
+  display: flex;
+  border-radius: 9px;
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  img {
+    border-radius: 9px;
+    margin: 10px;
+    height: auto;
+    width: 90%;
+  }
+}
+
+.chatroom-user-event-infos {
+  padding: 10px;
+}

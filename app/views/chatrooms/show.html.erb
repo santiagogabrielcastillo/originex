@@ -20,7 +20,7 @@
                   <% end %>
                 </div>
                 <div class="col-12 col-sm-8">
-                  <div class="chatroom-user-infos p-2">
+                  <div class="chatroom-user-infos">
                     <%= link_to user_path(part.user) do %>
                       <p><%= part.user.full_name %></p>
                     <% end %>
@@ -42,11 +42,14 @@
         <% end %>
       </div>
     </div>
-    <div class="col-12 col-md-8 col-lg-8 chatroom mb-3 sticky-top">
+    <div class="col-12 col-md-8 col-lg-8 chatroom mb-3">
       <div class="row">
         <div class="col-12">
           <div class="chat-header m-3">
-          <p class="mx-2 mt-1"><%= @chatroom.participants.where(chatroom_id: params[:id]).count %> participant in this chat </p>
+            <div class="number-of-participants">
+              <p class="mx-2 mt-1"><%= @chatroom.participants.where(chatroom_id: params[:id]).count %> participants in this chat </p>
+              <i class="fas fa-comments"></i>
+            </div>
             <h1><%= @chatroom.title.capitalize %></h1>
             <p class="mx-3"><%= @chatroom.description %></p>
           </div>
@@ -60,7 +63,6 @@
           <div id="create-message">
             <%= simple_form_for [ @chatroom, @message ], remote: true, input_html: { autocomplete: "off" } do |f| %>
               <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.title}", input_html: {id: "user-input", autocomplete: "off" } %>
-              <a href="#"><i class="send fas fa-paper-plane"></i></a>
            <% end %>
           </div>
         </div>

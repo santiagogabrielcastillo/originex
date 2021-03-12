@@ -79,6 +79,12 @@ h1 {
   }
   .chatroom-users {
     flex-direction: row;
+
+    .chatroom-user {
+      background-color: transparent!important;
+      border-radius: 0px;
+      box-shadow: none!important;
+    }
  
     h2 {
       font-size: 2rem;
@@ -138,7 +144,7 @@ h1 {
   }
 }
 
-@media (max-width : 320px) {
+@media (max-width : 321px) {
   h1 {
     font-size: 1.2rem;
   }
@@ -179,7 +185,7 @@ h1 {
   flex-direction: column;
   background: white;
   padding: 5px;
-  display: flex;
+  // display: flex;
   justify-content: flex-start;
   border-radius: 9px;
   align-items: center;

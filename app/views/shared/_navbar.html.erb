@@ -13,7 +13,7 @@
     <%= link_to "Activities", activities_path, class: "navbar-link mx-2" %>
     <a href="#footer" id="about-us" class="navbar-link mx-2">About us</a>
   </div>
-    <div class="avatar-section collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
+    <div class="avatar-section collapse navbar-collapse" id="navbarSupportedContent">
     <% if user_signed_in? %>
       <div class="notification">
         <% if !Participant.where('user_id = ? and status = ?', current_user.id, false).empty? %>

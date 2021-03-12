@@ -172,7 +172,7 @@ USERS = [{
   email: "santicastillo@gmail.com",
   password: "123123",
   username: "Genio",
-  full_name: "Santiago Castillo",
+  full_name: "Santi Castillo",
   phone_number: "987456123",
   birthday: Date.new(1976-5-7),
   address: "Paraguay 1450, Buenos Aires, Argentina",

@@ -65,14 +65,14 @@
           <i class="my-auto fas fa-running"></i>
           <p class="my-auto ml-2"><%= @event.activity.category %></p>
         </div>
-        <div class="event-show-contact-link">
-          <% if @user_participant.empty? %>
+        <div class="event-show-contact-link">        
+          <% if @user_participant.present? %>
+            <%= link_to 'Chatroom', chatroom_path(@event.chatroom), class: "btn btn-red-degrade" %>
+          <% elsif @event.status == "public" %>
             <%= simple_form_for([@event, @participant]) do |f| %>
               <%= f.button :submit, "Join chat", class: "btn btn-red-degrade" %>
             <% end %>
-          <% else %>
-            <%= link_to 'Chatroom', chatroom_path(@event.chatroom), class: "btn btn-red-degrade" %>
-          <% end %>
+          <% end %>          
         </div>
       </div>
     </div>

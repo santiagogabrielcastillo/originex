@@ -120,7 +120,7 @@
   align-items: center;
   padding: 1.2rem;
   
-    p {
+  p {
     font-size: 1rem;
     line-height: 1.4rem;
     opacity: 1.0;
@@ -128,11 +128,12 @@
     margin: 1rem;
   }
 
-    img {
+  img {
     border-radius: 9px;
     height: 20vh;
     width: 17vw;
     margin-right: 1rem;
+    object-fit: cover;
   }
 }
 
@@ -194,7 +195,6 @@
       height: 20vh;
       width: 19vw;
       margin-right: 1rem;
-      object-fit: cover;
     }
   }
   .card-profile-info {

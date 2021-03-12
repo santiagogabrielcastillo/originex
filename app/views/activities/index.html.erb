@@ -1,4 +1,8 @@
+<% if @activities.size > 0 %>
 <% content_for :meta_title, "#{@activities.first.title} - #{DEFAULT_META["meta_product_name"]}'s activities" %>
+<% else %>
+<%= content_for :meta_title, "#{DEFAULT_META["meta_product_name"]}'s activities - Share new experiences" %>
+<% end %>
 <% content_for :meta_description, "Explore over our activities and find one that fits your interests. Have fun, meet people and keep inovating in your daily life!" %>
 
 <div class="container container-index">

@@ -16,7 +16,7 @@ ACTIVITIES = [{
      it’s an effective way to keep both your body and brain in great shape.
      Just lace up your running shoes and you’re ready to pound the pavement — or the treadmill, the track, the park, or the trail behind your house. 
      The options are endless. And you don’t have to carve out precious alone time to run, either. ",
-    zone: "Núñez",
+    zone: "Palermo",
     photo: "https://images.unsplash.com/photo-1602619075660-d0f5459cb189?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80"
     }, {
     title: "BA Art exposition",
@@ -24,7 +24,7 @@ ACTIVITIES = [{
     description: "Buenos Aires has a lot more to offer if you’re willing to dig around a bit. 
     For those who enjoy art, or simply just want to get out the house and do something different, there are a lots of exhibitions hosted 
     by some of the trendiest and most alternative galleries in Buenos Aires.",
-    zone: "Palermo",
+    zone: "Caballito",
     photo: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Exposition_%22Gauguin%2C_Van_Gogh%2C_les_peintres_de_la_couleur%22.jpg"
   }, {
     title: "Pizza lovers",
@@ -45,7 +45,7 @@ ACTIVITIES = [{
   title: "Concert",
   category: "Cultural activities",
   description: "Buenos Aires is regarded by Argentinians as “the city that never sleeps,” and from a musical standpoint, they have a valid point. You can catch live music across the city from Monday to Sunday, with styles ranging from urban to electronic, rock to reggae, and classical to hip-hop.",
-  zone: "Caballito",
+  zone: "Palermo",
   photo: "https://thesymphonyofrock.files.wordpress.com/2019/07/battle-of-the-bands.jpg?w=1440&h=580&crop=1"
 }, {
   title: "Small beer places",

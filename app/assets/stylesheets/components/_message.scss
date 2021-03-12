@@ -49,6 +49,17 @@
   margin: 0 10px;
   padding: 11px 10px 8px 10px;
 }
+@media (max-width : 590px) {
+  .message-content {
+    font-size: 10px;
+  }
+}
+
+@media (max-width : 320px) {
+  .message-content {
+    font-size: 8px;
+  }
+}
 .avatar {
   width: 42px;
   height: 42px;

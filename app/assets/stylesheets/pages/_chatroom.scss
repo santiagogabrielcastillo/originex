@@ -1,7 +1,8 @@
  
-h2 {
-    font-weight: 600;
-    color: rgba( 0, 0, 0, .3);
+h1 {
+    color: rgba( 0, 0, 0, .5);
+    font-weight: 800;
+    font-size: 4rem;
 } 
 
 .chat-header {
@@ -11,19 +12,19 @@ h2 {
   padding: 20px;
   background-color: white;
   // background-color: rgba(36,238,217, 0.2); ;
-  h1 {
-    font-weight: 800;
-    font-size: 3rem;
-  }
 
 }
 
 .users-cards {
   flex-grow: 1;
 }
+.chatroom-display {
+  position: sticky;
+  top: 100px;
+}
 
 .chatroom {
-  flex-grow: 1;
+  // flex-grow:1;
   // background-color: rgba(36,238,217, 0.3);
   background-color: white;
   border-radius: 10px;
@@ -39,7 +40,6 @@ h2 {
   flex-direction: row;
   border-radius: 10px;
 
-
   h2 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -53,7 +53,7 @@ h2 {
     font-weight: 700;
   }
   a > p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 800;
     margin: 1rem 0rem 0rem 0rem;
     color: #f37b6b;
@@ -64,15 +64,28 @@ h2 {
       text-decoration: none;
     }
   }
+
+  img {
+    max-width: 70px;
+    border-radius: 50%;
+    margin: 5px 5px 0px -7px;
+  }
 }
 
 @media (max-width : 800px) {
+  h1 {
+    font-weight: 800;
+    font-size: 2rem;
+  }
   .chatroom-users {
     flex-direction: row;
-    h1 {
-      font-weight: 800;
-      font-size: 2rem;
+
+    .chatroom-user {
+      background-color: transparent!important;
+      border-radius: 0px;
+      box-shadow: none!important;
     }
+ 
     h2 {
       font-size: 2rem;
       margin-bottom: 0.8rem;
@@ -94,7 +107,7 @@ h2 {
 
 @media (max-width : 587px) {
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
   .chatroom-users {
 
@@ -107,6 +120,9 @@ h2 {
       font-size: 1rem;
       margin-bottom: 1rem;
     }
+    p {
+      font-size: 10px;
+    }
   }
 
   .chatroom-user {
@@ -117,14 +133,20 @@ h2 {
   .chatroom {
     flex-direction: row;
   }
+  .number-of-participants {
+    display: none;
+  }
+  .username-chat {
+    display: none;
+  }
   .chatroom-user-infos {
     display: none;
   }
 }
 
-@media (max-width : 320px) {
+@media (max-width : 321px) {
   h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .chatroom-users {
     flex-direction: column;
@@ -137,12 +159,22 @@ h2 {
       font-size: 0.8rem;
       margin-bottom: 0.8rem;
     }
+    p {
+      font-size: 8px;
+    }
   }
+
   .chatroom-user {
     background-color: transparent;
     border-radius: 0px;
     box-shadow: none!important;
 
+  }
+  .number-of-participants {
+    display: none;
+  }
+  .username-chat {
+    display: none;
   }
   .chatroom-user-infos {
     display: none;
@@ -152,22 +184,29 @@ h2 {
 .chatroom-user {
   flex-direction: column;
   background: white;
-  display: flex;
+  padding: 5px;
+  // display: flex;
+  justify-content: flex-start;
   border-radius: 9px;
   align-items: center;
   box-shadow: 0 0 15px lightgrey;
 
-  img {
-    max-width: 70px;
-    border-radius: 50%;
-    margin: 10px;
-  }
-
   p {
-    font-size: 0.5;
+    font-size: 1rem;
     font-weight: bold;
   }
   
 }
 
+.number-of-participants {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 12px;
+  color: rgb(75,165,227);
 
+  i {
+    font-size: 1.5rem;   
+    margin-top: -5;
+  }
+}

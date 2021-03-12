@@ -9,18 +9,18 @@
       <h3 class="mb-3">Participants</h3>
       <div class="row">      
         <% @participants.each do |part| %>
-          <div class="col-4 col-sm-12">
+          <div class="col-4 col-md-12">
             <div class="chatroom-user mb-3">
               <div class="row">
                 <div class="col-12 col-sm-4">
                   <% if part.user.photo.attached? %>
-                    <%= cl_image_tag part.user.photo.key, class: "img-fluid"%>
+                    <%= cl_image_tag part.user.photo.key, class: "img-fluid", style: "margin-left: 20px;"%>
                   <% else %>
                     <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png", class: "img-fluid" %>
                   <% end %>
                 </div>
                 <div class="col-12 col-sm-8">
-                  <div class="chatroom-user-infos p-2">
+                  <div class="chatroom-user-infos">
                     <%= link_to user_path(part.user) do %>
                       <p><%= part.user.full_name %></p>
                     <% end %>
@@ -36,19 +36,22 @@
 
       <div class="d-flex justify-content-center">
         <% if @chatroom.event %>
-          <%= link_to 'See event details', event_path(@chatroom.event), class: 'btn-red-degrade mt-3' %>
+          <%= link_to 'See event details', event_path(@chatroom.event), class: 'btn-red-degrade mt-3', style: "margin-bottom: 20px;" %>
         <% else %>
           <%= link_to 'Create event', new_chatroom_event_path(@chatroom), class: 'btn-red-degrade mt-3 btn-block text-center' %>
         <% end %>
       </div>
     </div>
-    <div class="col-12 col-md-8 col-lg-8 chatroom mb-3 sticky-top">
+    <div class="col-12 col-md-8 col-lg-8 chatroom mb-3">
       <div class="row">
         <div class="col-12">
           <div class="chat-header m-3">
-          <p class="mx-2 mt-1"><%= @chatroom.participants.where(chatroom_id: params[:id]).count %> participant in this chat </p>
+            <div class="mb-3 number-of-participants">
+              <p class="mx-2 my-0"><%= @chatroom.participants.where(chatroom_id: params[:id]).count %> participants in this chat </p>
+              <i class="fas fa-comments"></i>
+            </div>
             <h1><%= @chatroom.title.capitalize %></h1>
-            <p class="mx-3"><%= @chatroom.description %></p>
+            <p><%= @chatroom.description %></p>
           </div>
           <hr>
           <div  class="mx-3" id="messages" data-chatroom-id="<%= @chatroom.id %>">
@@ -60,7 +63,6 @@
           <div id="create-message">
             <%= simple_form_for [ @chatroom, @message ], remote: true, input_html: { autocomplete: "off" } do |f| %>
               <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.title}", input_html: {id: "user-input", autocomplete: "off" } %>
-              <a href="#"><i class="send fas fa-paper-plane"></i></a>
            <% end %>
           </div>
         </div>
